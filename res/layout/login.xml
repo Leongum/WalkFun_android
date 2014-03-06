@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_gravity="center"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent" android:background="@drawable/main_bg">
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" android:id="@+id/loginLayoutMain" android:visibility="gone">
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/loginImgContainer" android:layout_centerHorizontal="true" android:layout_centerVertical="true"
+                android:background="@drawable/login_button_container"/>
+        <Button
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:text="登 录"
+                android:id="@+id/loginBtnLogin" android:layout_centerHorizontal="true" android:layout_alignParentTop="true"
+                android:layout_marginTop="140dp" android:background="@drawable/login_button" android:textColor="#000000"
+                android:textSize="24dp" android:textStyle="bold"/>
+        <Button android:layout_width="150dp" android:layout_height="60dp" android:text="注 册" android:id="@+id/loginBtnRegister"
+                android:background="@drawable/login_button" android:textColor="#000000" android:textSize="24dp"
+                android:layout_alignLeft="@+id/loginBtnLogin" android:layout_below="@+id/loginBtnLogin" android:layout_marginTop="5dp"
+                android:textStyle="bold"/>
+    </RelativeLayout>
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" android:background="@drawable/paper" android:id="@+id/loginLayoutFeild"
+            android:visibility="visible">
+        <Button
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:id="@+id/loginBtnReturn" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"
+                android:background="@drawable/back_bg"/>
+        <Button android:layout_width="55dp" android:layout_height="55dp" android:id="@+id/loginBtnSubmit"
+                android:background="@drawable/submit" android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/loginTxtUserName" android:layout_centerHorizontal="true" android:layout_alignParentTop="true"
+                android:layout_marginTop="120dp" android:background="@drawable/textfield" android:hint="邮 箱"
+                android:inputType="text" android:gravity="center" android:textSize="16dp"/>
+        <EditText android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:id="@+id/loginTxtPassword"
+                  android:background="@drawable/textfield" android:hint="密 码" android:inputType="text|textPassword"
+                  android:gravity="center" android:layout_toRightOf="@+id/loginBtnReturn"
+                  android:layout_below="@+id/loginTxtUserName" android:textSize="16dp" android:layout_marginTop="15dp"/>
+        <EditText android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/loginTxtNickName"
+                  android:background="@drawable/textfield" android:hint="昵 称" android:inputType="text"
+                  android:gravity="center"
+                  android:layout_toRightOf="@+id/loginBtnReturn" android:layout_below="@+id/loginTxtPassword"
+                  android:textSize="16dp" android:layout_marginTop="15dp"/>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,15 +1,11 @@
 package com.G5432.Utils;
 
 import android.content.SharedPreferences;
-import android.util.Log;
 import com.G5432.Entity.UserBase;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import org.json.JSONObject;
 
 import java.util.Date;
-import java.util.Map;
-import java.util.Set;
 
 /**
  * Created with IntelliJ IDEA.
@@ -62,13 +58,19 @@ public class UserUtil {
     }
 
     public static void logout() {
-        String missionUpdateTime = getLastUpdateTime("MissionUpdateTime");
-        String systemMessageUpdateTime = getLastUpdateTime("SystemMessageUpdateTime");
+        String localMissionUpdateTime = UserUtil.getLastUpdateTime("MissionUpdateTime");
+        String localMessageUpdateTime = UserUtil.getLastUpdateTime("SystemMessageUpdateTime");
+        String localRecommendUpdateTime = UserUtil.getLastUpdateTime("RecommendAppUpdateTime");
+        String localActionDefineUpdateTime = UserUtil.getLastUpdateTime("ActionDefineUpdateTime");
+        String localProductDefineUpdateTime = UserUtil.getLastUpdateTime("VProductsUpdateTime");
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.clear();
         editor.putInt("userId", -1);
-        editor.putString("MissionUpdateTime", missionUpdateTime);
-        editor.putString("SystemMessageUpdateTime", systemMessageUpdateTime);
+        editor.putString("MissionUpdateTime", localMissionUpdateTime);
+        editor.putString("SystemMessageUpdateTime", localMessageUpdateTime);
+        editor.putString("RecommendAppUpdateTime", localRecommendUpdateTime);
+        editor.putString("ActionDefineUpdateTime", localActionDefineUpdateTime);
+        editor.putString("VProductsUpdateTime", localProductDefineUpdateTime);
         editor.commit();
     }
 

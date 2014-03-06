@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android"
+        android:background="@drawable/charactor">
+    <Button
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:id="@+id/mainBtnSync" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true"
+            android:background="@drawable/sync_apply" android:layout_marginLeft="15dp"/>
+    <Button android:layout_width="55dp" android:layout_height="55dp" android:id="@+id/mainBtnSet"
+            android:background="@drawable/settings" android:layout_alignParentRight="true"
+            android:layout_alignBottom="@+id/mainBtnSync" android:layout_marginRight="15dp"/>
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="83dp"
+                android:id="@+id/mainImgTop" android:layout_centerHorizontal="true" android:layout_alignParentTop="true"
+                android:background="@drawable/main_title_board"/>
+        <ImageView
+                android:layout_width="215dp"
+                android:layout_height="80dp"
+                android:id="@+id/mianImgUserInfo"
+                android:background="@drawable/main_login_bg" android:layout_alignLeft="@+id/mainImgTop"
+                android:layout_alignTop="@+id/mainImgTop" android:layout_marginLeft="75dp"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User Name"
+                android:id="@+id/mainTxtName" android:layout_alignLeft="@+id/mianImgUserInfo"
+                android:layout_alignTop="@+id/mainImgTop" android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp" android:textColor="#000000"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lv.1"
+                android:id="@+id/mainTxtLevel" android:layout_alignRight="@+id/mianImgUserInfo"
+                android:layout_alignTop="@+id/mainImgTop" android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp" android:textColor="#000000" android:textSize="10dp"/>
+    </RelativeLayout>
+</RelativeLayout>

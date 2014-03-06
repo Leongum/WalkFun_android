@@ -92,6 +92,7 @@ public class UserHandler {
      * @param handler
      */
     public void registerUser(UserBase userBase, final Handler handler) {
+        userBase.setPassword(CommonUtil.getMD5(userBase.getPassword()));
         String requestBody = gson.toJson(userBase, UserBase.class);
         String url = CommonUtil.getUrl(Constant.USER_REGISTER_URL);
         httpClientHelper.post(url, null, requestBody, new AsyncHttpResponseHandler() {
@@ -225,6 +226,7 @@ public class UserHandler {
 
     /**
      * 根据用户昵称查询用户基本信息
+     *
      * @param userName 用户昵称
      * @param handler
      */
@@ -253,6 +255,14 @@ public class UserHandler {
                 handler.sendEmptyMessage(0);
             }
         });
+    }
+
+    /**
+     * 用户登出
+     */
+    public void logout() {
+        UserUtil.logout();
+        userService.clearUserData();
     }
 
 }

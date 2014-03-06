@@ -16,17 +16,43 @@ import java.sql.SQLException;
 public class UserService {
 
     private Dao<UserBase, Integer> userBaseDao = null;
-
     private Dao<UserInfo, Integer> userInfoDao = null;
+    private Dao<UserFriend, String> userFriendDao = null;
+    private Dao<Action, Void> actionDao = null;
+    private Dao<FriendSort, Integer> friendSortDao = null;
+    private Dao<MissionHistory, String> missionHistoryDao = null;
+    private Dao<RunningHistory, String> runningHistoryDao = null;
+    private Dao<UserProp, String> userPropDao = null;
 
     public UserService(DatabaseHelper helper) {
         try {
             userBaseDao = helper.getUserBaseDao();
             userInfoDao = helper.getUserInfoDao();
+            userFriendDao = helper.getUserFriendDao();
+            actionDao = helper.getActionDao();
+            friendSortDao = helper.getFriendSortDao();
+            missionHistoryDao = helper.getMissionHistoryDao();
+            runningHistoryDao = helper.getRunningHistoryDao();
+            userPropDao = helper.getUserPropDao();
         } catch (Exception ex) {
             ex.printStackTrace();
         }
 
+    }
+
+    public void clearUserData(){
+        try {
+            userBaseDao.delete(userBaseDao.queryForAll());
+            userInfoDao.delete(userInfoDao.queryForAll());
+            userFriendDao.delete(userFriendDao.queryForAll());
+            actionDao.delete(actionDao.queryForAll());
+            friendSortDao.delete(friendSortDao.queryForAll());
+            missionHistoryDao.delete(missionHistoryDao.queryForAll());
+            runningHistoryDao.delete(runningHistoryDao.queryForAll());
+            userPropDao.delete(userPropDao.queryForAll());
+        } catch (SQLException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
     }
 
     public void saveUserInfoToDB(UserBase userBase){

@@ -21,13 +21,13 @@ public class UserBase {
     private String deviceId;
     @Expose
     @DatabaseField
-    private String userEmail;
+    private String userName;
     @Expose
     @DatabaseField
     private String password;
     @Expose
     @DatabaseField
-    private String userName;
+    private String nickName;
     @Expose
     @DatabaseField
     private Integer age;
@@ -72,12 +72,12 @@ public class UserBase {
         this.deviceId = deviceId;
     }
 
-    public String getUserEmail() {
-        return userEmail;
+    public String getNickName() {
+        return nickName;
     }
 
-    public void setUserEmail(String userEmail) {
-        this.userEmail = userEmail;
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
     }
 
     public String getPassword() {
