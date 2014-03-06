@@ -49,7 +49,7 @@ public class RunningHistoryHandler {
         httpClientHelper.get(url, null, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, String response) {
-                Log.d(this.getClass().getName(), response);
+                Log.i(this.getClass().getName(), response);
                 GlobalSyncStatus.historySynced = true;
                 if (statusCode == 200 || statusCode == 204) {
                     List<RunningHistory> runningHistoryList = gson.fromJson(response, new TypeToken<List<RunningHistory>>() {
@@ -85,7 +85,6 @@ public class RunningHistoryHandler {
             httpClientHelper.post(url, null, gson.toJson(runningHistoryList), new AsyncHttpResponseHandler() {
                 @Override
                 public void onSuccess(int statusCode, String response) {
-                    Log.d(this.getClass().getName(), response);
                     if (statusCode == 200 || statusCode == 204) {
                         runningHistoryService.updateUnsyncedRunHistories(UserUtil.getUserId());
                     } else {
@@ -156,7 +155,7 @@ public class RunningHistoryHandler {
         httpClientHelper.get(url, null, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, String response) {
-                Log.d(this.getClass().getName(), response);
+                Log.i(this.getClass().getName(), response);
                 GlobalSyncStatus.historySynced = true;
                 Message msg = Message.obtain();
                 if (statusCode == 200 || statusCode == 204) {

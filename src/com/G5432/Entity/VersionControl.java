@@ -14,15 +14,25 @@ import java.util.Date;
  */
 public class VersionControl {
 
+    @Expose
     private String platform;
+    @Expose
     private Integer version;
+    @Expose
     private Integer subVersion;
+    @Expose
     private String description;
+    @Expose
     private Date systemTime;
+    @Expose
     private Date missionLastUpdateTime;
+    @Expose
     private Date messageLastUpdateTime;
+    @Expose
     private Date recommendLastUpdateTime;
+    @Expose
     private Date productLastUpdateTime;
+    @Expose
     private Date actionDefineUpdateTime;
 
     public String getPlatform() {

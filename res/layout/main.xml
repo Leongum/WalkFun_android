@@ -23,21 +23,21 @@
         <ImageView
                 android:layout_width="215dp"
                 android:layout_height="80dp"
-                android:id="@+id/mianImgUserInfo"
+                android:id="@+id/mainImgUserInfo"
                 android:background="@drawable/main_login_bg" android:layout_alignLeft="@+id/mainImgTop"
                 android:layout_alignTop="@+id/mainImgTop" android:layout_marginLeft="75dp"/>
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="User Name"
-                android:id="@+id/mainTxtName" android:layout_alignLeft="@+id/mianImgUserInfo"
+                android:id="@+id/mainTxtName" android:layout_alignLeft="@+id/mainImgUserInfo"
                 android:layout_alignTop="@+id/mainImgTop" android:layout_marginLeft="15dp"
                 android:layout_marginTop="20dp" android:textColor="#000000"/>
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Lv.1"
-                android:id="@+id/mainTxtLevel" android:layout_alignRight="@+id/mianImgUserInfo"
+                android:id="@+id/mainTxtLevel" android:layout_alignRight="@+id/mainImgUserInfo"
                 android:layout_alignTop="@+id/mainImgTop" android:layout_marginRight="20dp"
                 android:layout_marginTop="20dp" android:textColor="#000000" android:textSize="10dp"/>
     </RelativeLayout>

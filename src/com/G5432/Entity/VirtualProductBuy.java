@@ -1,5 +1,7 @@
 package com.G5432.Entity;
 
+import com.google.gson.annotations.Expose;
+
 import java.util.Date;
 
 /**
@@ -11,8 +13,11 @@ import java.util.Date;
  */
 public class VirtualProductBuy {
 
+    @Expose
     private Integer userId;
+    @Expose
     private Integer productId;
+    @Expose
     private Integer numbers;
 
     public Integer getUserId() {

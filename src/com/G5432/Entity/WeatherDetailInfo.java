@@ -1,5 +1,7 @@
 package com.G5432.Entity;
 
+import com.google.gson.annotations.Expose;
+
 /**
  * Created with IntelliJ IDEA.
  * User: p
@@ -8,15 +10,15 @@ package com.G5432.Entity;
  * To change this template use File | Settings | File Templates.
  */
 public class WeatherDetailInfo {
-
+    @Expose
     private String city;
-
+    @Expose
     private Integer temp;
-
+    @Expose
     private String windDirection;
-
+    @Expose
     private String windSpeed;
-
+    @Expose
     private String humidity;
 
     public String getCity() {

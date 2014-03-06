@@ -19,7 +19,7 @@ public class Constant {
 
     // --- firend api ---
     public static final String FRIEND_CREATE_OR_UPDATE_URL = SERVICE_HOST + "/account/friends/create/{0}";
-    public static final String FRIEND_GET_URL = SERVICE_HOST + "/account/friends/get/{0}?lastUpdateTime={0}";
+    public static final String FRIEND_GET_URL = SERVICE_HOST + "/account/friends/get/{0}?lastUpdateTime={1}";
     public static final String FRIEND_SEARCH_URL = SERVICE_HOST + "/account/search/get/{0}";
     public static final String FRIEND_SORT_UPDATE_URL = SERVICE_HOST + "/account/friendsort/get/{0}?lastUpdateTime={1}";
     public static final String FRIEND_RECOMMEND_URL = SERVICE_HOST + "/account/friends/recommend/{0}";//page no form 0

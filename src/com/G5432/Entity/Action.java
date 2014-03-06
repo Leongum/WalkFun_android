@@ -14,6 +14,8 @@ import java.util.Date;
  */
 public class Action {
 
+    @DatabaseField(id = true, useGetSet = true)
+    private String genId;
     @Expose
     @DatabaseField
     private Integer actionFromId;
@@ -38,6 +40,14 @@ public class Action {
 
     public Action() {
 
+    }
+
+    public String getGenId() {
+        return actionFromId + "-" + actionToId + "-" + updateTime.toString();
+    }
+
+    public void setGenId(String genId) {
+        this.genId = genId;
     }
 
     public Integer getActionFromId() {

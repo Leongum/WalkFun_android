@@ -2,6 +2,7 @@ package com.G5432.WalkFun;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -30,6 +31,8 @@ public class SetSelectionActivity extends OrmLiteBaseActivity<DatabaseHelper> {
     private UserHandler userHandler;
     private String sex = "男";
 
+    private AlertDialog.Builder sexSetBuilder = null;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,11 +41,11 @@ public class SetSelectionActivity extends OrmLiteBaseActivity<DatabaseHelper> {
         userHandler = new UserHandler(getHelper());
     }
 
-    final AlertDialog.Builder sexSetBuilder = new AlertDialog.Builder(this);
-
     private void initPageUIControl() {
         imgWoman = (ImageView) findViewById(R.id.setSelectionImgWoman);
         imgMan = (ImageView) findViewById(R.id.setSelectionImgMan);
+
+        sexSetBuilder = new AlertDialog.Builder(this);
 
         sexSetBuilder.setPositiveButton("是", new DialogInterface.OnClickListener() {
             @Override
@@ -72,7 +75,9 @@ public class SetSelectionActivity extends OrmLiteBaseActivity<DatabaseHelper> {
         @Override
         public void handleMessage(Message msg) {
             if (msg.what == 1) {
-                //todo:: jump to main page
+                Intent intent = new Intent();
+                intent.setClass(SetSelectionActivity.this, MainActivity.class);
+                startActivity(intent);
             } else {
                 ToastUtil.showMessage(getApplicationContext(), "性别设置失败，请重试");
             }

@@ -75,6 +75,7 @@ public class UserInfo {
     private Integer missionCombo;
     @DatabaseField
     private String propHaving;
+    @Expose
     @DatabaseField
     private Date updateTime;
 

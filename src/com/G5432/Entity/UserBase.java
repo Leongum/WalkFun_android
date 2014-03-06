@@ -46,6 +46,7 @@ public class UserBase {
     @Expose
     @DatabaseField
     private String platformInfo;
+    @Expose
     @DatabaseField
     private Date updateTime;
 

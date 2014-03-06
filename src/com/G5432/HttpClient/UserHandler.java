@@ -26,13 +26,13 @@ public class UserHandler {
     private HttpClientHelper httpClientHelper = new HttpClientHelper();
 
     private UserService userService = null;
-    private UserPropHandler propHandler = null;
+    private DatabaseHelper databaseHelper = null;
 
     private Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss").excludeFieldsWithoutExposeAnnotation().create();
 
     public UserHandler(DatabaseHelper helper) {
         userService = new UserService(helper);
-        propHandler = new UserPropHandler(helper);
+        databaseHelper = helper;
     }
 
     /**
@@ -50,7 +50,7 @@ public class UserHandler {
             httpClientHelper.get(url, null, new AsyncHttpResponseHandler() {
                 @Override
                 public void onSuccess(int statusCode, String response) {
-                    Log.d(this.getClass().getName(), response);
+                    Log.i(this.getClass().getName(), response);
                     GlobalSyncStatus.userInfoSynced = true;
                     if (statusCode == 200 || statusCode == 204) {
                         UserBase userBase = gson.fromJson(response, UserBase.class);
@@ -71,8 +71,9 @@ public class UserHandler {
                     handler.sendEmptyMessage(0);
                 }
             });
+        } else {
+            handler.sendEmptyMessage(0);
         }
-        handler.sendEmptyMessage(0);
     }
 
     /**
@@ -98,7 +99,7 @@ public class UserHandler {
         httpClientHelper.post(url, null, requestBody, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, String response) {
-                Log.d(this.getClass().getName(), response);
+                Log.i(this.getClass().getName(), response);
                 Message msg = Message.obtain();
                 if (statusCode == 200 || statusCode == 204) {
                     UserBase userBase = gson.fromJson(response, UserBase.class);
@@ -135,7 +136,7 @@ public class UserHandler {
         httpClientHelper.get(CommonUtil.getUrl(url), null, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, String response) {
-                Log.d(this.getClass().getName(), response);
+                Log.i(this.getClass().getName(), response);
                 Message msg = Message.obtain();
                 if (statusCode == 200 || statusCode == 204) {
                     UserBase userBase = gson.fromJson(response, UserBase.class);
@@ -170,10 +171,9 @@ public class UserHandler {
         String requestBody = gson.toJson(userBase, UserBase.class);
         final Integer userId = userBase.getUserId();
         String url = CommonUtil.getUrl(MessageFormat.format(Constant.USER_BASE_UPDATE_URL, userId));
-        httpClientHelper.post(url, null, requestBody, new AsyncHttpResponseHandler() {
+        httpClientHelper.put(url, null, requestBody, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, String response) {
-                Log.d(this.getClass().getName(), response);
                 if (statusCode == 200 || statusCode == 204) {
                     syncUserInfo(handler, userId);
                 } else {
@@ -201,11 +201,12 @@ public class UserHandler {
         httpClientHelper.get(CommonUtil.getUrl(url), null, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, String response) {
-                Log.d(this.getClass().getName(), response);
+                Log.i(this.getClass().getName(), response);
                 Message msg = Message.obtain();
                 if (statusCode == 200 || statusCode == 204) {
                     RewardDetails rewardDetails = gson.fromJson(response, RewardDetails.class);
                     syncUserInfo(new Handler(), userId);
+                    UserPropHandler propHandler = new UserPropHandler(databaseHelper);
                     propHandler.syncUserProps(new Handler());
                     msg.obj = rewardDetails;
                     msg.what = 1;
@@ -235,7 +236,7 @@ public class UserHandler {
         httpClientHelper.get(CommonUtil.getUrl(url), null, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, String response) {
-                Log.d(this.getClass().getName(), response);
+                Log.i(this.getClass().getName(), response);
                 Message msg = Message.obtain();
                 if (statusCode == 200 || statusCode == 204) {
                     List<SearchUserInfo> searchUserInfoList = gson.fromJson(response, new TypeToken<List<SearchUserInfo>>() {

@@ -26,6 +26,8 @@ public class LoadingActivity extends OrmLiteBaseActivity<DatabaseHelper> {
 
     private VirtualProductHandler virtualProductHandler = null;
 
+    private Boolean needJump = true;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,22 +59,34 @@ public class LoadingActivity extends OrmLiteBaseActivity<DatabaseHelper> {
                 Date localRecommendUpdateTime = CommonUtil.parseDate(UserUtil.getLastUpdateTime("RecommendAppUpdateTime"));
                 Date localActionDefineUpdateTime = CommonUtil.parseDate(UserUtil.getLastUpdateTime("ActionDefineUpdateTime"));
                 Date localProductDefineUpdateTime = CommonUtil.parseDate(UserUtil.getLastUpdateTime("VProductsUpdateTime"));
+                GlobalSyncStatus.setVersionSync();
                 if (localMissionUpdateTime.before(missionLastUpdateTime)) {
                     missionHandler.syncMissions(syncStatusHandler);
+                } else {
+                    GlobalSyncStatus.missionSynced = true;
                 }
                 if (localMessageUpdateTime.before(messageLastUpdateTime)) {
                     systemHandler.syncSystemMessages(syncStatusHandler);
+                } else {
+                    GlobalSyncStatus.messageSynced = true;
                 }
                 if (localRecommendUpdateTime.before(recommendLastUpdateTime)) {
                     systemHandler.syncRecommendApp(syncStatusHandler);
+                } else {
+                    GlobalSyncStatus.recommendSynced = true;
                 }
                 if (localActionDefineUpdateTime.before(actionDefineUpdateTime)) {
                     systemHandler.syncActionDefine(syncStatusHandler);
+                } else {
+                    GlobalSyncStatus.actionDefineSynced = true;
                 }
                 if (localProductDefineUpdateTime.before(productLastUpdateTime)) {
                     virtualProductHandler.syncVProducts(syncStatusHandler);
+                } else {
+                    GlobalSyncStatus.productSynced = true;
                 }
-            }else{
+                syncStatusHandler.sendEmptyMessage(1);
+            } else {
                 jumpActivity();
             }
         }
@@ -86,16 +100,18 @@ public class LoadingActivity extends OrmLiteBaseActivity<DatabaseHelper> {
                     GlobalSyncStatus.messageSynced &&
                     GlobalSyncStatus.recommendSynced &&
                     GlobalSyncStatus.actionDefineSynced &&
-                    GlobalSyncStatus.productSynced) {
+                    GlobalSyncStatus.productSynced &&
+                    needJump) {
                 jumpActivity();
             }
         }
     };
 
     public void jumpActivity() {
+        needJump = false;
         if (UserUtil.getUserId() > 0) {
             Intent intent = new Intent();
-            //intent.setClass(LoadingActivity.this, MainActivity.class);
+            intent.setClass(LoadingActivity.this, MainActivity.class);
             startActivity(intent);
         } else {
             Intent intent = new Intent();

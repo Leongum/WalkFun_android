@@ -47,7 +47,7 @@ public class MissionHandler {
         httpClientHelper.get(url, null, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, String response) {
-                Log.d(this.getClass().getName(), response);
+                Log.i(this.getClass().getName(), response);
                 GlobalSyncStatus.missionSynced = true;
                 if (statusCode == 200 || statusCode == 204) {
                     List<Mission> missionList = gson.fromJson(response, new TypeToken<List<Mission>>() {
@@ -95,7 +95,7 @@ public class MissionHandler {
             httpClientHelper.get(url, null, new AsyncHttpResponseHandler() {
                 @Override
                 public void onSuccess(int statusCode, String response) {
-                    Log.d(this.getClass().getName(), response);
+                    Log.i(this.getClass().getName(), response);
                     Message msg = Message.obtain();
                     if (statusCode == 200 || statusCode == 204) {
                         Mission mission = gson.fromJson(response, Mission.class);

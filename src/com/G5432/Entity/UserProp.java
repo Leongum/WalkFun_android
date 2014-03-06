@@ -28,6 +28,7 @@ public class UserProp {
     @Expose
     @DatabaseField
     private Integer ownNumber;
+    @Expose
     @DatabaseField
     private Date updateTime;
 

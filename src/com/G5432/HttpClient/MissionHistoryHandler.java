@@ -50,7 +50,7 @@ public class MissionHistoryHandler {
         httpClientHelper.get(url, null, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, String response) {
-                Log.d(this.getClass().getName(), response);
+                Log.i(this.getClass().getName(), response);
                 GlobalSyncStatus.missionHistorySynced = true;
                 if (statusCode == 200 || statusCode == 204) {
                     List<MissionHistory> missionHistoryList = gson.fromJson(response, new TypeToken<List<MissionHistory>>() {
@@ -86,7 +86,6 @@ public class MissionHistoryHandler {
             httpClientHelper.post(url, null, gson.toJson(missionHistoryList), new AsyncHttpResponseHandler() {
                 @Override
                 public void onSuccess(int statusCode, String response) {
-                    Log.d(this.getClass().getName(), response);
                     if (statusCode == 200 || statusCode == 204) {
                         missionHistoryService.updateUnsyncedMissionHistories(UserUtil.getUserId());
                     } else {

@@ -1,5 +1,7 @@
 package com.G5432.Entity;
 
+import com.google.gson.annotations.Expose;
+
 import java.math.BigInteger;
 import java.util.Date;
 
@@ -12,14 +14,23 @@ import java.util.Date;
  */
 public class SimpleRunningHistory {
 
+    @Expose
     private Integer userId;
+    @Expose
     private double spendCarlorie;
+    @Expose
     private BigInteger duration;
+    @Expose
     private double avgSpeed;
+    @Expose
     private Integer steps;
+    @Expose
     private double distance;
+    @Expose
     private Integer missionGrade;
+    @Expose
     private String propGet;
+    @Expose
     private Date missionEndTime;
 
     public Integer getUserId() {

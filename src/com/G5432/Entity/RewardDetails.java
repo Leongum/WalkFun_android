@@ -1,5 +1,7 @@
 package com.G5432.Entity;
 
+import com.google.gson.annotations.Expose;
+
 /**
  * Created with IntelliJ IDEA.
  * User: p
@@ -8,12 +10,13 @@ package com.G5432.Entity;
  * To change this template use File | Settings | File Templates.
  */
 public class RewardDetails {
+    @Expose
     private Integer userId;
-
+    @Expose
     private Integer actionId;
-
+    @Expose
     private Integer rewardMoney;
-
+    @Expose
     private Integer rewardPropId;
 
     public Integer getUserId() {

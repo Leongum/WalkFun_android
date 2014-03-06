@@ -7,7 +7,7 @@
 
     <RelativeLayout
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent" android:id="@+id/loginLayoutMain" android:visibility="gone">
+            android:layout_height="fill_parent" android:id="@+id/loginLayoutMain" android:visibility="visible">
         <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -28,7 +28,7 @@
     <RelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent" android:background="@drawable/paper" android:id="@+id/loginLayoutFeild"
-            android:visibility="visible">
+            android:visibility="gone">
         <Button
                 android:layout_width="55dp"
                 android:layout_height="55dp"

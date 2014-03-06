@@ -50,7 +50,7 @@ public class FriendHandler {
         httpClientHelper.get(url, null, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, String response) {
-                Log.d(this.getClass().getName(), response);
+                Log.i(this.getClass().getName(), response);
                 GlobalSyncStatus.userFriendSynced = true;
                 if (statusCode == 200 || statusCode == 204) {
                     List<UserFriend> userFriendList = gson.fromJson(response, new TypeToken<List<UserFriend>>() {
@@ -88,7 +88,7 @@ public class FriendHandler {
         httpClientHelper.get(url, null, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, String response) {
-                Log.d(this.getClass().getName(), response);
+                Log.i(this.getClass().getName(), response);
                 GlobalSyncStatus.userFriendSortSynced = true;
                 if (statusCode == 200 || statusCode == 204) {
                     List<FriendSort> friendSortList = gson.fromJson(response, new TypeToken<List<FriendSort>>() {
@@ -152,7 +152,7 @@ public class FriendHandler {
         httpClientHelper.get(url, null, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, String response) {
-                Log.d(this.getClass().getName(), response);
+                Log.i(this.getClass().getName(), response);
                 GlobalSyncStatus.userActionSynced = true;
                 if (statusCode == 200 || statusCode == 204) {
                     List<Action> actionList = gson.fromJson(response, new TypeToken<List<Action>>() {
@@ -199,7 +199,6 @@ public class FriendHandler {
         httpClientHelper.post(url, null, requestBody, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, String response) {
-                Log.d(this.getClass().getName(), response);
                 if (statusCode == 200 || statusCode == 204) {
                     syncActions(new Handler());
                     userHandler.syncUserInfo(new Handler(), userId);
@@ -230,7 +229,7 @@ public class FriendHandler {
         httpClientHelper.get(url, null, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, String response) {
-                Log.d(this.getClass().getName(), response);
+                Log.i(this.getClass().getName(), response);
                 if (statusCode == 200 || statusCode == 204) {
                     List<Action> actionList = gson.fromJson(response, new TypeToken<List<Action>>() {
                     }.getType());
@@ -273,7 +272,7 @@ public class FriendHandler {
         httpClientHelper.get(url, null, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, String response) {
-                Log.d(this.getClass().getName(), response);
+                Log.i(this.getClass().getName(), response);
                 if (statusCode == 200 || statusCode == 204) {
                     List<SearchUserInfo> searchUserInfoList = gson.fromJson(response, new TypeToken<List<SearchUserInfo>>() {
                     }.getType());
@@ -366,7 +365,6 @@ public class FriendHandler {
         httpClientHelper.post(url, null, requestBody, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, String response) {
-                Log.d(this.getClass().getName(), response);
                 if (statusCode == 200 || statusCode == 204) {
                     syncActions(new Handler());
                     userHandler.syncUserInfo(new Handler(), userId);

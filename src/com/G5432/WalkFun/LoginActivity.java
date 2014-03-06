@@ -1,5 +1,6 @@
 package com.G5432.WalkFun;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -39,10 +40,12 @@ public class LoginActivity extends OrmLiteBaseActivity<DatabaseHelper> {
     private RunningHistoryHandler runningHistoryHandler;
     private UserPropHandler userPropHandler;
 
+    private Boolean jumped = false;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.loading);
+        setContentView(R.layout.login);
         initPageUIControl();
         userHandler = new UserHandler(getHelper());
         friendHandler = new FriendHandler(getHelper());
@@ -136,6 +139,7 @@ public class LoginActivity extends OrmLiteBaseActivity<DatabaseHelper> {
         public void handleMessage(Message msg) {
             if (msg.what == 1) {
                 loginSuccessful = true;
+                GlobalSyncStatus.setUserBaseSync();
                 userPropHandler.syncUserProps(loginSuccessHandler);
                 friendHandler.syncActions(loginSuccessHandler);
                 friendHandler.syncFriendSort(loginSuccessHandler);
@@ -161,9 +165,12 @@ public class LoginActivity extends OrmLiteBaseActivity<DatabaseHelper> {
                     GlobalSyncStatus.userActionSynced &&
                     GlobalSyncStatus.missionHistorySynced &&
                     GlobalSyncStatus.historySynced) {
-                if (loginSuccessful) {
-                    //todo:: 跳转到首页
-                } else {
+                if (loginSuccessful && !jumped) {
+                    jumped = true;
+                    Intent intent = new Intent();
+                    intent.setClass(LoginActivity.this, MainActivity.class);
+                    startActivity(intent);
+                } else if (!loginSuccessful) {
                     userHandler.logout();
                     ToastUtil.showMessage(getApplicationContext(), "网络连接错误，登录失败。");
                 }
@@ -175,7 +182,9 @@ public class LoginActivity extends OrmLiteBaseActivity<DatabaseHelper> {
         @Override
         public void handleMessage(Message msg) {
             if (msg.what == 1) {
-                //todo:: jump sex setting page
+                Intent intent = new Intent();
+                intent.setClass(LoginActivity.this, SetSelectionActivity.class);
+                startActivity(intent);
             } else {
                 ToastUtil.showMessage(getApplicationContext(), "注册失败，用户名已存在");
             }

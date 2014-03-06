@@ -25,18 +25,18 @@ public class HttpClientHelper {
 
     public static Map<String, String> defaultHeaders = new HashMap<String, String>();
 
-    public static Map<String, String> postDefaultHeaders = new HashMap<String, String>();
+    //public static Map<String, String> postDefaultHeaders = new HashMap<String, String>();
 
     public HttpClientHelper() {
         defaultHeaders.put("Content-Type", "application/json");
         defaultHeaders.put("Accept-Encoding", "gzip");
 
-        postDefaultHeaders.put("Content-Type", "application/json");
-        postDefaultHeaders.put("Content-Encoding", "gzip");
+        //postDefaultHeaders.put("Content-Type", "application/json");
+        //postDefaultHeaders.put("Content-Encoding", "gzip");
 
         String key = MessageFormat.format("{0}#{1}",UserUtil.getUserUuid(), UserUtil.getUserId());
 
-        postDefaultHeaders.put("X-CLIENT-KEY", key);
+        //postDefaultHeaders.put("X-CLIENT-KEY", key);
         defaultHeaders.put("X-CLIENT-KEY", key);
     }
 
@@ -75,7 +75,7 @@ public class HttpClientHelper {
         if (customHttpHeader == null) {
             customHttpHeader = new HashMap<String, String>();
         }
-        customHttpHeader.putAll(postDefaultHeaders);
+        customHttpHeader.putAll(defaultHeaders);
         client.post(null, url, convertHeaders(customHttpHeader), convertHttpEntity(entity), "application/json", responseHandler);
     }
 
@@ -83,7 +83,7 @@ public class HttpClientHelper {
         if (customHttpHeader == null) {
             customHttpHeader = new HashMap<String, String>();
         }
-        customHttpHeader.putAll(postDefaultHeaders);
+        customHttpHeader.putAll(defaultHeaders);
         client.put(null, url, convertHeaders(customHttpHeader), convertHttpEntity(entity), "application/json", responseHandler);
     }
 }

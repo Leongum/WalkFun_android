@@ -1,5 +1,7 @@
 package com.G5432.Entity;
 
+import com.google.gson.annotations.Expose;
+
 /**
  * Created with IntelliJ IDEA.
  * User: p
@@ -8,12 +10,17 @@ package com.G5432.Entity;
  * To change this template use File | Settings | File Templates.
  */
 public class SearchUserInfo {
-
+    @Expose
     private Integer userId;
+    @Expose
     private String nickName;
+    @Expose
     private String sex;
+    @Expose
     private Double level;
+    @Expose
     private String userTitle;
+    @Expose
     private String userTitlePic;
 
     public Integer getUserId() {

@@ -13,7 +13,7 @@ import com.j256.ormlite.field.DatabaseField;
 public class FriendSort {
 
     @Expose
-    @DatabaseField
+    @DatabaseField(id=true)
     private Integer friendId;
     @Expose
     @DatabaseField

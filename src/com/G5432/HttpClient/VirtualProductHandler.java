@@ -45,7 +45,7 @@ public class VirtualProductHandler {
         httpClientHelper.get(url, null, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, String response) {
-                Log.d(this.getClass().getName(), response);
+                Log.i(this.getClass().getName(), response);
                 GlobalSyncStatus.productSynced = true;
                 if (statusCode == 200 || statusCode == 204) {
                     List<VProduct> vProductList = gson.fromJson(response, new TypeToken<List<VProduct>>() {

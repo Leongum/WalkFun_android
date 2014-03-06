@@ -49,7 +49,7 @@ public class SystemHandler {
             @Override
             public void onSuccess(int statusCode, String response) {
                 GlobalSyncStatus.weatherSynced = true;
-                Log.d(this.getClass().getName(), response);
+                Log.i(this.getClass().getName(), response);
                 Message msg = Message.obtain();
                 if (statusCode == 200 || statusCode == 204) {
                     JSONObject jsonObject = null;
@@ -97,7 +97,7 @@ public class SystemHandler {
             @Override
             public void onSuccess(int statusCode, String response) {
                 GlobalSyncStatus.pm25Synced = true;
-                Log.d(this.getClass().getName(), response);
+                Log.i(this.getClass().getName(), response);
                 Message msg = Message.obtain();
                 if (statusCode == 200 || statusCode == 204) {
                     PM25DetailInfo pm25DetailInfo = gson.fromJson(response, PM25DetailInfo.class);
@@ -130,7 +130,7 @@ public class SystemHandler {
         httpClientHelper.get(url, null, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, String response) {
-                Log.d(this.getClass().getName(), response);
+                Log.i(this.getClass().getName(), response);
                 Message msg = Message.obtain();
                 if (statusCode == 200 || statusCode == 204) {
                     VersionControl versionControl = gson.fromJson(response, VersionControl.class);
@@ -164,7 +164,7 @@ public class SystemHandler {
         httpClientHelper.get(url, null, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, String response) {
-                Log.d(this.getClass().getName(), response);
+                Log.i(this.getClass().getName(), response);
                 GlobalSyncStatus.messageSynced = true;
                 if (statusCode == 200 || statusCode == 204) {
                     List<SystemMessage> systemMessageList = gson.fromJson(response, new TypeToken<List<SystemMessage>>() {
@@ -199,7 +199,7 @@ public class SystemHandler {
         httpClientHelper.get(url, null, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, String response) {
-                Log.d(this.getClass().getName(), response);
+                Log.i(this.getClass().getName(), response);
                 GlobalSyncStatus.recommendSynced = true;
                 if (statusCode == 200 || statusCode == 204) {
                     List<RecommendApp> recommendAppList = gson.fromJson(response, new TypeToken<List<RecommendApp>>() {
@@ -242,7 +242,7 @@ public class SystemHandler {
         httpClientHelper.get(url, null, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, String response) {
-                Log.d(this.getClass().getName(), response);
+                Log.i(this.getClass().getName(), response);
                 GlobalSyncStatus.actionDefineSynced = true;
                 if (statusCode == 200 || statusCode == 204) {
                     List<ActionDefinition> actionDefinitions = gson.fromJson(response, new TypeToken<List<ActionDefinition>>() {

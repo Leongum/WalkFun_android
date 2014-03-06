@@ -44,6 +44,7 @@ public class MissionHistory {
     @Expose
     @DatabaseField
     private String missionStatusComment;
+    @Expose
     @DatabaseField
     private Date updateTime;
 

@@ -41,6 +41,7 @@ public class VProduct {
     @Expose
     @DatabaseField
     private Integer maxDropNum;
+    @Expose
     @DatabaseField
     private Date updateTime;
 

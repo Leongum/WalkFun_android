@@ -1,5 +1,7 @@
 package com.G5432.Entity;
 
+import com.google.gson.annotations.Expose;
+
 /**
  * Created with IntelliJ IDEA.
  * User: p
@@ -9,11 +11,17 @@ package com.G5432.Entity;
  */
 public class PM25DetailInfo {
 
+    @Expose
     private String aqi;
+    @Expose
     private String area;
+    @Expose
     private String pm2_5;
+    @Expose
     private String pm2_5_24h;
+    @Expose
     private String quality;
+    @Expose
     private String level;
 
     public String getAqi() {

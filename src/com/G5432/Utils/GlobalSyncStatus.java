@@ -22,7 +22,7 @@ public class GlobalSyncStatus {
 
     //history and mission history
     public static Boolean historySynced = true;
-    public static Boolean missionHistorySynced =true;
+    public static Boolean missionHistorySynced = true;
 
     //user sync logic
     public static Boolean userInfoSynced = true;
@@ -30,4 +30,21 @@ public class GlobalSyncStatus {
     public static Boolean userFriendSynced = true;
     public static Boolean userFriendSortSynced = true;
     public static Boolean userActionSynced = true;
+
+    public static void setVersionSync() {
+        messageSynced = false;
+        missionSynced = false;
+        recommendSynced = false;
+        productSynced = false;
+        actionDefineSynced = false;
+    }
+
+    public static void setUserBaseSync() {
+        GlobalSyncStatus.userPropsSynced = false;
+        GlobalSyncStatus.userFriendSynced = false;
+        GlobalSyncStatus.userFriendSortSynced = false;
+        GlobalSyncStatus.userActionSynced = false;
+        GlobalSyncStatus.missionHistorySynced = false;
+        GlobalSyncStatus.historySynced = false;
+    }
 }

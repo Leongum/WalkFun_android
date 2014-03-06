@@ -48,7 +48,7 @@ public class UserPropHandler {
         httpClientHelper.get(url, null, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, String response) {
-                Log.d(this.getClass().getName(), response);
+                Log.i(this.getClass().getName(), response);
                 GlobalSyncStatus.userPropsSynced = true;
                 if (statusCode == 200 || statusCode == 204) {
                     List<UserProp> userPropList = gson.fromJson(response, new TypeToken<List<UserProp>>() {
@@ -100,7 +100,6 @@ public class UserPropHandler {
         httpClientHelper.post(url, null, requestBody, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, String response) {
-                Log.d(this.getClass().getName(), response);
                 if (statusCode == 200 || statusCode == 204) {
                     syncUserProps(new Handler());
                     userHandler.syncUserInfo(new Handler(), userId);
