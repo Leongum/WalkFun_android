@@ -175,6 +175,7 @@ public class ItemMallActivity extends OrmLiteBaseActivity<DatabaseHelper> {
                 ToastUtil.showMessage(getApplicationContext(), "购买成功");
                 userBase = userHandler.fetchUser(userId);
                 totalMoney = Math.floor(userBase.getUserInfo().getGoldCoin());
+                txtMoney.setText(String.valueOf(totalMoney));
                 layoutBuy.setVisibility(View.GONE);
             } else {
                 ToastUtil.showMessage(getApplicationContext(), "网络通信失败");

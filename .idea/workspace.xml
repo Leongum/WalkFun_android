@@ -28,54 +28,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/female.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/green_btn_bg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/item_coin.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/item_icon_cell.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/item_table_bg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/item_title_board.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/itemmall_button.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/male.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/scroll_picker_bg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/searchviewcell_bg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/G5432/WalkFun/Friend/FriendMainActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/G5432/WalkFun/Friend/FriendSearchActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/G5432/WalkFun/Item/ItemMainActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/G5432/WalkFun/Item/ItemMallActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/G5432/WalkFun/Item/ItemUseActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/friend_cell.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/friend_main.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/friend_search.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/friend_search_cell.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/item_main.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/item_mall_item_cell.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/item_mall_main.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/item_prop_cell.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/item_use.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/android-async-http-1.4.3.jar" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/G5432/WalkFun/LoadingActivity.java" afterPath="$PROJECT_DIR$/src/com/G5432/WalkFun/Main/LoadingActivity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/G5432/WalkFun/LoginActivity.java" afterPath="$PROJECT_DIR$/src/com/G5432/WalkFun/Main/LoginActivity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/G5432/WalkFun/MainActivity.java" afterPath="$PROJECT_DIR$/src/com/G5432/WalkFun/Main/MainActivity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/G5432/WalkFun/SetSelectionActivity.java" afterPath="$PROJECT_DIR$/src/com/G5432/WalkFun/Main/SetSelectionActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/android-async-http-1.4.4.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/G5432/Utils/CommonUtil.java" afterPath="$PROJECT_DIR$/src/com/G5432/Utils/CommonUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/G5432/Entity/Enum/FollowStatusEnum.java" afterPath="$PROJECT_DIR$/src/com/G5432/Entity/Enum/FollowStatusEnum.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/G5432/HttpClient/FriendHandler.java" afterPath="$PROJECT_DIR$/src/com/G5432/HttpClient/FriendHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/G5432/Service/FriendService.java" afterPath="$PROJECT_DIR$/src/com/G5432/Service/FriendService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/G5432/Utils/GlobalSyncStatus.java" afterPath="$PROJECT_DIR$/src/com/G5432/Utils/GlobalSyncStatus.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/G5432/HttpClient/HttpClientHelper.java" afterPath="$PROJECT_DIR$/src/com/G5432/HttpClient/HttpClientHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/G5432/HttpClient/SystemHandler.java" afterPath="$PROJECT_DIR$/src/com/G5432/HttpClient/SystemHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/G5432/HttpClient/UserHandler.java" afterPath="$PROJECT_DIR$/src/com/G5432/HttpClient/UserHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/G5432/HttpClient/UserPropHandler.java" afterPath="$PROJECT_DIR$/src/com/G5432/HttpClient/UserPropHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/G5432/HttpClient/VirtualProductHandler.java" afterPath="$PROJECT_DIR$/src/com/G5432/HttpClient/VirtualProductHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/libs.xml" afterPath="$PROJECT_DIR$/.idea/libraries/libs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/main.xml" afterPath="$PROJECT_DIR$/res/layout/main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/G5432/WalkFun/Item/ItemMallActivity.java" afterPath="$PROJECT_DIR$/src/com/G5432/WalkFun/Item/ItemMallActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="24338852-29c0-4e07-a664-dfb1d50d7670" name="no commit" comment="" />
     <ignored path="Cyberace_android.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1394782536748" ignored="false" />
+    <file path="/Dummy.txt" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1395031541797" ignored="false" />
     <file path="/fragment.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1394695925510" ignored="false" />
     <file path="/RunningHistoryService.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1393829484702" ignored="false" />
     <file path="/LoadingActivity.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1394695715141" ignored="false" />
@@ -83,7 +44,7 @@
     <file path="/BackendSyncRequest.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1393816791175" ignored="false" />
     <file path="/UserUtil.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1393916359643" ignored="false" />
     <file path="/CommonUtil.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1394693080976" ignored="false" />
-    <file path="/AndroidManifest.xml" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1394783008675" ignored="false" />
+    <file path="/AndroidManifest.xml" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1395031825888" ignored="false" />
     <file path="/RunningBasic.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1383121234735" ignored="false" />
     <file path="/LoginActivity.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1394089227626" ignored="false" />
     <file path="/MySNSAdapter.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1383123615830" ignored="false" />
@@ -215,7 +176,7 @@
     <file path="/ItemMainActivity.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1394769304094" ignored="false" />
     <file path="/HttpClientHelper.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1394676262622" ignored="false" />
     <file path="/ItemUseActivity.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1394696144518" ignored="false" />
-    <file path="/ItemMallActivity.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1395031257321" ignored="false" />
+    <file path="/ItemMallActivity.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1395031956288" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -308,51 +269,6 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/G5432/WalkFun/Item/ItemMallActivity.java" line="163" class="com.G5432.WalkFun.Item.ItemMallActivity$6" package="com.G5432.WalkFun.Item">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/G5432/WalkFun/Item/ItemMallActivity.java" line="173" class="com.G5432.WalkFun.Item.ItemMallActivity$7" package="com.G5432.WalkFun.Item">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/G5432/HttpClient/UserPropHandler.java" line="91" class="com.G5432.HttpClient.UserPropHandler" package="com.G5432.HttpClient">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
     </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
@@ -399,10 +315,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserHandler.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="UserHandler.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/G5432/HttpClient/UserHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="16" selection-start="1171" selection-end="1171" vertical-scroll-proportion="-0.6060606">
+            <state line="43" column="16" selection-start="1171" selection-end="1171" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -420,7 +336,7 @@
       <file leaf-file-name="UserPropHandler.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/G5432/HttpClient/UserPropHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="104" column="39" selection-start="3883" selection-end="3883" vertical-scroll-proportion="0.0">
+            <state line="91" column="0" selection-start="3096" selection-end="3096" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -429,28 +345,25 @@
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="78" selection-start="1544" selection-end="1544" vertical-scroll-proportion="0.0">
+            <state line="47" column="115" selection-start="2884" selection-end="2884" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="item_mall_main.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/item_mall_main.xml">
-          <provider editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+      <file leaf-file-name="BuildConfig.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gen/com/G5432/WalkFun/BuildConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="19" selection-start="127" selection-end="127" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
-          </provider>
         </entry>
       </file>
-      <file leaf-file-name="ItemMallActivity.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ItemMallActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/G5432/WalkFun/Item/ItemMallActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="164" column="39" selection-start="6798" selection-end="6798" vertical-scroll-proportion="0.0">
+            <state line="177" column="59" selection-start="0" selection-end="7892" vertical-scroll-proportion="10.939394">
               <folding>
                 <element signature="e#3339#3510#0" expanded="true" />
                 <element signature="e#3499#3500#0" expanded="true" />
@@ -511,10 +424,10 @@
         <option value="$PROJECT_DIR$/src/com/G5432/WalkFun/Item/ItemMainActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/item_mall_item_cell.xml" />
         <option value="$PROJECT_DIR$/res/layout/item_buy_number.xml" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/res/layout/item_mall_main.xml" />
-        <option value="$PROJECT_DIR$/src/com/G5432/WalkFun/Item/ItemMallActivity.java" />
         <option value="$PROJECT_DIR$/src/com/G5432/HttpClient/UserPropHandler.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/com/G5432/WalkFun/Item/ItemMallActivity.java" />
       </list>
     </option>
   </component>
@@ -1098,7 +1011,11 @@
       <created>1394092255230</created>
       <updated>1394092255230</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="finished friend and props.">
+      <created>1395031567617</created>
+      <updated>1395031567617</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1198,7 +1115,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished loading login register logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished friend and props." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1222,6 +1139,7 @@
     <MESSAGE value="runinfoactivity" />
     <MESSAGE value="fix build issue" />
     <MESSAGE value="finished loading login register logic" />
+    <MESSAGE value="finished friend and props." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1235,13 +1153,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/G5432/WalkFun/Main/LoadingActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="36" selection-start="4223" selection-end="4223" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/G5432/WalkFun/Main/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="67" column="15" selection-start="2180" selection-end="2325" vertical-scroll-proportion="0.0">
@@ -1272,13 +1183,6 @@
     <entry file="jar://$PROJECT_DIR$/../android_SDK/sdk/platforms/android-14/android.jar!/android/R.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="544" column="32" selection-start="39144" selection-end="39144" vertical-scroll-proportion="0.33333334" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="78" selection-start="1544" selection-end="1544" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/item_mall_main.xml">
@@ -1338,9 +1242,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/G5432/HttpClient/UserHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="16" selection-start="1171" selection-end="1171" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gen/com/G5432/WalkFun/BuildConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="19" selection-start="127" selection-end="127" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="115" selection-start="2884" selection-end="2884" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/G5432/HttpClient/UserPropHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="0" selection-start="3096" selection-end="3096" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/G5432/WalkFun/Item/ItemMallActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="164" column="39" selection-start="6798" selection-end="6798" vertical-scroll-proportion="0.0">
+        <state line="177" column="59" selection-start="0" selection-end="7892" vertical-scroll-proportion="10.939394">
           <folding>
             <element signature="e#3339#3510#0" expanded="true" />
             <element signature="e#3499#3500#0" expanded="true" />
@@ -1353,20 +1285,6 @@
             <element signature="e#6560#6893#0" expanded="true" />
             <element signature="e#6878#6879#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/G5432/HttpClient/UserPropHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="39" selection-start="3883" selection-end="3883" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/G5432/HttpClient/UserHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="16" selection-start="1171" selection-end="1171" vertical-scroll-proportion="-0.6060606">
-          <folding />
         </state>
       </provider>
     </entry>
