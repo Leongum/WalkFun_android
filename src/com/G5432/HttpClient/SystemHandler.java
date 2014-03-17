@@ -16,7 +16,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.text.MessageFormat;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -276,7 +276,21 @@ public class SystemHandler {
     }
 
     public ActionDefinition fetchActionDefineByPropId(Integer propId) {
-        //todo:: need add logic
+        List<ActionDefinition> actionDefinitionList = fetchAllActionDefine(ActionDefineEnum.USE);
+        List<ActionDefinition> findActions = new ArrayList<ActionDefinition>();
+        for (ActionDefinition actionDefinition : actionDefinitionList) {
+            Map<Integer, Integer> actionDic = CommonUtil.explainActionRule(actionDefinition.getActionRule());
+            if (actionDic.containsKey(propId)) {
+                findActions.add(actionDefinition);
+            }
+        }
+        if (findActions.size() > 1) {
+            Random random = new Random(new Date().getTime());
+            int index = random.nextInt(findActions.size());
+            return findActions.get(index);
+        } else if (findActions.size() == 1) {
+            return findActions.get(0);
+        }
         return null;
     }
 }

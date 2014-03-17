@@ -14,6 +14,7 @@ import com.google.gson.reflect.TypeToken;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 
 import java.text.MessageFormat;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -277,14 +278,15 @@ public class FriendHandler {
                     List<SearchUserInfo> searchUserInfoList = gson.fromJson(response, new TypeToken<List<SearchUserInfo>>() {
                     }.getType());
                     Integer me = UserUtil.getUserId();
+                    List<SearchUserInfo> returnSearchList = new ArrayList<SearchUserInfo>();
                     for (SearchUserInfo searchUserInfo : searchUserInfoList) {
-                        if (me == searchUserInfo.getUserId()) {
-                            searchUserInfoList.remove(searchUserInfo);
+                        if (me != searchUserInfo.getUserId()) {
+                            returnSearchList.add(searchUserInfo);
                         }
                     }
                     Message msg = Message.obtain();
                     msg.what = 1;
-                    msg.obj = searchUserInfoList;
+                    msg.obj = returnSearchList;
                     handler.sendMessage(msg);
                 } else {
                     Log.e(this.getClass().getName(), response);
@@ -308,8 +310,10 @@ public class FriendHandler {
      */
     public FollowStatusEnum getFollowStatus(Integer friendId) {
         UserFriend userFriend = friendService.fetchFriendByIds(UserUtil.getUserId(), friendId);
-
-        if (userFriend != null || userFriend.getFriendStatus() == FollowStatusEnum.DELETED.ordinal()) {
+        if (userFriend == null){
+            return FollowStatusEnum.UNKNOW;
+        }
+        if (userFriend != null && userFriend.getFriendStatus() == FollowStatusEnum.DELETED.ordinal()) {
             return FollowStatusEnum.DELETED;
         }
         return FollowStatusEnum.FOLLOWED;
@@ -366,7 +370,7 @@ public class FriendHandler {
             @Override
             public void onSuccess(int statusCode, String response) {
                 if (statusCode == 200 || statusCode == 204) {
-                    syncActions(new Handler());
+                    syncFriends(new Handler());
                     userHandler.syncUserInfo(new Handler(), userId);
                     syncFriendSort(new Handler());
                     handler.sendEmptyMessageDelayed(1, 1000);

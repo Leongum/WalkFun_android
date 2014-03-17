@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android"
+        android:clickable="false" android:background="#ffffff">
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="返回"
+            android:id="@+id/friendSearchBtnReturn" android:layout_alignParentLeft="true" android:layout_alignTop="@+id/friendSearchTxtInput"
+            android:background="#ffffff" android:layout_marginTop="15dp" android:textColor="#1da1ff"/>
+    <EditText
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:id="@+id/friendSearchTxtInput"
+            android:inputType="text"
+            android:hint="请直接输入用户的昵称搜索" android:textSize="12dp" android:layout_toLeftOf="@+id/friendsearchBtnSearch"
+            android:layout_alignTop="@+id/friendsearchBtnSearch"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="最近活跃"
+            android:id="@+id/friendSearchTxtTitle"
+            android:textColor="#000000"
+            android:layout_alignParentLeft="true" android:layout_marginLeft="9dp"
+            android:layout_below="@+id/friendSearchTxtInput"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="换一批"
+            android:id="@+id/friendSearchBtnNext"
+            android:textColor="#1da1ff" android:background="#ffffff"
+            android:layout_alignRight="@+id/friendsearchBtnSearch" android:layout_below="@+id/friendSearchTxtInput"
+            android:layout_marginRight="15dp"/>
+    <ListView
+            android:layout_width="453dp"
+            android:layout_height="410dp"
+            android:id="@+id/friendSearchList" android:layout_alignLeft="@+id/friendSearchTxtTitle" android:layout_below="@+id/friendSearchTxtTitle"
+            android:layout_alignRight="@+id/friendSearchBtnNext"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="搜索"
+            android:id="@+id/friendsearchBtnSearch" android:layout_alignParentLeft="false"
+            android:layout_alignParentTop="true" android:layout_alignParentRight="true"/>
+</RelativeLayout>

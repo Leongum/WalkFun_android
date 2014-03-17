@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/friendcellLayoutCell">
+    <ImageView
+            android:layout_width="260dp"
+            android:layout_height="77dp"
+            android:id="@+id/friendcellImgBg"
+            android:background="@drawable/searchviewcell_bg" android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Name"
+            android:id="@+id/friendcellTxtUserName" android:layout_alignLeft="@+id/friendcellImgBg"
+            android:layout_alignTop="@+id/friendcellImgBg" android:textColor="#000000" android:layout_marginLeft="18dp"
+            android:layout_marginTop="15dp"/>
+    <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/friendcellImgSex" android:layout_alignLeft="@+id/friendcellTxtUserName" android:layout_below="@+id/friendcellTxtUserName"
+            android:layout_marginTop="5dp" android:layout_marginLeft="5dp"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Lv.10"
+              android:id="@+id/friendcellTxtLevel"
+              android:textColor="#000000"
+              android:textSize="12dp" android:layout_toRightOf="@+id/friendcellImgSex"
+              android:layout_alignBottom="@+id/friendcellImgSex" android:layout_marginLeft="8dp"
+              android:layout_marginBottom="2dp"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="User Title"
+              android:id="@+id/friendcellTxtUserTitle"
+              android:textColor="#4a4a4a"
+              android:textSize="12dp" android:layout_toRightOf="@+id/friendcellTxtUserName"
+              android:layout_alignBottom="@+id/friendcellTxtUserName" android:layout_marginLeft="20dp"/>
+</RelativeLayout>

@@ -1,4 +1,4 @@
-package com.G5432.WalkFun;
+package com.G5432.WalkFun.Main;
 
 import android.content.Intent;
 import android.os.*;
@@ -6,8 +6,10 @@ import com.G5432.DBUtils.DatabaseHelper;
 import com.G5432.Entity.*;
 import com.G5432.HttpClient.*;
 import com.G5432.Utils.*;
+import com.G5432.WalkFun.R;
 import com.j256.ormlite.android.apptools.OrmLiteBaseActivity;
 
+import java.io.File;
 import java.util.Date;
 
 
@@ -21,11 +23,13 @@ import java.util.Date;
 public class LoadingActivity extends OrmLiteBaseActivity<DatabaseHelper> {
 
     private SystemHandler systemHandler = null;
+    private UserHandler userHandler = null;
 
     private MissionHandler missionHandler = null;
 
     private VirtualProductHandler virtualProductHandler = null;
 
+    //flag to make sure only jump once
     private Boolean needJump = true;
 
     @Override
@@ -36,8 +40,10 @@ public class LoadingActivity extends OrmLiteBaseActivity<DatabaseHelper> {
         systemHandler = new SystemHandler(getHelper());
         missionHandler = new MissionHandler(getHelper());
         virtualProductHandler = new VirtualProductHandler(getHelper());
+        userHandler = new UserHandler(getHelper());
         //do sync data
         systemHandler.syncVersion(versionHandler);
+
     }
 
     Handler versionHandler = new Handler() {
@@ -85,6 +91,8 @@ public class LoadingActivity extends OrmLiteBaseActivity<DatabaseHelper> {
                 } else {
                     GlobalSyncStatus.productSynced = true;
                 }
+                //sync userInfo.
+                userHandler.syncUserInfo(syncStatusHandler,UserUtil.getUserId());
                 syncStatusHandler.sendEmptyMessage(1);
             } else {
                 jumpActivity();

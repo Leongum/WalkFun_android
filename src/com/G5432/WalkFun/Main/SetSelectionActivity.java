@@ -1,4 +1,4 @@
-package com.G5432.WalkFun;
+package com.G5432.WalkFun.Main;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -13,6 +13,7 @@ import com.G5432.Entity.UserBase;
 import com.G5432.HttpClient.*;
 import com.G5432.Utils.ToastUtil;
 import com.G5432.Utils.UserUtil;
+import com.G5432.WalkFun.R;
 import com.j256.ormlite.android.apptools.OrmLiteBaseActivity;
 
 /**

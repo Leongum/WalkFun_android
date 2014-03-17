@@ -6,6 +6,7 @@ import java.text.MessageFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -16,6 +17,16 @@ import java.util.Map;
  * To change this template use File | Settings | File Templates.
  */
 public class CommonUtil {
+
+
+    public static String PROP_YES = "PY";
+    public static String PROP_NO = "PN";
+    public static String HEALTH = "H";
+    public static String FAT = "F";
+    public static String RANDOM = "R";
+    public static String MONEY = "M";
+    public static String SHOW_DROP = "D";
+    public static String HEAD_BAG = "B";
 
     public static Date parseDate(String date) {
         DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -118,5 +129,25 @@ public class CommonUtil {
             }
         }
         return null;
+    }
+
+    public static Map<Integer, Integer> explainActionRule(String actionRule) {
+        Map<Integer, Integer> vProductIds = new HashMap<Integer, Integer>();
+        //9,圆润的石头,1,PY|6,1个金币,1,PN
+        if (actionRule != null) {
+            String[] ruleArray = actionRule.split("\\|");
+            for (int i = 0; i < ruleArray.length; i++) {
+                String[] ruleDetails = ruleArray[i].split(",");
+                if (ruleDetails != null && ruleDetails.length == 4) {
+                    Integer productId = Integer.parseInt(ruleDetails[0]);
+                    Integer numb = Integer.parseInt(ruleDetails[2]);
+                    String propFlag = ruleDetails[3];
+                    if (propFlag.equalsIgnoreCase(PROP_YES)) {
+                        vProductIds.put(productId, numb);
+                    }
+                }
+            }
+        }
+        return vProductIds;
     }
 }

@@ -37,6 +37,7 @@ public class GlobalSyncStatus {
         recommendSynced = false;
         productSynced = false;
         actionDefineSynced = false;
+        userInfoSynced = false;
     }
 
     public static void setUserBaseSync() {

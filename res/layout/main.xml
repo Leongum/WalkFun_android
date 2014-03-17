@@ -4,17 +4,9 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android"
         android:background="@drawable/charactor">
-    <Button
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:id="@+id/mainBtnSync" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true"
-            android:background="@drawable/sync_apply" android:layout_marginLeft="15dp"/>
-    <Button android:layout_width="55dp" android:layout_height="55dp" android:id="@+id/mainBtnSet"
-            android:background="@drawable/settings" android:layout_alignParentRight="true"
-            android:layout_alignBottom="@+id/mainBtnSync" android:layout_marginRight="15dp"/>
     <RelativeLayout
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
+            android:layout_height="wrap_content">
         <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="83dp"
@@ -41,4 +33,16 @@
                 android:layout_alignTop="@+id/mainImgTop" android:layout_marginRight="20dp"
                 android:layout_marginTop="20dp" android:textColor="#000000" android:textSize="10dp"/>
     </RelativeLayout>
+    <Button
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:id="@+id/mainBtnSync" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true"
+            android:background="@drawable/sync_apply" android:layout_marginLeft="15dp"/>
+    <Button android:layout_width="55dp" android:layout_height="55dp" android:id="@+id/mainBtnSet"
+            android:background="@drawable/settings" android:layout_alignParentRight="true"
+            android:layout_alignBottom="@+id/mainBtnSync" android:layout_marginRight="15dp"/>
+    <Button android:layout_width="55dp" android:layout_height="55dp" android:id="@+id/mainBtnProps"
+            android:background="@drawable/settings"
+            android:layout_toRightOf="@+id/mainBtnSync" android:layout_alignTop="@+id/mainBtnSync"
+            android:longClickable="false"/>
 </RelativeLayout>

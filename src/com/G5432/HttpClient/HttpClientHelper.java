@@ -34,10 +34,11 @@ public class HttpClientHelper {
         //postDefaultHeaders.put("Content-Type", "application/json");
         //postDefaultHeaders.put("Content-Encoding", "gzip");
 
-        String key = MessageFormat.format("{0}#{1}",UserUtil.getUserUuid(), UserUtil.getUserId());
+        String key = MessageFormat.format("{0}#{1}", UserUtil.getUserUuid(), UserUtil.getUserId());
 
         //postDefaultHeaders.put("X-CLIENT-KEY", key);
         defaultHeaders.put("X-CLIENT-KEY", key);
+        client.setTimeout(3000);
     }
 
     public static HttpEntity convertHttpEntity(String entity) {
@@ -61,6 +62,10 @@ public class HttpClientHelper {
             }
         }
         return headers;
+    }
+
+    public static void get(String url, BinaryHttpResponseHandler responseHandler) {
+        client.get(url, responseHandler);
     }
 
     public static void get(String url, Map<String, String> customHttpHeader, AsyncHttpResponseHandler responseHandler) {

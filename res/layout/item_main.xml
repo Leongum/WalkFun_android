@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android"
+        android:background="@drawable/main_bg">
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+        <ImageView
+                android:layout_width="320dp"
+                android:layout_height="85dp"
+                android:id="@+id/itemMainImgTop" android:layout_centerHorizontal="true" android:layout_alignParentTop="true"
+                android:background="@drawable/item_title_board"/>
+        <Button
+                android:layout_width="83dp"
+                android:layout_height="61dp"
+                android:id="@+id/itemMainBtnMall" android:layout_alignRight="@+id/itemMainImgTop"
+                android:layout_alignTop="@+id/itemMainImgTop" android:background="@drawable/itemmall_button"
+                android:layout_marginTop="10dp" android:layout_marginRight="30dp"/>
+        <ImageView
+                android:layout_width="320dp"
+                android:layout_height="568dp"
+                android:id="@+id/itemMainImgTableBg" android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/item_table_bg"/>
+        <TextView
+                android:layout_width="70dp"
+                android:layout_height="16dp"
+                android:text="12345"
+                android:id="@+id/itemMainTxtMoney" android:layout_alignLeft="@+id/itemMainBtnMall"
+                android:layout_alignTop="@+id/itemMainBtnMall" android:layout_marginTop="8dp"
+                android:gravity="right|fill_vertical" android:textSize="12dp" android:textColor="#080808"/>
+        <GridView
+                android:layout_width="280dp"
+                android:layout_height="260dp"
+                android:id="@+id/itemMainGridProps" android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true" android:layout_marginTop="120dp" android:layout_marginLeft="20dp"
+                android:numColumns="3" android:horizontalSpacing="10dp"
+                android:verticalSpacing="10dp" android:fastScrollEnabled="true"/>
+    </RelativeLayout>
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" android:alpha="0.5" android:background="#000000"
+            android:id="@+id/itemMainLayoutUse" android:visibility="gone">
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="使 用"
+                android:id="@+id/itemMainBtnUse" android:layout_centerHorizontal="true" android:layout_alignParentTop="true"
+                android:layout_marginTop="380dp"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/itemMainImgUseShow" android:layout_centerHorizontal="true" android:layout_alignParentTop="true"
+                android:layout_marginTop="240dp"/>
+        <TextView
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:text="How to use"
+                android:id="@+id/itemMainTxtUseTitle" android:layout_centerHorizontal="true" android:layout_alignParentTop="true"
+                android:layout_marginTop="128dp" android:textSize="14dp" android:gravity="center"
+                android:inputType="text|textMultiLine" android:textColor="#ffffff"/>
+    </RelativeLayout>
+</RelativeLayout>

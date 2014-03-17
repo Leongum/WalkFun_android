@@ -1,4 +1,4 @@
-package com.G5432.WalkFun;
+package com.G5432.WalkFun.Main;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,9 @@ import com.G5432.DBUtils.DatabaseHelper;
 import com.G5432.Entity.UserBase;
 import com.G5432.HttpClient.UserHandler;
 import com.G5432.Utils.UserUtil;
+import com.G5432.WalkFun.Friend.FriendMainActivity;
+import com.G5432.WalkFun.Item.ItemMainActivity;
+import com.G5432.WalkFun.R;
 import com.j256.ormlite.android.apptools.OrmLiteBaseActivity;
 
 /**
@@ -25,6 +28,9 @@ public class MainActivity extends OrmLiteBaseActivity<DatabaseHelper> {
     private ImageView imgUserInfo;
     private TextView txtUserName;
     private TextView txtLevel;
+
+
+    private Button btnItem;
 
     private UserHandler userHandler;
     private UserBase userBase;
@@ -45,17 +51,33 @@ public class MainActivity extends OrmLiteBaseActivity<DatabaseHelper> {
         txtUserName = (TextView) findViewById(R.id.mainTxtName);
         txtLevel = (TextView) findViewById(R.id.mainTxtLevel);
 
+
+
         txtUserName.setText(userBase.getNickName());
         txtLevel.setText("Lv." + userBase.getUserInfo().getLevel().intValue());
 
         btnSync.setOnClickListener(syncListener);
         btnSetting.setOnClickListener(settingListener);
         imgUserInfo.setOnClickListener(userInfoListener);
+
+        //todo:: need remove
+        btnItem = (Button) findViewById(R.id.mainBtnProps);
+        btnItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, ItemMainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private View.OnClickListener syncListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
+            Intent intent = new Intent();
+            intent.setClass(MainActivity.this, FriendMainActivity.class);
+            startActivity(intent);
             //todo:: do sync things
         }
     };

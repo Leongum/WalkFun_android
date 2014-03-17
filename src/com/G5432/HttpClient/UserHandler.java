@@ -51,7 +51,6 @@ public class UserHandler {
                 @Override
                 public void onSuccess(int statusCode, String response) {
                     Log.i(this.getClass().getName(), response);
-                    GlobalSyncStatus.userInfoSynced = true;
                     if (statusCode == 200 || statusCode == 204) {
                         UserBase userBase = gson.fromJson(response, UserBase.class);
                         UserInfo userInfo = gson.fromJson(response, UserInfo.class);
@@ -62,10 +61,14 @@ public class UserHandler {
                         Log.e(this.getClass().getName(), response);
                         handler.sendEmptyMessage(0);
                     }
+                    GlobalSyncStatus.userInfoSynced = true;
                 }
 
                 @Override
-                public void onFailure(Throwable error, String content) {
+                public void onFailure(int statusCode, Throwable error, String content) {
+                    if(statusCode == 406 && content.contains("LOGIN_CHECK_FAIL")){
+                        logout();
+                    }
                     Log.e(this.getClass().getName(), error.getMessage());
                     GlobalSyncStatus.userInfoSynced = true;
                     handler.sendEmptyMessage(0);

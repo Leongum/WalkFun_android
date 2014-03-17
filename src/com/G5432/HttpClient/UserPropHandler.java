@@ -102,8 +102,8 @@ public class UserPropHandler {
             public void onSuccess(int statusCode, String response) {
                 if (statusCode == 200 || statusCode == 204) {
                     syncUserProps(new Handler());
-                    userHandler.syncUserInfo(new Handler(), userId);
-                    handler.sendEmptyMessageDelayed(1, 1000);
+                    userHandler.syncUserInfo(handler, userId);
+                    //handler.sendEmptyMessageDelayed(1, 1000);
                 } else {
                     Log.e(this.getClass().getName(), response);
                     handler.sendEmptyMessage(0);

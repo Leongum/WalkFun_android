@@ -54,7 +54,7 @@ public class FriendService {
         UserFriend userFriend = null;
         try {
             QueryBuilder<UserFriend, String> queryBuilder = userFriendDao.queryBuilder();
-            queryBuilder.where().eq("userId", userId).and().ne("friendId", friendId);
+            queryBuilder.where().eq("userId", userId).and().eq("friendId", friendId);
             userFriend = queryBuilder.queryForFirst();
             if (userFriend != null) {
                 FriendSort friendSort = friendSortDao.queryForId(userFriend.getUserId());
@@ -75,7 +75,7 @@ public class FriendService {
         List<UserFriend> friendList = null;
         try {
             QueryBuilder<UserFriend, String> queryBuilder = userFriendDao.queryBuilder();
-            queryBuilder.where().eq("friendId", userId).and().ne("friendEach", null);
+            queryBuilder.where().eq("friendId", userId).and().isNotNull("friendEach");
             queryBuilder.orderBy("addTime", false);
             friendList = queryBuilder.query();
             for (UserFriend userFriend : friendList) {

@@ -1,4 +1,4 @@
-package com.G5432.WalkFun;
+package com.G5432.WalkFun.Main;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,7 @@ import com.G5432.DBUtils.DatabaseHelper;
 import com.G5432.Entity.UserBase;
 import com.G5432.HttpClient.*;
 import com.G5432.Utils.*;
+import com.G5432.WalkFun.R;
 import com.j256.ormlite.android.apptools.OrmLiteBaseActivity;
 
 /**

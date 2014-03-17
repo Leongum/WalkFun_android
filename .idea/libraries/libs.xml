@@ -4,10 +4,12 @@
       <root url="jar://$PROJECT_DIR$/libs/ormlite-core-4.47.jar!/" />
       <root url="jar://$PROJECT_DIR$/libs/gson-2.2.4.jar!/" />
       <root url="jar://$PROJECT_DIR$/libs/ormlite-android-4.47.jar!/" />
-      <root url="jar://$PROJECT_DIR$/libs/android-async-http-1.4.3.jar!/" />
       <root url="jar://$PROJECT_DIR$/libs/android-support-v4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/android-async-http-1.4.4.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ideaLibSources/android-async-http-1.4.4-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

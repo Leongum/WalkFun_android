@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android"
+        android:background="@drawable/main_bg">
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+        <Button
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:id="@+id/itemMallBtnReturn" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"
+                android:background="@drawable/back_bg"/>
+        <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/itemMallListProps" android:layout_alignParentLeft="true"
+                android:layout_below="@+id/itemMallBtnReturn" android:layout_alignParentBottom="true"
+                android:scrollingCache="false"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$200"
+                android:id="@+id/itemMallMainTxtMoney" android:layout_alignRight="@+id/itemMallListProps"
+                android:layout_alignTop="@+id/itemMallBtnReturn" android:layout_marginTop="15dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" android:id="@+id/itemMallMainLayoutPopup" android:visibility="visible">
+        <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" android:background="#000000" android:alpha="0.5">
+        </RelativeLayout>
+        <TextView android:layout_width="180dp" android:layout_height="25dp" android:text="商品名字"
+                  android:id="@+id/itemMallMainTxtTitle"
+                  android:gravity="center" android:textColor="#ffffff"
+                  android:textSize="12dp" android:layout_alignLeft="@+id/itemMallMainImgPop"
+                  android:layout_alignTop="@+id/itemMallMainImgPop" android:layout_marginTop="115dp"
+                  android:layout_marginLeft="65dp"/>
+        <TextView
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="$ 200"
+                android:id="@+id/itemMallMainPopTxtMoney"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:layout_alignLeft="@+id/itemMallMainBtnDecrease" android:layout_below="@+id/itemMallMainBtnDecrease"
+                android:layout_marginLeft="10dp"/>
+        <Button
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:text="购 买"
+                android:id="@+id/itemMallMainBtnBuy"
+                android:background="@drawable/green_btn_bg"
+                android:textColor="#000000" android:textSize="16dp" android:textStyle="bold"
+                android:layout_alignLeft="@+id/itemMallMainBtnDecrease" android:layout_below="@+id/itemMallMainPopTxtMoney"/>
+        <Button
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:text="-"
+                android:id="@+id/itemMallMainBtnDecrease" android:layout_alignLeft="@+id/itemMallMainTxtTitle"
+                android:layout_below="@+id/itemMallMainTxtTitle" android:background="@drawable/green_btn_bg"
+                android:layout_marginTop="20dp" android:layout_marginLeft="35dp"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:id="@+id/itemMallMainTxtNumber"
+                android:layout_toRightOf="@+id/itemMallMainBtnDecrease" android:layout_alignTop="@+id/itemMallMainBtnDecrease"
+                android:textColor="#000000" android:layout_marginTop="6dp" android:layout_marginLeft="15dp"/>
+        <Button android:layout_width="30dp" android:layout_height="30dp" android:text="+" android:id="@+id/itemMallMainBtnIncrease"
+                android:background="@drawable/green_btn_bg"
+                android:layout_toRightOf="@+id/itemMallMainTxtNumber" android:layout_alignTop="@+id/itemMallMainBtnDecrease"
+                android:layout_marginLeft="15dp"/>
+    </RelativeLayout>
+</RelativeLayout>

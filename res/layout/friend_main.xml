@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="350dp"
+            android:id="@+id/friendmainListFriend" android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" android:layout_marginTop="80dp" android:layout_marginBottom="80dp"/>
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+        <Button
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:text="-"
+                android:id="@+id/friendmainBtnRemove"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="15dp" android:layout_alignParentLeft="true" android:layout_marginLeft="30dp"
+                android:background="#44cdff"/>
+        <Button android:layout_width="35dp" android:layout_height="35dp" android:text="+" android:id="@+id/friendmainBtnAdd"
+                android:background="#44cdff"
+                android:layout_alignParentTop="true" android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp" android:layout_marginTop="15dp"/>
+        <Button android:layout_width="50dp" android:layout_height="35dp" android:text="关注" android:id="@+id/friendmainBtnFollow"
+                android:background="#0d28ff" android:layout_toRightOf="@+id/friendmainBtnRemove" android:layout_alignTop="@+id/friendmainBtnRemove"
+                android:layout_marginLeft="30dp"/>
+        <Button android:layout_width="50dp" android:layout_height="35dp" android:text="粉丝" android:id="@+id/friendmainBtnFan"
+                android:background="#0d28ff"
+                android:layout_toRightOf="@+id/friendmainBtnFollow" android:layout_alignTop="@+id/friendmainBtnRemove"
+                android:layout_marginLeft="30dp"/>
+        <Button
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:text="完 成"
+                android:id="@+id/friendmainBtnOK" android:layout_alignParentLeft="true" android:layout_marginLeft="6dp"
+                android:layout_alignParentTop="true" android:background="#ff0207" android:visibility="gone"/>
+    </RelativeLayout>
+</RelativeLayout>
