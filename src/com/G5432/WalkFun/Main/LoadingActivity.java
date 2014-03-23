@@ -55,13 +55,13 @@ public class LoadingActivity extends OrmLiteBaseActivity<DatabaseHelper> {
                 UserUtil.saveSystemTime(version.getSystemTime());
                 //time from service
                 Date missionLastUpdateTime = version.getMissionLastUpdateTime();
-                Date messageLastUpdateTime = version.getMessageLastUpdateTime();
+                Date fightDefineUpdateTime = version.getFightDefineUpdateTime();
                 Date recommendLastUpdateTime = version.getRecommendLastUpdateTime();
                 Date actionDefineUpdateTime = version.getActionDefineUpdateTime();
                 Date productLastUpdateTime = version.getProductLastUpdateTime();
                 //time from local
                 Date localMissionUpdateTime = CommonUtil.parseDate(UserUtil.getLastUpdateTime("MissionUpdateTime"));
-                Date localMessageUpdateTime = CommonUtil.parseDate(UserUtil.getLastUpdateTime("SystemMessageUpdateTime"));
+                Date localFightDefineUpdateTime = CommonUtil.parseDate(UserUtil.getLastUpdateTime("FightDefineUpdateTime"));
                 Date localRecommendUpdateTime = CommonUtil.parseDate(UserUtil.getLastUpdateTime("RecommendAppUpdateTime"));
                 Date localActionDefineUpdateTime = CommonUtil.parseDate(UserUtil.getLastUpdateTime("ActionDefineUpdateTime"));
                 Date localProductDefineUpdateTime = CommonUtil.parseDate(UserUtil.getLastUpdateTime("VProductsUpdateTime"));
@@ -71,10 +71,10 @@ public class LoadingActivity extends OrmLiteBaseActivity<DatabaseHelper> {
                 } else {
                     GlobalSyncStatus.missionSynced = true;
                 }
-                if (localMessageUpdateTime.before(messageLastUpdateTime)) {
-                    systemHandler.syncSystemMessages(syncStatusHandler);
+                if (localFightDefineUpdateTime.before(fightDefineUpdateTime)) {
+                    systemHandler.syncFightDefine(syncStatusHandler);
                 } else {
-                    GlobalSyncStatus.messageSynced = true;
+                    GlobalSyncStatus.fightDefineSynced = true;
                 }
                 if (localRecommendUpdateTime.before(recommendLastUpdateTime)) {
                     systemHandler.syncRecommendApp(syncStatusHandler);
@@ -105,7 +105,7 @@ public class LoadingActivity extends OrmLiteBaseActivity<DatabaseHelper> {
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
             if (GlobalSyncStatus.missionSynced &&
-                    GlobalSyncStatus.messageSynced &&
+                    GlobalSyncStatus.fightDefineSynced &&
                     GlobalSyncStatus.recommendSynced &&
                     GlobalSyncStatus.actionDefineSynced &&
                     GlobalSyncStatus.productSynced &&

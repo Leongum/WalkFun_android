@@ -27,7 +27,7 @@ public class VersionControl {
     @Expose
     private Date missionLastUpdateTime;
     @Expose
-    private Date messageLastUpdateTime;
+    private Date fightDefineUpdateTime;
     @Expose
     private Date recommendLastUpdateTime;
     @Expose
@@ -83,12 +83,12 @@ public class VersionControl {
         this.missionLastUpdateTime = missionLastUpdateTime;
     }
 
-    public Date getMessageLastUpdateTime() {
-        return messageLastUpdateTime;
+    public Date getFightDefineUpdateTime() {
+        return fightDefineUpdateTime;
     }
 
-    public void setMessageLastUpdateTime(Date messageLastUpdateTime) {
-        this.messageLastUpdateTime = messageLastUpdateTime;
+    public void setFightDefineUpdateTime(Date fightDefineUpdateTime) {
+        this.fightDefineUpdateTime = fightDefineUpdateTime;
     }
 
     public Date getRecommendLastUpdateTime() {

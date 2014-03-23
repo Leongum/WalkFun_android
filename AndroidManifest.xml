@@ -47,5 +47,8 @@
 
         <activity android:name=".Item.ItemMallActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait">
         </activity>
+
+        <activity android:name=".History.HistoryRunMainActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait">
+        </activity>
     </application>
 </manifest>

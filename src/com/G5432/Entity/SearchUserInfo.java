@@ -22,6 +22,12 @@ public class SearchUserInfo {
     private String userTitle;
     @Expose
     private String userTitlePic;
+    @Expose
+    private Double fatness;
+    @Expose
+    private Double power;
+    @Expose
+    private Double fight;
 
     public Integer getUserId() {
         return userId;
@@ -69,5 +75,29 @@ public class SearchUserInfo {
 
     public void setUserTitlePic(String userTitlePic) {
         this.userTitlePic = userTitlePic;
+    }
+
+    public Double getFatness() {
+        return fatness;
+    }
+
+    public void setFatness(Double fatness) {
+        this.fatness = fatness;
+    }
+
+    public Double getPower() {
+        return power;
+    }
+
+    public void setPower(Double power) {
+        this.power = power;
+    }
+
+    public Double getFight() {
+        return fight;
+    }
+
+    public void setFight(Double fight) {
+        this.fight = fight;
     }
 }

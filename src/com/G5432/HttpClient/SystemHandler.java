@@ -153,41 +153,6 @@ public class SystemHandler {
     }
 
     /**
-     * 同步system message 返回empty message handler
-     *
-     * @param handler
-     */
-    public void syncSystemMessages(final Handler handler) {
-        GlobalSyncStatus.messageSynced = false;
-        String lastUpdateTime = UserUtil.getLastUpdateTime("SystemMessageUpdateTime");
-        String url = CommonUtil.getUrl(MessageFormat.format(Constant.SYSTEM_SYSTEM_MESSAGE_URL, lastUpdateTime));
-        httpClientHelper.get(url, null, new AsyncHttpResponseHandler() {
-            @Override
-            public void onSuccess(int statusCode, String response) {
-                Log.i(this.getClass().getName(), response);
-                GlobalSyncStatus.messageSynced = true;
-                if (statusCode == 200 || statusCode == 204) {
-                    List<SystemMessage> systemMessageList = gson.fromJson(response, new TypeToken<List<SystemMessage>>() {
-                    }.getType());
-                    systemService.saveSystemMessageToDB(systemMessageList);
-                    UserUtil.saveLastUpdateTime("SystemMessageUpdateTime");
-                    handler.sendEmptyMessage(1);
-                } else {
-                    Log.e(this.getClass().getName(), response);
-                    handler.sendEmptyMessage(0);
-                }
-            }
-
-            @Override
-            public void onFailure(Throwable error, String content) {
-                GlobalSyncStatus.messageSynced = true;
-                Log.e(this.getClass().getName(), error.getMessage());
-                handler.sendEmptyMessage(0);
-            }
-        });
-    }
-
-    /**
      * 同步system recommend app 返回empty message handler
      *
      * @param handler
@@ -275,6 +240,11 @@ public class SystemHandler {
         return systemService.fetchAllActionDefine(actionType);
     }
 
+    /**
+     * 根据prod id获取对应的action id。
+     * @param propId
+     * @return
+     */
     public ActionDefinition fetchActionDefineByPropId(Integer propId) {
         List<ActionDefinition> actionDefinitionList = fetchAllActionDefine(ActionDefineEnum.USE);
         List<ActionDefinition> findActions = new ArrayList<ActionDefinition>();
@@ -292,5 +262,69 @@ public class SystemHandler {
             return findActions.get(0);
         }
         return null;
+    }
+
+    /**
+     * 根据action id 获取action
+     * @param id
+     * @return
+     */
+    public ActionDefinition fetchActionDefineById(Integer id){
+        return systemService.fetchActionDefineById(id);
+    }
+
+    /**
+     * fight define 返回empty message handler
+     *
+     * @param handler
+     */
+    public void syncFightDefine(final Handler handler) {
+        GlobalSyncStatus.fightDefineSynced = false;
+        String lastUpdateTime = UserUtil.getLastUpdateTime("FightDefineUpdateTime");
+        String url = CommonUtil.getUrl(MessageFormat.format(Constant.SYSTEM_FIGHT_DEFINE_URL, lastUpdateTime));
+        httpClientHelper.get(url, null, new AsyncHttpResponseHandler() {
+            @Override
+            public void onSuccess(int statusCode, String response) {
+                Log.i(this.getClass().getName(), response);
+                GlobalSyncStatus.fightDefineSynced = true;
+                if (statusCode == 200 || statusCode == 204) {
+                    List<FightDefinition> fightDefinitions = gson.fromJson(response, new TypeToken<List<FightDefinition>>() {
+                    }.getType());
+                    systemService.saveFightDefineToDB(fightDefinitions);
+                    UserUtil.saveLastUpdateTime("FightDefineUpdateTime");
+                    handler.sendEmptyMessage(1);
+                } else {
+                    Log.e(this.getClass().getName(), response);
+                    handler.sendEmptyMessage(0);
+                }
+            }
+
+            @Override
+            public void onFailure(Throwable error, String content) {
+                GlobalSyncStatus.fightDefineSynced = true;
+                Log.e(this.getClass().getName(), error.getMessage());
+                handler.sendEmptyMessage(0);
+            }
+        });
+    }
+
+    /**
+     * 根据用户的等级 获取fight 战斗
+     *
+     * @param level
+     * @return
+     */
+    public List<FightDefinition> fetchFightDefineByLevel(Integer level) {
+        return systemService.fetchFightDefineByLevel(level);
+    }
+
+    /**
+     * 根据fight id 获取 fight
+     *
+     * @param id
+     * @return
+     */
+    public FightDefinition fetchFightDefineById(Integer id) {
+        return systemService.fetchFightDefineById(id);
     }
 }

@@ -19,14 +19,21 @@ import java.util.Map;
 public class CommonUtil {
 
 
-    public static String PROP_YES = "PY";
-    public static String PROP_NO = "PN";
-    public static String HEALTH = "H";
-    public static String FAT = "F";
-    public static String RANDOM = "R";
-    public static String MONEY = "M";
-    public static String SHOW_DROP = "D";
-    public static String HEAD_BAG = "B";
+    public static String Drop_Down = "D";
+    public static String Fatness = "F";
+    public static String Fight_Win = "FW";
+    public static String Fight_Loose = "FL";
+    public static String Flower_Pot = "FP";
+    public static String Fight_Add = "FA";
+    public static String Fight_Percent = "FPE";
+    public static String Physical_Power_Add = "PPA";
+    public static String Physical_Power_Percent = "PPP";
+    public static String Prop_Yes = "PY";
+    public static String Prop_No = "PN";
+    public static String Show_Position = "SP";
+    public static String Money = "M";
+    public static String Type_Action = "TA";
+    public static String Type_Fight = "TF";
 
     public static Date parseDate(String date) {
         DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -133,16 +140,16 @@ public class CommonUtil {
 
     public static Map<Integer, Integer> explainActionRule(String actionRule) {
         Map<Integer, Integer> vProductIds = new HashMap<Integer, Integer>();
-        //9,圆润的石头,1,PY|6,1个金币,1,PN
+        //9,1,PY|6,1,PN
         if (actionRule != null) {
             String[] ruleArray = actionRule.split("\\|");
             for (int i = 0; i < ruleArray.length; i++) {
                 String[] ruleDetails = ruleArray[i].split(",");
                 if (ruleDetails != null && ruleDetails.length == 4) {
                     Integer productId = Integer.parseInt(ruleDetails[0]);
-                    Integer numb = Integer.parseInt(ruleDetails[2]);
-                    String propFlag = ruleDetails[3];
-                    if (propFlag.equalsIgnoreCase(PROP_YES)) {
+                    Integer numb = Integer.parseInt(ruleDetails[1]);
+                    String propFlag = ruleDetails[2];
+                    if (propFlag.equalsIgnoreCase(Prop_Yes)) {
                         vProductIds.put(productId, numb);
                     }
                 }

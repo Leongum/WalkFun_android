@@ -40,6 +40,12 @@ public class VProduct {
     private String dropPicList;
     @Expose
     @DatabaseField
+    private Double minLevelLimit;
+    @Expose
+    @DatabaseField
+    private Double maxLevelLimit;
+    @Expose
+    @DatabaseField
     private Integer maxDropNum;
     @Expose
     @DatabaseField
@@ -111,6 +117,22 @@ public class VProduct {
 
     public void setDropPicList(String dropPicList) {
         this.dropPicList = dropPicList;
+    }
+
+    public Double getMinLevelLimit() {
+        return minLevelLimit;
+    }
+
+    public void setMinLevelLimit(Double minLevelLimit) {
+        this.minLevelLimit = minLevelLimit;
+    }
+
+    public Double getMaxLevelLimit() {
+        return maxLevelLimit;
+    }
+
+    public void setMaxLevelLimit(Double maxLevelLimit) {
+        this.maxLevelLimit = maxLevelLimit;
     }
 
     public Integer getMaxDropNum() {

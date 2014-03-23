@@ -37,9 +37,9 @@ public class Constant {
 
     // --- system api ---
     public static final String SYSTEM_VERSION_URL = SERVICE_HOST + "/system/version/get/{0}";
-    public static final String SYSTEM_SYSTEM_MESSAGE_URL = SERVICE_HOST + "/system/message/get/{0}";
     public static final String SYSTEM_RECOMMEND_APP_URL = SERVICE_HOST + "/system/recommend/get/{0}";
     public static final String SYSTEM_ACTION_DEFINE_URL = SERVICE_HOST + "/system/actionDefine/get/{0}";
+    public static final String SYSTEM_FIGHT_DEFINE_URL = SERVICE_HOST + "/system/fightDefine/get/{0}";
 
     // --- mission api ---
     public static final String MISSION_GET_URL = SERVICE_HOST + "/missions/mission/get?lastUpdateTime={0}";

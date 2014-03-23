@@ -10,11 +10,11 @@ package com.G5432.Utils;
 public class GlobalSyncStatus {
 
     //default sync logic
-    public static Boolean messageSynced = true;
     public static Boolean missionSynced = true;
     public static Boolean recommendSynced = true;
     public static Boolean productSynced = true;
     public static Boolean actionDefineSynced = true;
+    public static Boolean fightDefineSynced = true;
 
     //weather sync logic
     public static Boolean weatherSynced = true;
@@ -32,7 +32,7 @@ public class GlobalSyncStatus {
     public static Boolean userActionSynced = true;
 
     public static void setVersionSync() {
-        messageSynced = false;
+        fightDefineSynced = false;
         missionSynced = false;
         recommendSynced = false;
         productSynced = false;

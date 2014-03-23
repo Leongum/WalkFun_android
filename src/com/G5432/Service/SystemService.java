@@ -18,71 +18,20 @@ import java.util.List;
  */
 public class SystemService {
 
-    private Dao<SystemMessage, Integer> systemMessageDao = null;
+    private Dao<FightDefinition, Integer> fightDefinitionDao = null;
 
     private Dao<RecommendApp, Integer> recommendAppDao = null;
 
-    private Dao<ActionDefinition,Integer> actionDefinitionDao =null;
+    private Dao<ActionDefinition, Integer> actionDefinitionDao = null;
 
     public SystemService(DatabaseHelper helper) {
         try {
-            systemMessageDao = helper.getSystemMessageDao();
+            fightDefinitionDao = helper.getFightDefinitionDao();
             recommendAppDao = helper.getRecommendAppDao();
             actionDefinitionDao = helper.getActionDefinitionDao();
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-    }
-
-    public void saveSystemMessageToDB(List<SystemMessage> systemMessageList) {
-        try {
-            for (SystemMessage systemMessage : systemMessageList) {
-                systemMessageDao.createOrUpdate(systemMessage);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
-    }
-
-    public SystemMessage fetchSystemMessageInfo(Integer messageId) {
-        SystemMessage systemMessage = null;
-        try {
-            systemMessage = systemMessageDao.queryForId(messageId);
-        } catch (SQLException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
-        return systemMessage;
-    }
-
-    public String getSystemMessage(Integer messageId) {
-        return getSystemMessage(messageId, null);
-    }
-
-    public String getSystemMessage(Integer messageId, Double region) {
-        String result = "";
-        SystemMessage systemMessage = fetchSystemMessageInfo(messageId);
-        if (systemMessage != null) {
-            //todo:: add exception handler
-        }
-
-        if (systemMessage != null) {
-            result = systemMessage.getMessage();
-            if (region != null && !systemMessage.getRule().isEmpty()) {
-                String[] messageArray = systemMessage.getMessage().split("\\|");
-                String[] ruleArray = systemMessage.getRule().split("\\|");
-                if (messageArray.length == ruleArray.length && ruleArray.length > 1) {
-                    for (int i = 0; i < ruleArray.length; i++) {
-                        String[] ruleDetails = ruleArray[i].split(",");
-                        double left = Double.parseDouble(ruleDetails[0]);
-                        double right = Double.parseDouble(ruleDetails[1]);
-                        if (region <= right && region >= left) {
-                            result = messageArray[i];
-                        }
-                    }
-                }
-            }
-        }
-        return result;
     }
 
     public void saveRecommendAppToDB(List<RecommendApp> recommendAppList) {
@@ -123,12 +72,58 @@ public class SystemService {
 
         try {
             QueryBuilder<ActionDefinition, Integer> queryBuilder = actionDefinitionDao.queryBuilder();
-            queryBuilder.where().eq("actionType" ,actionType.ordinal());
+            queryBuilder.where().eq("actionType", actionType.ordinal());
             queryBuilder.orderBy("triggerProbability", true);
             actionDefinitionList = queryBuilder.query();
         } catch (SQLException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
         return actionDefinitionList;
+    }
+
+    public ActionDefinition fetchActionDefineById(Integer id) {
+        ActionDefinition actionDefinition = null;
+        try {
+            actionDefinition = actionDefinitionDao.queryForId(id);
+        } catch (SQLException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+
+        return actionDefinition;
+    }
+
+    public void saveFightDefineToDB(List<FightDefinition> fightDefinitionList) {
+        try {
+            for (FightDefinition fightDefinition : fightDefinitionList) {
+                fightDefinitionDao.createOrUpdate(fightDefinition);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+    }
+
+    public List<FightDefinition> fetchFightDefineByLevel(Integer level) {
+        List<FightDefinition> fightDefinitionList = null;
+
+        try {
+            QueryBuilder<FightDefinition, Integer> queryBuilder = fightDefinitionDao.queryBuilder();
+            queryBuilder.where().ge("minLevelLimit", level).and().le("maxLevelLimit", level).and().eq("inUsing", 0);
+            queryBuilder.orderBy("monsterMinFight", true);
+            fightDefinitionList = queryBuilder.query();
+        } catch (SQLException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+        return fightDefinitionList;
+    }
+
+    public FightDefinition fetchFightDefineById(Integer id) {
+        FightDefinition fightDefinition = null;
+        try {
+            fightDefinition = fightDefinitionDao.queryForId(id);
+        } catch (SQLException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+
+        return fightDefinition;
     }
 }

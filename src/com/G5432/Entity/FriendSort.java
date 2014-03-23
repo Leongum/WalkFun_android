@@ -32,7 +32,13 @@ public class FriendSort {
     private String userTitlePic;
     @Expose
     @DatabaseField
-    private Double totalDistance;
+    private Double fatness;
+    @Expose
+    @DatabaseField
+    private Double power;
+    @Expose
+    @DatabaseField
+    private Double fight;
 
     public FriendSort(){
 
@@ -86,11 +92,27 @@ public class FriendSort {
         this.userTitlePic = userTitlePic;
     }
 
-    public Double getTotalDistance() {
-        return totalDistance;
+    public Double getFatness() {
+        return fatness;
     }
 
-    public void setTotalDistance(Double totalDistance) {
-        this.totalDistance = totalDistance;
+    public void setFatness(Double fatness) {
+        this.fatness = fatness;
+    }
+
+    public Double getPower() {
+        return power;
+    }
+
+    public void setPower(Double power) {
+        this.power = power;
+    }
+
+    public Double getFight() {
+        return fight;
+    }
+
+    public void setFight(Double fight) {
+        this.fight = fight;
     }
 }

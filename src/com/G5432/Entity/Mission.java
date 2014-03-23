@@ -40,13 +40,19 @@ public class Mission {
     private Double triggerDistances;
     @Expose
     @DatabaseField
-    private Integer triggerPropId;
+    private Integer triggerActionId;
     @Expose
     @DatabaseField
-    private Integer triggerPropNumbers;
+    private Integer triggerFightId;
     @Expose
     @DatabaseField
-    private Integer triggerUserNumbers;
+    private Integer triggerNumbers;
+    @Expose
+    @DatabaseField
+    private Double minLevelLimit;
+    @Expose
+    @DatabaseField
+    private Double maxLevelLimit;
     @Expose
     @DatabaseField
     private Double goldCoin;
@@ -126,28 +132,44 @@ public class Mission {
         this.triggerDistances = triggerDistances;
     }
 
-    public Integer getTriggerPropId() {
-        return triggerPropId;
+    public Integer getTriggerActionId() {
+        return triggerActionId;
     }
 
-    public void setTriggerPropId(Integer triggerPropId) {
-        this.triggerPropId = triggerPropId;
+    public void setTriggerActionId(Integer triggerActionId) {
+        this.triggerActionId = triggerActionId;
     }
 
-    public Integer getTriggerPropNumbers() {
-        return triggerPropNumbers;
+    public Integer getTriggerFightId() {
+        return triggerFightId;
     }
 
-    public void setTriggerPropNumbers(Integer triggerPropNumbers) {
-        this.triggerPropNumbers = triggerPropNumbers;
+    public void setTriggerFightId(Integer triggerFightId) {
+        this.triggerFightId = triggerFightId;
     }
 
-    public Integer getTriggerUserNumbers() {
-        return triggerUserNumbers;
+    public Integer getTriggerNumbers() {
+        return triggerNumbers;
     }
 
-    public void setTriggerUserNumbers(Integer triggerUserNumbers) {
-        this.triggerUserNumbers = triggerUserNumbers;
+    public void setTriggerNumbers(Integer triggerNumbers) {
+        this.triggerNumbers = triggerNumbers;
+    }
+
+    public Double getMinLevelLimit() {
+        return minLevelLimit;
+    }
+
+    public void setMinLevelLimit(Double minLevelLimit) {
+        this.minLevelLimit = minLevelLimit;
+    }
+
+    public Double getMaxLevelLimit() {
+        return maxLevelLimit;
+    }
+
+    public void setMaxLevelLimit(Double maxLevelLimit) {
+        this.maxLevelLimit = maxLevelLimit;
     }
 
     public Double getGoldCoin() {

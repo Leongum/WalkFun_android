@@ -32,12 +32,12 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
         try {
             TableUtils.createTable(connectionSource, Action.class);
             TableUtils.createTable(connectionSource, ActionDefinition.class);
+            TableUtils.createTable(connectionSource, FightDefinition.class);
             TableUtils.createTable(connectionSource, FriendSort.class);
             TableUtils.createTable(connectionSource, Mission.class);
             TableUtils.createTable(connectionSource, MissionHistory.class);
             TableUtils.createTable(connectionSource, RecommendApp.class);
             TableUtils.createTable(connectionSource, RunningHistory.class);
-            TableUtils.createTable(connectionSource, SystemMessage.class);
             TableUtils.createTable(connectionSource, UserBase.class);
             TableUtils.createTable(connectionSource, UserFriend.class);
             TableUtils.createTable(connectionSource, UserInfo.class);
@@ -69,6 +69,15 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
             actionDefinitionDao = getDao(ActionDefinition.class);
         }
         return actionDefinitionDao;
+    }
+
+    private Dao<FightDefinition, Integer> fightDefinitionDao;
+
+    public Dao<FightDefinition, Integer> getFightDefinitionDao() throws SQLException {
+        if (fightDefinitionDao == null) {
+            fightDefinitionDao = getDao(FightDefinition.class);
+        }
+        return fightDefinitionDao;
     }
 
     private Dao<FriendSort, Integer> friendSortDao;
@@ -114,15 +123,6 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
             runningHistoryDao = getDao(RunningHistory.class);
         }
         return runningHistoryDao;
-    }
-
-    private Dao<SystemMessage, Integer> systemMessageDao;
-
-    public Dao<SystemMessage, Integer> getSystemMessageDao() throws SQLException {
-        if (systemMessageDao == null) {
-            systemMessageDao = getDao(SystemMessage.class);
-        }
-        return systemMessageDao;
     }
 
     private Dao<UserBase, Integer> userBaseDao;

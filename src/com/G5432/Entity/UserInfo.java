@@ -27,28 +27,28 @@ public class UserInfo {
     private String userTitlePic;
     @Expose
     @DatabaseField
-    private String userFatDesc;
-    @Expose
-    @DatabaseField
     private Double level;
     @Expose
     @DatabaseField
     private Double goldCoin;
     @Expose
     @DatabaseField
-    private Double goldCoinSpeed;
-    @Expose
-    @DatabaseField
     private Double experience;
     @Expose
     @DatabaseField
-    private Double experienceSpeed;
-    @Expose
-    @DatabaseField
-    private Double health;
-    @Expose
-    @DatabaseField
     private Double fatness;
+    @Expose
+    @DatabaseField
+    private Double power;
+    @Expose
+    @DatabaseField
+    private Double powerPlus;
+    @Expose
+    @DatabaseField
+    private Double fight;
+    @Expose
+    @DatabaseField
+    private Double fightPlus;
     @Expose
     @DatabaseField
     private Double totalDistance;
@@ -64,12 +64,6 @@ public class UserInfo {
     @Expose
     @DatabaseField
     private Integer totalActiveTimes;
-    @Expose
-    @DatabaseField
-    private Integer currentCombo;
-    @Expose
-    @DatabaseField
-    private Integer maxCombo;
     @Expose
     @DatabaseField
     private Integer missionCombo;
@@ -115,14 +109,6 @@ public class UserInfo {
         this.userTitlePic = userTitlePic;
     }
 
-    public String getUserFatDesc() {
-        return userFatDesc;
-    }
-
-    public void setUserFatDesc(String userFatDesc) {
-        this.userFatDesc = userFatDesc;
-    }
-
     public Double getLevel() {
         return level;
     }
@@ -139,14 +125,6 @@ public class UserInfo {
         this.goldCoin = goldCoin;
     }
 
-    public Double getGoldCoinSpeed() {
-        return goldCoinSpeed;
-    }
-
-    public void setGoldCoinSpeed(Double goldCoinSpeed) {
-        this.goldCoinSpeed = goldCoinSpeed;
-    }
-
     public Double getExperience() {
         return experience;
     }
@@ -155,28 +133,44 @@ public class UserInfo {
         this.experience = experience;
     }
 
-    public Double getExperienceSpeed() {
-        return experienceSpeed;
-    }
-
-    public void setExperienceSpeed(Double experienceSpeed) {
-        this.experienceSpeed = experienceSpeed;
-    }
-
-    public Double getHealth() {
-        return health;
-    }
-
-    public void setHealth(Double health) {
-        this.health = health;
-    }
-
     public Double getFatness() {
         return fatness;
     }
 
     public void setFatness(Double fatness) {
         this.fatness = fatness;
+    }
+
+    public Double getPower() {
+        return power;
+    }
+
+    public void setPower(Double power) {
+        this.power = power;
+    }
+
+    public Double getPowerPlus() {
+        return powerPlus;
+    }
+
+    public void setPowerPlus(Double powerPlus) {
+        this.powerPlus = powerPlus;
+    }
+
+    public Double getFight() {
+        return fight;
+    }
+
+    public void setFight(Double fight) {
+        this.fight = fight;
+    }
+
+    public Double getFightPlus() {
+        return fightPlus;
+    }
+
+    public void setFightPlus(Double fightPlus) {
+        this.fightPlus = fightPlus;
     }
 
     public Double getTotalDistance() {
@@ -217,22 +211,6 @@ public class UserInfo {
 
     public void setTotalActiveTimes(Integer totalActiveTimes) {
         this.totalActiveTimes = totalActiveTimes;
-    }
-
-    public Integer getCurrentCombo() {
-        return currentCombo;
-    }
-
-    public void setCurrentCombo(Integer currentCombo) {
-        this.currentCombo = currentCombo;
-    }
-
-    public Integer getMaxCombo() {
-        return maxCombo;
-    }
-
-    public void setMaxCombo(Integer maxCombo) {
-        this.maxCombo = maxCombo;
     }
 
     public Integer getMissionCombo() {

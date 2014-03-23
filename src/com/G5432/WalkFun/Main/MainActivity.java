@@ -9,6 +9,7 @@ import com.G5432.Entity.UserBase;
 import com.G5432.HttpClient.UserHandler;
 import com.G5432.Utils.UserUtil;
 import com.G5432.WalkFun.Friend.FriendMainActivity;
+import com.G5432.WalkFun.History.HistoryRunMainActivity;
 import com.G5432.WalkFun.Item.ItemMainActivity;
 import com.G5432.WalkFun.R;
 import com.j256.ormlite.android.apptools.OrmLiteBaseActivity;
@@ -96,7 +97,9 @@ public class MainActivity extends OrmLiteBaseActivity<DatabaseHelper> {
     private View.OnClickListener userInfoListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            //todo:: do jump
+            Intent intent = new Intent();
+            intent.setClass(MainActivity.this, HistoryRunMainActivity.class);
+            startActivity(intent);
         }
     };
 

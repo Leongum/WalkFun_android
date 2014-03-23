@@ -30,19 +30,10 @@ public class UserBase {
     private String nickName;
     @Expose
     @DatabaseField
-    private Integer age;
-    @Expose
-    @DatabaseField
     private String sex;
     @Expose
     @DatabaseField
     private String uuid;
-    @Expose
-    @DatabaseField
-    private Double weight;
-    @Expose
-    @DatabaseField
-    private Double height;
     @Expose
     @DatabaseField
     private String platformInfo;
@@ -97,14 +88,6 @@ public class UserBase {
         this.userName = userName;
     }
 
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
-
     public String getSex() {
         return sex;
     }
@@ -119,22 +102,6 @@ public class UserBase {
 
     public void setUuid(String uuid) {
         this.uuid = uuid;
-    }
-
-    public Double getWeight() {
-        return weight;
-    }
-
-    public void setWeight(Double weight) {
-        this.weight = weight;
-    }
-
-    public Double getHeight() {
-        return height;
-    }
-
-    public void setHeight(Double height) {
-        this.height = height;
     }
 
     public String getPlatformInfo() {
