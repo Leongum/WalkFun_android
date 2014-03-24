@@ -18,6 +18,12 @@
                 android:id="@+id/mainImgUserInfo"
                 android:background="@drawable/main_login_bg" android:layout_alignLeft="@+id/mainImgTop"
                 android:layout_alignTop="@+id/mainImgTop" android:layout_marginLeft="75dp"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mainBtnTrafficlight" android:layout_alignLeft="@+id/mainImgTop"
+                android:layout_alignTop="@+id/mainImgTop" android:background="@drawable/main_trafficlight_none"
+                android:layout_marginLeft="6dp" android:layout_marginTop="12dp"/>
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

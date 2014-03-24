@@ -56,9 +56,9 @@ public class HistoryRunCellAdapter extends SimpleAdapter {
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-//                    Intent intent = new Intent(context, RunHistoryFinishedActivity.class);
-//                    intent.putExtra("runUuid", currentData.get("runUuid").toString());
-//                    context.startActivity(intent);
+                    Intent intent = new Intent(context, HistoryRunDetailActivity.class);
+                    intent.putExtra("runUuid", currentData.get("runUuid").toString());
+                    context.startActivity(intent);
                 }
             });
         }

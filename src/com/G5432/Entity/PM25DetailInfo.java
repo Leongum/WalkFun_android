@@ -12,25 +12,17 @@ import com.google.gson.annotations.Expose;
 public class PM25DetailInfo {
 
     @Expose
-    private String aqi;
+    private Integer aqi;
     @Expose
     private String area;
     @Expose
-    private String pm2_5;
+    private Integer pm2_5;
     @Expose
-    private String pm2_5_24h;
+    private Integer pm2_5_24h;
     @Expose
     private String quality;
     @Expose
     private String level;
-
-    public String getAqi() {
-        return aqi;
-    }
-
-    public void setAqi(String aqi) {
-        this.aqi = aqi;
-    }
 
     public String getArea() {
         return area;
@@ -38,22 +30,6 @@ public class PM25DetailInfo {
 
     public void setArea(String area) {
         this.area = area;
-    }
-
-    public String getPm2_5() {
-        return pm2_5;
-    }
-
-    public void setPm2_5(String pm2_5) {
-        this.pm2_5 = pm2_5;
-    }
-
-    public String getPm2_5_24h() {
-        return pm2_5_24h;
-    }
-
-    public void setPm2_5_24h(String pm2_5_24h) {
-        this.pm2_5_24h = pm2_5_24h;
     }
 
     public String getQuality() {
@@ -70,5 +46,29 @@ public class PM25DetailInfo {
 
     public void setLevel(String level) {
         this.level = level;
+    }
+
+    public Integer getAqi() {
+        return aqi;
+    }
+
+    public void setAqi(Integer aqi) {
+        this.aqi = aqi;
+    }
+
+    public Integer getPm2_5() {
+        return pm2_5;
+    }
+
+    public void setPm2_5(Integer pm2_5) {
+        this.pm2_5 = pm2_5;
+    }
+
+    public Integer getPm2_5_24h() {
+        return pm2_5_24h;
+    }
+
+    public void setPm2_5_24h(Integer pm2_5_24h) {
+        this.pm2_5_24h = pm2_5_24h;
     }
 }

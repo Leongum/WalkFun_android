@@ -1,5 +1,10 @@
 package com.G5432.Utils;
 
+import com.G5432.Entity.BMapInfo;
+import com.baidu.mapapi.search.MKRoute;
+import com.baidu.mapapi.utils.CoordinateConvert;
+import com.baidu.platform.comapi.basestruct.GeoPoint;
+
 import java.security.NoSuchAlgorithmException;
 import java.text.DateFormat;
 import java.text.MessageFormat;
@@ -136,6 +141,47 @@ public class CommonUtil {
             }
         }
         return null;
+    }
+
+    public static BMapInfo getRoutesFromString(String routeString) {
+        BMapInfo bMapInfo = new BMapInfo();
+        MKRoute route = new MKRoute();
+        GeoPoint start = new GeoPoint(0, 0);
+        GeoPoint end = new GeoPoint(0, 0);
+        Integer maxLat = -90 * 1000000;
+        Integer minLat = 90 * 1000000;
+        Integer maxLon = -180 * 1000000;
+        Integer minLon = 180 * 1000000;
+        String[] routeArray = routeString.split("\\|");
+        GeoPoint[][] routeList = new GeoPoint[routeArray.length][];
+        for (int i = 0; i < routeArray.length; i++) {
+            String[] points = routeArray[i].split(" ");
+            GeoPoint[] pointRoute = new GeoPoint[points.length];
+            for (int j = 0; j < points.length; j++) {
+                String[] geoPoint = points[j].split(",");
+                GeoPoint point = new GeoPoint((int) (Double.valueOf(geoPoint[0]).doubleValue() * 1E6), (int) (Double.valueOf(geoPoint[1]).doubleValue() * 1E6));
+                point = CoordinateConvert.fromGcjToBaidu(point);
+                maxLat = Math.max(maxLat, point.getLatitudeE6());
+                maxLon = Math.max(maxLon, point.getLongitudeE6());
+                minLat = Math.min(minLat, point.getLatitudeE6());
+                minLon = Math.min(minLon, point.getLongitudeE6());
+                pointRoute[j] = point;
+                if (i == 0 && j == 0) {
+                    start = point;
+                }
+                if (i == routeArray.length - 1 && j == points.length - 1) {
+                    end = point;
+                }
+            }
+            routeList[i] = pointRoute;
+        }
+        route.customizeRoute(start, end, routeList);
+        bMapInfo.setRoute(route);
+        GeoPoint centerPoint = new GeoPoint((maxLat + minLat)/2, (maxLon + minLon)/2);
+        bMapInfo.setCenterPoint(centerPoint);
+        bMapInfo.setSpanLat((int)(Math.abs(maxLat - minLat) * 1.2));
+        bMapInfo.setSpanLon((int)(Math.abs(maxLon - minLon) * 1.2));
+        return bMapInfo;
     }
 
     public static Map<Integer, Integer> explainActionRule(String actionRule) {

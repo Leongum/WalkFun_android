@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="大概在58秒的时候"
+            android:id="@+id/historyRunDetailCellTxtTime" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"
+            android:textSize="10dp" android:textColor="#000000"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="事件描述大概能写多少个字呢？？"
+            android:id="@+id/historyRunDetailCellTxtAction" android:layout_alignLeft="@+id/historyRunDetailCellTxtTime" android:layout_below="@+id/historyRunDetailCellTxtTime"
+            android:textColor="#000000"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="获得了什么道具或者影响到了什么属性"
+              android:id="@+id/historyRunDetailCellTxtReward"
+              android:textSize="10dp" android:layout_alignLeft="@+id/historyRunDetailCellTxtTime" android:layout_below="@+id/historyRunDetailCellTxtAction"
+              android:textColor="#000000"/>
+</RelativeLayout>

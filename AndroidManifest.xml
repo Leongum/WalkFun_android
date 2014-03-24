@@ -15,7 +15,19 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.READ_LOGS"/>
     <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
-    <application android:label="@string/app_name" android:icon="@drawable/ic_launcher">
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+
+    <supports-screens
+            android:anyDensity="true"
+            android:largeScreens="true"
+            android:normalScreens="false"
+            android:resizeable="true"
+            android:smallScreens="true" />
+
+    <application android:label="@string/app_name" android:icon="@drawable/ic_launcher" android:name="com.G5432.Utils.WalkFunApplication">
+        <service android:name="com.baidu.location.f" android:enabled="true" android:process=":remote">
+        </service>
         <activity android:name=".Main.LoadingActivity"
                   android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait">
             <intent-filter>
@@ -49,6 +61,12 @@
         </activity>
 
         <activity android:name=".History.HistoryRunMainActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name=".History.HistoryRunDetailActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name=".History.HistoryRunMapActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait">
         </activity>
     </application>
 </manifest>

@@ -28,44 +28,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/G5432/Entity/FightDefinition.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/G5432/WalkFun/History/HistoryRunCellAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/G5432/WalkFun/History/HistoryRunMainActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/history_run_cell.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/history_run_cell_title.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/history_run_detail_main.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/history_run_main.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/G5432/Entity/SystemMessage.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/baidumapapi_v2_4_0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/armeabi/libBaiduMapSDK_v2_4_0.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/locSDK_4.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/main_trafficlight_green.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/main_trafficlight_none.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/main_trafficlight_red.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/main_trafficlight_yellow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/G5432/Entity/BMapInfo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/G5432/WalkFun/History/HistoryRunDetailActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/G5432/WalkFun/History/HistoryRunMapActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/G5432/Entity/WalkEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/G5432/Utils/WalkFunApplication.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/history_run_detail_cell.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/history_run_map.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/armeabi/libBaiduMapSDK_v2_3_0.so" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/G5432/Utils/CommonUtil.java" afterPath="$PROJECT_DIR$/src/com/G5432/Utils/CommonUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/G5432/Utils/Constant.java" afterPath="$PROJECT_DIR$/src/com/G5432/Utils/Constant.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/G5432/DBUtils/DatabaseHelper.java" afterPath="$PROJECT_DIR$/src/com/G5432/DBUtils/DatabaseHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/G5432/Entity/FriendSort.java" afterPath="$PROJECT_DIR$/src/com/G5432/Entity/FriendSort.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/G5432/Utils/GlobalSyncStatus.java" afterPath="$PROJECT_DIR$/src/com/G5432/Utils/GlobalSyncStatus.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/G5432/WalkFun/Main/LoadingActivity.java" afterPath="$PROJECT_DIR$/src/com/G5432/WalkFun/Main/LoadingActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/G5432/WalkFun/History/HistoryRunCellAdapter.java" afterPath="$PROJECT_DIR$/src/com/G5432/WalkFun/History/HistoryRunCellAdapter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/G5432/WalkFun/Main/MainActivity.java" afterPath="$PROJECT_DIR$/src/com/G5432/WalkFun/Main/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/G5432/Entity/Mission.java" afterPath="$PROJECT_DIR$/src/com/G5432/Entity/Mission.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/G5432/Entity/SearchUserInfo.java" afterPath="$PROJECT_DIR$/src/com/G5432/Entity/SearchUserInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/G5432/Entity/PM25DetailInfo.java" afterPath="$PROJECT_DIR$/src/com/G5432/Entity/PM25DetailInfo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/G5432/HttpClient/SystemHandler.java" afterPath="$PROJECT_DIR$/src/com/G5432/HttpClient/SystemHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/G5432/Service/SystemService.java" afterPath="$PROJECT_DIR$/src/com/G5432/Service/SystemService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/G5432/Entity/UserBase.java" afterPath="$PROJECT_DIR$/src/com/G5432/Entity/UserBase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/G5432/Entity/UserInfo.java" afterPath="$PROJECT_DIR$/src/com/G5432/Entity/UserInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/G5432/Entity/VProduct.java" afterPath="$PROJECT_DIR$/src/com/G5432/Entity/VProduct.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/G5432/Entity/VersionControl.java" afterPath="$PROJECT_DIR$/src/com/G5432/Entity/VersionControl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/history_run_detail_main.xml" afterPath="$PROJECT_DIR$/res/layout/history_run_detail_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/libs.xml" afterPath="$PROJECT_DIR$/.idea/libraries/libs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/main.xml" afterPath="$PROJECT_DIR$/res/layout/main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="24338852-29c0-4e07-a664-dfb1d50d7670" name="no commit" comment="" />
     <ignored path="Cyberace_android.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1395555669489" ignored="false" />
-    <file path="/fragment.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1394695925510" ignored="false" />
+    <file path="/Dummy.txt" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1395643229320" ignored="false" />
+    <file path="/fragment.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1395562460853" ignored="false" />
     <file path="/RunningHistoryService.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1393829484702" ignored="false" />
     <file path="/LoadingActivity.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1395557308051" ignored="false" />
-    <file path="/a.dummy" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1395556486164" ignored="false" />
+    <file path="/a.dummy" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1395643595240" ignored="false" />
     <file path="/BackendSyncRequest.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1393816791175" ignored="false" />
     <file path="/UserUtil.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1393916359643" ignored="false" />
-    <file path="/CommonUtil.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1395558005622" ignored="false" />
-    <file path="/AndroidManifest.xml" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1395038324022" ignored="false" />
+    <file path="/CommonUtil.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1395644397575" ignored="false" />
+    <file path="/AndroidManifest.xml" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1395645031646" ignored="false" />
     <file path="/RunningBasic.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1383121234735" ignored="false" />
     <file path="/LoginActivity.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1394089227626" ignored="false" />
     <file path="/MySNSAdapter.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1383123615830" ignored="false" />
@@ -73,7 +75,7 @@
     <file path="$USER_HOME$/Downloads/ShareSDK Android Sample  2.1.2/Sample/src/cn/sharesdk/demo/AuthPage.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1383189894816" ignored="false" />
     <file path="/AuthPage.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1383189883577" ignored="false" />
     <file path="/ShareSNSActivity.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1386128219807" ignored="false" />
-    <file path="/MainActivity.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1395046689161" ignored="false" />
+    <file path="/MainActivity.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1395564208257" ignored="false" />
     <file path="/RunInfoActivity.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1388050903156" ignored="false" />
     <file path="/CityCode.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1383534564593" ignored="false" />
     <file path="/PlanCollect.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1389252328152" ignored="false" />
@@ -199,8 +201,16 @@
     <file path="/ItemUseActivity.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1394696144518" ignored="false" />
     <file path="/ItemMallActivity.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1395031956288" ignored="false" />
     <file path="/HistoryRunMainActivity.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1395046551792" ignored="false" />
-    <file path="/HistoryRunCellAdapter.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1395045969095" ignored="false" />
+    <file path="/HistoryRunCellAdapter.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1395634189907" ignored="false" />
     <file path="/Constant.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1395557425110" ignored="false" />
+    <file path="/WalkFunApplication.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1395566144802" ignored="false" />
+    <file path="/BMapApiDemoMain.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1395561690715" ignored="false" />
+    <file path="$USER_HOME$/Downloads/BaiduMap_AndroidSDK_v2.4.0_All/BaiduMapsApiDemo/src/baidumapsdk/demo/BMapApiDemoMain.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1395561693685" ignored="false" />
+    <file path="/PM25DetailInfo.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1395563496246" ignored="false" />
+    <file path="/HistoryRunDetailActivity.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1395643929667" ignored="false" />
+    <file path="/HistoryRunDetailCellAdapter.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1395631636488" ignored="false" />
+    <file path="/WalkEvent.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1395632278891" ignored="false" />
+    <file path="/HistoryRunMapActivity.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1395644869352" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -307,13 +317,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SystemHandler.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/G5432/HttpClient/SystemHandler.java">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="243" column="31" selection-start="9626" selection-end="9626" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="68" column="62" selection-start="3928" selection-end="3928" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -321,16 +329,69 @@
       <file leaf-file-name="CommonUtil.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/G5432/Utils/CommonUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="151" column="58" selection-start="5750" selection-end="5750" vertical-scroll-proportion="0.0">
+            <state line="162" column="33" selection-start="6215" selection-end="6215" vertical-scroll-proportion="-8.64">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="history_run_main.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/history_run_main.xml">
+      <file leaf-file-name="BMapInfo.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/G5432/Entity/BMapInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="16" selection-start="391" selection-end="391" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CityCode.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/G5432/Utils/CityCode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="13" selection-start="236" selection-end="236" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HistoryRunMainActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/G5432/WalkFun/History/HistoryRunMainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="7" selection-start="740" selection-end="1313" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/G5432/WalkFun/Main/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="13" selection-start="1096" selection-end="1096" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HistoryRunMapActivity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/G5432/WalkFun/History/HistoryRunMapActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="80" column="47" selection-start="2614" selection-end="2614" vertical-scroll-proportion="8.510638">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1901#2053#0" expanded="true" />
+                <element signature="e#2042#2043#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="history_run_map.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/history_run_map.xml">
           <provider editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="8" column="61" selection-start="476" selection-end="476" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -339,73 +400,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoadingActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/G5432/WalkFun/Main/LoadingActivity.java">
+      <file leaf-file-name="HistoryRunDetailActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/G5432/WalkFun/History/HistoryRunDetailActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="107" column="73" selection-start="4676" selection-end="4676" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="72" column="16" selection-start="2441" selection-end="2441" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#2172#2487#0" expanded="true" />
+                <element signature="e#2476#2477#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GlobalSyncStatus.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/G5432/Utils/GlobalSyncStatus.java">
+      <file leaf-file-name="HistoryRunCellAdapter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/G5432/WalkFun/History/HistoryRunCellAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="25" selection-start="1087" selection-end="1087" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="history_run_cell.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/history_run_cell.xml">
-          <provider editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ToastUtil.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/G5432/Utils/ToastUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="13" selection-start="304" selection-end="304" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="history_run_cell_title.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/res/layout/history_run_cell_title.xml">
-          <provider editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="history_run_detail_main.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/history_run_detail_main.xml">
-          <provider editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserUtil.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/G5432/Utils/UserUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="13" selection-start="354" selection-end="354" vertical-scroll-proportion="0.0">
+            <state line="60" column="52" selection-start="2292" selection-end="2498" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -434,22 +444,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/res/layout/history_run_detail_main.xml" />
-        <option value="$PROJECT_DIR$/src/com/G5432/Entity/FriendSort.java" />
-        <option value="$PROJECT_DIR$/src/com/G5432/Entity/SearchUserInfo.java" />
-        <option value="$PROJECT_DIR$/src/com/G5432/Entity/UserBase.java" />
-        <option value="$PROJECT_DIR$/src/com/G5432/Entity/UserInfo.java" />
-        <option value="$PROJECT_DIR$/src/com/G5432/Entity/FightDefinition.java" />
-        <option value="$PROJECT_DIR$/src/com/G5432/Entity/VersionControl.java" />
-        <option value="$PROJECT_DIR$/src/com/G5432/Entity/Mission.java" />
-        <option value="$PROJECT_DIR$/src/com/G5432/Entity/VProduct.java" />
-        <option value="$PROJECT_DIR$/src/com/G5432/DBUtils/DatabaseHelper.java" />
-        <option value="$PROJECT_DIR$/src/com/G5432/Utils/GlobalSyncStatus.java" />
-        <option value="$PROJECT_DIR$/src/com/G5432/WalkFun/Main/LoadingActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/G5432/Utils/Constant.java" />
-        <option value="$PROJECT_DIR$/src/com/G5432/Service/SystemService.java" />
         <option value="$PROJECT_DIR$/src/com/G5432/HttpClient/SystemHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/G5432/Entity/PM25DetailInfo.java" />
+        <option value="$PROJECT_DIR$/res/layout/main.xml" />
+        <option value="$PROJECT_DIR$/src/com/G5432/WalkFun/Main/MainActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/G5432/Utils/WalkFunApplication.java" />
+        <option value="$PROJECT_DIR$/src/com/G5432/WalkFun/History/HistoryRunDetailCellAdapter.java" />
+        <option value="$PROJECT_DIR$/src/com/G5432/Entity/WalkEvent.java" />
+        <option value="$PROJECT_DIR$/res/layout/history_run_detail_cell.xml" />
+        <option value="$PROJECT_DIR$/src/com/G5432/WalkFun/History/HistoryRunCellAdapter.java" />
+        <option value="$PROJECT_DIR$/res/layout/history_run_detail_main.xml" />
+        <option value="$PROJECT_DIR$/src/com/G5432/WalkFun/History/HistoryRunDetailActivity.java" />
+        <option value="$PROJECT_DIR$/res/layout/history_run_map.xml" />
+        <option value="$PROJECT_DIR$/src/com/G5432/Entity/BMapInfo.java" />
         <option value="$PROJECT_DIR$/src/com/G5432/Utils/CommonUtil.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/com/G5432/WalkFun/History/HistoryRunMapActivity.java" />
       </list>
     </option>
   </component>
@@ -539,14 +549,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="WalkFun_android" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; Android 4.0 Platform &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -721,28 +723,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WalkFun_android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WalkFun_android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="G5432" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="HttpClient" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -823,6 +803,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WalkFun_android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WalkFun_android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable-xhdpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WalkFun_android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WalkFun_android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -840,7 +852,7 @@
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="ExportedModule" value="Cyberace_android" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/android-async-http-1.4.4.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/locSDK_4.0.jar!/" />
     <property name="GenerateAntBuildDialog.inclineRuntiemClasspath" value="false" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="cyberace_android" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
@@ -866,9 +878,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/res/drawable-hdpi" />
       <recent name="$PROJECT_DIR$/libs" />
       <recent name="$PROJECT_DIR$/libs/armeabi" />
+      <recent name="$PROJECT_DIR$/res/drawable-hdpi" />
       <recent name="$PROJECT_DIR$/src/com/G5432/Entity/Enum" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -1097,7 +1109,11 @@
       <created>1395032010596</created>
       <updated>1395032010596</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="add history page and change service due to new design.">
+      <created>1395558268715</created>
+      <updated>1395558268715</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1124,33 +1140,33 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16499282" sideWeight="0.10473815" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25824964" sideWeight="0.6072319" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.8952618" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32462686" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16427547" sideWeight="0.6932668" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.7605985" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39276809" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6645885" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32917705" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32668328" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.72319204" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32917705" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22955523" sideWeight="0.10473815" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22883788" sideWeight="0.23940149" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42518702" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25681493" sideWeight="0.6072319" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.6708229" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32462686" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39276809" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32668328" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4127182" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.6708229" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1197,7 +1213,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="add missing package jar and make screen always in one direction" />
+    <option name="LAST_COMMIT_MESSAGE" value="add history page and change service due to new design." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1223,6 +1239,7 @@
     <MESSAGE value="finished loading login register logic" />
     <MESSAGE value="finished friend and props." />
     <MESSAGE value="add missing package jar and make screen always in one direction" />
+    <MESSAGE value="add history page and change service due to new design." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1236,130 +1253,139 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/G5432/Entity/VirtualProductBuy.java">
+    <entry file="file://$PROJECT_DIR$/res/layout/history_run_detail_cell.xml">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/G5432/WalkFun/Item/ItemMallActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="256" selection-end="256" vertical-scroll-proportion="0.0">
+        <state line="120" column="32" selection-start="4738" selection-end="4738" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/G5432/DBUtils/DatabaseHelper.java">
+    <entry file="file://$PROJECT_DIR$/src/com/G5432/WalkFun/Item/ItemUseActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="55" selection-start="3030" selection-end="3030" vertical-scroll-proportion="0.0">
+        <state line="49" column="43" selection-start="1261" selection-end="1344" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/ormlite-core-4.47.jar!/com/j256/ormlite/stmt/QueryBuilder.class">
+    <entry file="file://$PROJECT_DIR$/src/com/G5432/WalkFun/Item/ItemMainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="52" selection-start="2239" selection-end="2239" vertical-scroll-proportion="0.34502104">
+        <state line="113" column="39" selection-start="4217" selection-end="4380" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/G5432/Service/MissionService.java">
+    <entry file="file://$PROJECT_DIR$/res/layout/history_run_detail_main.xml">
+      <provider editor-type-id="text-editor">
+        <state line="42" column="24" selection-start="2780" selection-end="2780" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/G5432/WalkFun/History/HistoryRunCellAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="25" selection-start="1479" selection-end="1750" vertical-scroll-proportion="0.0">
+        <state line="60" column="52" selection-start="2292" selection-end="2498" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/G5432/Utils/Constant.java">
+    <entry file="file://$PROJECT_DIR$/src/com/G5432/WalkFun/History/HistoryRunMainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="54" selection-start="2235" selection-end="2258" vertical-scroll-proportion="0.0">
+        <state line="43" column="7" selection-start="740" selection-end="1313" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/G5432/Service/SystemService.java">
+    <entry file="file://$PROJECT_DIR$/src/com/G5432/WalkFun/History/HistoryRunDetailActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="31" selection-start="3340" selection-end="3340" vertical-scroll-proportion="0.0">
+        <state line="72" column="16" selection-start="2441" selection-end="2441" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#2172#2487#0" expanded="true" />
+            <element signature="e#2476#2477#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/history_run_map.xml">
+      <provider editor-type-id="text-editor">
+        <state line="8" column="61" selection-start="476" selection-end="476" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/G5432/Utils/CityCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="13" selection-start="236" selection-end="236" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/G5432/Utils/GlobalSyncStatus.java">
+    <entry file="file://$PROJECT_DIR$/src/com/G5432/Entity/BMapInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="25" selection-start="1087" selection-end="1087" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/G5432/Utils/ToastUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="304" selection-end="304" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/G5432/Utils/UserUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="13" selection-start="354" selection-end="354" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/G5432/Utils/CommonUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="151" column="58" selection-start="5750" selection-end="5750" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/G5432/HttpClient/SystemHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="243" column="31" selection-start="9626" selection-end="9626" vertical-scroll-proportion="0.0">
+        <state line="20" column="16" selection-start="391" selection-end="391" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/G5432/WalkFun/Main/LoadingActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/com/G5432/Utils/CommonUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="73" selection-start="4676" selection-end="4676" vertical-scroll-proportion="0.0">
+        <state line="162" column="33" selection-start="6215" selection-end="6215" vertical-scroll-proportion="-8.64">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/history_run_main.xml">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="62" selection-start="3928" selection-end="3928" vertical-scroll-proportion="0.0">
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/history_run_detail_main.xml">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
+    <entry file="file://$PROJECT_DIR$/src/com/G5432/WalkFun/Main/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="13" selection-start="1096" selection-end="1096" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/history_run_cell.xml">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
+    <entry file="file://$PROJECT_DIR$/src/com/G5432/WalkFun/History/HistoryRunMapActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="47" selection-start="2614" selection-end="2614" vertical-scroll-proportion="8.510638">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1901#2053#0" expanded="true" />
+            <element signature="e#2042#2043#0" expanded="true" />
+          </folding>
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/history_run_cell_title.xml">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
   </component>

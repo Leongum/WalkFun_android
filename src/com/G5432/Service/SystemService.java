@@ -107,7 +107,7 @@ public class SystemService {
 
         try {
             QueryBuilder<FightDefinition, Integer> queryBuilder = fightDefinitionDao.queryBuilder();
-            queryBuilder.where().ge("minLevelLimit", level).and().le("maxLevelLimit", level).and().eq("inUsing", 0);
+            queryBuilder.where().ge("maxLevelLimit", level).and().le("minLevelLimit", level).and().eq("inUsing", 0);
             queryBuilder.orderBy("monsterMinFight", true);
             fightDefinitionList = queryBuilder.query();
         } catch (SQLException e) {

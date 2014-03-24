@@ -103,7 +103,6 @@ public class SystemHandler {
                     PM25DetailInfo pm25DetailInfo = gson.fromJson(response, PM25DetailInfo.class);
                     msg.obj = pm25DetailInfo;
                     msg.what = 2;
-
                 } else {
                     Log.e(this.getClass().getName(), response);
                     msg.what = 0;
