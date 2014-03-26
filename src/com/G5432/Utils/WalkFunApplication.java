@@ -43,7 +43,7 @@ public class WalkFunApplication extends Application {
             ToastUtil.showMessage(WalkFunApplication.getInstance().getApplicationContext(), "BMapManager 初始化错误!");
         }
 
-        if(mLocationClient == null){
+        if (mLocationClient == null) {
             mLocationClient = new LocationClient(context);
         }
         mLocationClient.setAK(strKey);
@@ -99,8 +99,7 @@ public class WalkFunApplication extends Application {
                 WalkFunApplication.getInstance().m_bKeyRight = false;
             } else {
                 WalkFunApplication.getInstance().m_bKeyRight = true;
-                ToastUtil.showMessage(WalkFunApplication.getInstance().getApplicationContext(),
-                        "key认证成功");
+                //ToastUtil.showMessage(WalkFunApplication.getInstance().getApplicationContext(),"key认证成功");
             }
         }
     }

@@ -169,6 +169,7 @@ public class LoginActivity extends OrmLiteBaseActivity<DatabaseHelper> {
                 if (loginSuccessful && !jumped) {
                     jumped = true;
                     Intent intent = new Intent();
+                    intent.putExtra("pageId", 1);
                     intent.setClass(LoginActivity.this, MainActivity.class);
                     startActivity(intent);
                 } else if (!loginSuccessful) {

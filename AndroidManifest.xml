@@ -68,5 +68,8 @@
 
         <activity android:name=".History.HistoryRunMapActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait">
         </activity>
+
+        <activity android:name=".User.UserMainActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait">
+        </activity>
     </application>
 </manifest>

@@ -12,6 +12,7 @@ import com.G5432.DBUtils.DatabaseHelper;
 import com.G5432.Entity.*;
 import com.G5432.HttpClient.*;
 import com.G5432.Utils.*;
+import com.G5432.WalkFun.Main.MainActivity;
 import com.G5432.WalkFun.R;
 import com.j256.ormlite.android.apptools.OrmLiteBaseActivity;
 
@@ -144,7 +145,8 @@ public class ItemUseActivity extends OrmLiteBaseActivity<DatabaseHelper> {
         public void onClick(View view) {
             finish();
             Intent intent = new Intent();
-            intent.setClass(ItemUseActivity.this, ItemMainActivity.class);
+            intent.putExtra("pageId", 0);
+            intent.setClass(ItemUseActivity.this, MainActivity.class);
             startActivity(intent);
         }
     };

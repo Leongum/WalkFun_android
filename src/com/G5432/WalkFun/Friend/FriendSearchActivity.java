@@ -15,6 +15,7 @@ import com.G5432.Entity.SearchUserInfo;
 import com.G5432.HttpClient.FriendHandler;
 import com.G5432.HttpClient.UserHandler;
 import com.G5432.Utils.*;
+import com.G5432.WalkFun.Main.MainActivity;
 import com.G5432.WalkFun.R;
 import com.j256.ormlite.android.apptools.OrmLiteBaseActivity;
 
@@ -71,7 +72,8 @@ public class FriendSearchActivity extends OrmLiteBaseActivity<DatabaseHelper> {
         public void onClick(View view) {
             finish();
             Intent intent = new Intent();
-            intent.setClass(FriendSearchActivity.this, FriendMainActivity.class);
+            intent.putExtra("pageId", 2);
+            intent.setClass(FriendSearchActivity.this, MainActivity.class);
             startActivity(intent);
         }
     };

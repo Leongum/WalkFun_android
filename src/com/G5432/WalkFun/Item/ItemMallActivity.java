@@ -14,6 +14,7 @@ import com.G5432.HttpClient.UserPropHandler;
 import com.G5432.HttpClient.VirtualProductHandler;
 import com.G5432.Utils.ToastUtil;
 import com.G5432.Utils.UserUtil;
+import com.G5432.WalkFun.Main.MainActivity;
 import com.G5432.WalkFun.R;
 import com.j256.ormlite.android.apptools.OrmLiteBaseActivity;
 
@@ -188,7 +189,8 @@ public class ItemMallActivity extends OrmLiteBaseActivity<DatabaseHelper> {
         public void onClick(View view) {
             finish();
             Intent intent = new Intent();
-            intent.setClass(ItemMallActivity.this, ItemMainActivity.class);
+            intent.putExtra("pageId", 0);
+            intent.setClass(ItemMallActivity.this, MainActivity.class);
             startActivity(intent);
         }
     };

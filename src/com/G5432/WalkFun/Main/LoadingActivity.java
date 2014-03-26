@@ -37,6 +37,7 @@ public class LoadingActivity extends OrmLiteBaseActivity<DatabaseHelper> {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.loading);
         UserUtil.sharedPreferences = getSharedPreferences("UserBaseInfo", MODE_APPEND);
+        UserUtil.weatherPreferences = getSharedPreferences("WeatherInfo",MODE_APPEND);
         systemHandler = new SystemHandler(getHelper());
         missionHandler = new MissionHandler(getHelper());
         virtualProductHandler = new VirtualProductHandler(getHelper());
@@ -119,6 +120,7 @@ public class LoadingActivity extends OrmLiteBaseActivity<DatabaseHelper> {
         needJump = false;
         if (UserUtil.getUserId() > 0) {
             Intent intent = new Intent();
+            intent.putExtra("pageId", 1);
             intent.setClass(LoadingActivity.this, MainActivity.class);
             startActivity(intent);
         } else {

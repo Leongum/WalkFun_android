@@ -77,6 +77,7 @@ public class SetSelectionActivity extends OrmLiteBaseActivity<DatabaseHelper> {
         public void handleMessage(Message msg) {
             if (msg.what == 1) {
                 Intent intent = new Intent();
+                intent.putExtra("pageId", 1);
                 intent.setClass(SetSelectionActivity.this, MainActivity.class);
                 startActivity(intent);
             } else {

@@ -125,8 +125,8 @@ public class ItemMainActivity extends OrmLiteBaseActivity<DatabaseHelper> {
         }
     };
 
-//    @Override
-//    public void onBackPressed() {
-//        //todo::do nothing now
-//    }
+    @Override
+    public void onBackPressed() {
+        //todo::do nothing now
+    }
 }

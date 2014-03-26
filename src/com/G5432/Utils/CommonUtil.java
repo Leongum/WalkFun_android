@@ -118,20 +118,6 @@ public class CommonUtil {
         return MessageFormat.format("{0} km", String.format("%.2f", distance / 1000));
     }
 
-    public static String transSpeedToStandardFormat(double kmPerHour) {
-        double metersPerSec = kmPerHour / 3.6;
-        String speedType = UserUtil.getSpeedFormat();
-        if (speedType.equalsIgnoreCase(Constant.SPEED_FORMAT_MIN_PER_KM)) {
-            double orginSpeed = metersPerSec;
-            if (orginSpeed == 0)
-                return "0''0\" /km";
-            int minutes = (int) (1000 / (orginSpeed * 60));
-            int seconds = ((int) (1000 / orginSpeed)) % 60;
-            return MessageFormat.format("{0}''{1}\" km", minutes, seconds);
-        }
-        return MessageFormat.format("{0} km/h", String.format("%.2f", kmPerHour));
-    }
-
     public static String getCityCode(String cityName, String districtName) {
         CityCode cityCodeClass = new CityCode();
         Map<String, String> cityCodes = CityCode.cityCodes;

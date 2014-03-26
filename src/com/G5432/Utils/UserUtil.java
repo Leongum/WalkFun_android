@@ -18,6 +18,8 @@ public class UserUtil {
 
     public static SharedPreferences sharedPreferences;
 
+    public static SharedPreferences weatherPreferences;
+
     private Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss").excludeFieldsWithoutExposeAnnotation().create();
 
     public static Integer getUserId() {
@@ -30,26 +32,6 @@ public class UserUtil {
 
     public static String getUserUuid() {
         return sharedPreferences.getString("uuid", "");
-    }
-
-    public static String getSyncMode() {
-        return sharedPreferences.getString("syncMode", Constant.SYNC_MODE_ALL_MODE);
-    }
-
-    public static String getSpeedFormat() {
-        return sharedPreferences.getString("speedType", Constant.SPEED_FORMAT_KM_PER_HOUR);
-    }
-
-    public static void setSpeedFormat(String format) {
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("speedType", format);
-        editor.commit();
-    }
-
-    public static void setSyncMode(String syncMode) {
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("syncMode", syncMode);
-        editor.commit();
     }
 
     public static Date getSystemTime() {
@@ -113,4 +95,30 @@ public class UserUtil {
         editor.commit();
     }
 
+
+    public static void initWeatherInfo(Integer index, String weatherInfo) {
+        SharedPreferences.Editor editor = weatherPreferences.edit();
+        editor.putInt("index", index);
+        editor.putString("weatherInfo", weatherInfo);
+        editor.putString("weatherSyncTime",  CommonUtil.parseDateToString(new Date()));
+        editor.commit();
+    }
+
+    public static String getWeatherInfo() {
+        return UserUtil.weatherPreferences.getString("weatherInfo", "");
+    }
+
+    public static Integer getWeatherIndex() {
+        return weatherPreferences.getInt("index", -1);
+    }
+
+    public static void saveWeatherTime(Date systemTime) {
+        SharedPreferences.Editor editor = weatherPreferences.edit();
+        editor.putString("weatherSyncTime", CommonUtil.parseDateToString(systemTime));
+        editor.commit();
+    }
+
+    public static Date getWeatherTime() {
+        return CommonUtil.parseDate(UserUtil.weatherPreferences.getString("weatherSyncTime", "2000-01-01 00:00:00"));
+    }
 }

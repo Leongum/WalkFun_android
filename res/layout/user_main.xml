@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android"
+        >
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:id="@+id/userMainLayoutTitle"
+            >
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="85dp"
+                android:id="@+id/userMainImgTop" android:layout_centerHorizontal="true" android:layout_alignParentTop="true"
+                android:background="@drawable/main_title_board"/>
+        <ImageView
+                android:layout_width="215dp"
+                android:layout_height="80dp"
+                android:id="@+id/userMainImgUserInfo"
+                android:background="@drawable/main_login_bg" android:layout_alignLeft="@+id/userMainImgTop"
+                android:layout_alignTop="@+id/userMainImgTop" android:layout_marginLeft="75dp"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/userMainBtnTrafficlight" android:layout_alignLeft="@+id/userMainImgTop"
+                android:layout_alignTop="@+id/userMainImgTop" android:background="@drawable/main_trafficlight_none"
+                android:layout_marginLeft="6dp" android:layout_marginTop="12dp"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User Name"
+                android:id="@+id/userMainTxtName" android:layout_alignLeft="@+id/userMainImgUserInfo"
+                android:layout_alignTop="@+id/userMainImgTop" android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp" android:textColor="#000000"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lv.1"
+                android:id="@+id/userMainTxtLevel" android:layout_alignRight="@+id/userMainImgUserInfo"
+                android:layout_alignTop="@+id/userMainImgTop" android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp" android:textColor="#000000" android:textSize="10dp"/>
+    </RelativeLayout>
+</RelativeLayout>

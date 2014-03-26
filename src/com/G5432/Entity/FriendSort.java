@@ -39,6 +39,9 @@ public class FriendSort {
     @Expose
     @DatabaseField
     private Double fight;
+    @Expose
+    @DatabaseField
+    private Double fightPlus;
 
     public FriendSort(){
 
@@ -114,5 +117,13 @@ public class FriendSort {
 
     public void setFight(Double fight) {
         this.fight = fight;
+    }
+
+    public Double getFightPlus() {
+        return fightPlus;
+    }
+
+    public void setFightPlus(Double fightPlus) {
+        this.fightPlus = fightPlus;
     }
 }
