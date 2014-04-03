@@ -3,6 +3,7 @@ package com.G5432.Utils;
 import android.content.Context;
 import android.os.Handler;
 import android.os.Looper;
+import android.view.Gravity;
 import android.widget.Toast;
 
 /**
@@ -38,6 +39,7 @@ public class ToastUtil {
                         synchronized (synObj) {
                             if (toast != null) {
                                 toast.setText(msg);
+                                toast.setGravity(Gravity.CENTER, 0, 0);
                                 toast.setDuration(len);
                             } else {
                                 toast = Toast.makeText(act, msg, len);

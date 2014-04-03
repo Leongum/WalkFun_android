@@ -12,6 +12,7 @@ import com.G5432.Entity.VProduct;
 import com.G5432.HttpClient.UserHandler;
 import com.G5432.HttpClient.UserPropHandler;
 import com.G5432.HttpClient.VirtualProductHandler;
+import com.G5432.Utils.ProgressDlgUtil;
 import com.G5432.Utils.ToastUtil;
 import com.G5432.Utils.UserUtil;
 import com.G5432.WalkFun.Main.MainActivity;
@@ -65,13 +66,6 @@ public class ItemMallActivity extends OrmLiteBaseActivity<DatabaseHelper> {
         userPropHandler = new UserPropHandler(getHelper());
         userBase = userHandler.fetchUser(userId);
         totalMoney = Math.floor(userBase.getUserInfo().getGoldCoin());
-        props = new ArrayList<VProduct>();
-        List<VProduct> vProductList = virtualProductHandler.fetchAllVProduct();
-        for (VProduct vProduct : vProductList) {
-            if (vProduct.getVirtualPrice() > 0) {
-                props.add(vProduct);
-            }
-        }
         initPageUIControl();
     }
 
@@ -98,30 +92,58 @@ public class ItemMallActivity extends OrmLiteBaseActivity<DatabaseHelper> {
                 layoutBuy.setVisibility(View.GONE);
             }
         });
-        showProps(props);
+
+        showProps();
     }
 
-    private void showProps(final List<VProduct> props) {
-        ArrayList<Map<String, Object>> mData = new ArrayList<Map<String, Object>>();
-        for (int i = 0; i < props.size(); i++) {
-            Map<String, Object> item = new HashMap<String, Object>();
-            item.put("imageUrl", virtualProductHandler.getImageURI(props.get(i)));
-            item.put("propName", props.get(i).getProductName());
-            item.put("propDesc", props.get(i).getProductDescription());
-            item.put("propMoney", String.valueOf(Math.floor(props.get(i).getVirtualPrice())));
-            mData.add(item);
-        }
+    Handler initHandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
 
-        SimpleAdapter adapter = new SimpleAdapter(this, mData, R.layout.item_mall_item_cell,
-                new String[]{"imageUrl", "propName", "propDesc", "propMoney"},
-                new int[]{R.id.itemMallCellImgIcon, R.id.itemMallCellTxtTitle, R.id.itemMallCellTxtDesc, R.id.itemMallCellTxtMoney});
-        listProps.setAdapter(adapter);
-        listProps.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            SimpleAdapter adapter = new SimpleAdapter(ItemMallActivity.this, (ArrayList<Map<String, Object>>) msg.obj, R.layout.item_mall_item_cell,
+                    new String[]{"imageUrl", "propName", "propDesc", "propMoney"},
+                    new int[]{R.id.itemMallCellImgIcon, R.id.itemMallCellTxtTitle, R.id.itemMallCellTxtDesc, R.id.itemMallCellTxtMoney});
+            listProps.setAdapter(adapter);
+            listProps.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int index, long l) {
+                    showBuyLayout(props.get(index));
+
+                }
+            });
+            ProgressDlgUtil.stopProgressDlg();
+        }
+    };
+
+    private void showProps() {
+        ProgressDlgUtil.showProgressDlg(ItemMallActivity.this);
+        Thread thread = new Thread(new Runnable() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int index, long l) {
-                showBuyLayout(props.get(index));
+            public void run() {
+                props = new ArrayList<VProduct>();
+                List<VProduct> vProductList = virtualProductHandler.fetchAllVProduct();
+                for (VProduct vProduct : vProductList) {
+                    if (vProduct.getVirtualPrice() > 0) {
+                        props.add(vProduct);
+                    }
+                }
+                ArrayList<Map<String, Object>> mData = new ArrayList<Map<String, Object>>();
+                for (int i = 0; i < props.size(); i++) {
+                    Map<String, Object> item = new HashMap<String, Object>();
+                    item.put("imageUrl", virtualProductHandler.getImageURI(props.get(i)));
+                    item.put("propName", props.get(i).getProductName());
+                    item.put("propDesc", props.get(i).getProductDescription());
+                    item.put("propMoney", String.valueOf(Math.floor(props.get(i).getVirtualPrice())));
+                    mData.add(item);
+                }
+
+                Message message = new Message();
+                message.what = 1;
+                message.obj = mData;
+                initHandler.sendMessage(message);
             }
         });
+        thread.start();
     }
 
     public void showBuyLayout(final VProduct vProduct) {
@@ -187,7 +209,7 @@ public class ItemMallActivity extends OrmLiteBaseActivity<DatabaseHelper> {
     private View.OnClickListener returnListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            finish();
+            //finish();
             Intent intent = new Intent();
             intent.putExtra("pageId", 0);
             intent.setClass(ItemMallActivity.this, MainActivity.class);

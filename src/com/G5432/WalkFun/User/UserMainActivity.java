@@ -16,6 +16,7 @@ import com.G5432.HttpClient.UserHandler;
 import com.G5432.Utils.*;
 import com.G5432.WalkFun.History.HistoryRunMainActivity;
 import com.G5432.WalkFun.R;
+import com.G5432.WalkFun.WalkFunBaseActivity;
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
 import com.j256.ormlite.android.apptools.OrmLiteBaseActivity;

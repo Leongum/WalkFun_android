@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.*;
 import com.G5432.DBUtils.DatabaseHelper;
 import com.G5432.HttpClient.UserHandler;
+import com.G5432.Utils.ProgressDlgUtil;
 import com.G5432.WalkFun.Friend.FriendMainActivity;
 import com.G5432.WalkFun.Item.ItemMainActivity;
 import com.G5432.WalkFun.R;
@@ -43,7 +44,6 @@ public class MainActivity extends OrmLiteBaseActivity<DatabaseHelper> {
     private View userMainTitle;
     private View itemMainTitle;
 
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,9 +53,9 @@ public class MainActivity extends OrmLiteBaseActivity<DatabaseHelper> {
         manager = new LocalActivityManager(this, true);
         manager.dispatchCreate(savedInstanceState);
         userHandler = new UserHandler(getHelper());
+
         initPageUIControl();
     }
-
 
     private void initPageUIControl() {
         btnSync = (Button) findViewById(R.id.mainBtnSync);
@@ -178,6 +178,7 @@ public class MainActivity extends OrmLiteBaseActivity<DatabaseHelper> {
         @Override
         public void onClick(View view) {
             //todo:: do sync things
+            ProgressDlgUtil.showProgressDlg(MainActivity.this);
         }
     };
 
