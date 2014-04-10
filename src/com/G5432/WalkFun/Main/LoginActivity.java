@@ -1,5 +1,6 @@
 package com.G5432.WalkFun.Main;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -12,6 +13,14 @@ import com.G5432.HttpClient.*;
 import com.G5432.Utils.*;
 import com.G5432.WalkFun.R;
 import com.j256.ormlite.android.apptools.OrmLiteBaseActivity;
+import com.umeng.socialize.bean.SHARE_MEDIA;
+import com.umeng.socialize.controller.RequestType;
+import com.umeng.socialize.controller.UMServiceFactory;
+import com.umeng.socialize.controller.UMSocialService;
+import com.umeng.socialize.controller.UMSsoHandler;
+import com.umeng.socialize.controller.listener.SocializeListeners;
+import com.umeng.socialize.db.OauthHelper;
+import com.umeng.socialize.exception.SocializeException;
 
 /**
  * Created with IntelliJ IDEA.
@@ -32,6 +41,8 @@ public class LoginActivity extends OrmLiteBaseActivity<DatabaseHelper> {
     private EditText txtNickName;
     private Button btnReturn;
     private Button btnSubmit;
+    private Button btnQQ;
+    private Button btnWeibo;
     private Boolean isLogin = true;
     private Boolean loginSuccessful = true;
     //Handler
@@ -42,6 +53,8 @@ public class LoginActivity extends OrmLiteBaseActivity<DatabaseHelper> {
     private UserPropHandler userPropHandler;
 
     private Boolean jumped = false;
+
+    final UMSocialService mController = UMServiceFactory.getUMSocialService("com.umeng.share", RequestType.SOCIAL);
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -60,17 +73,54 @@ public class LoginActivity extends OrmLiteBaseActivity<DatabaseHelper> {
         btnRegister = (Button) findViewById(R.id.loginBtnRegister);
         btnSubmit = (Button) findViewById(R.id.loginBtnSubmit);
         btnReturn = (Button) findViewById(R.id.loginBtnReturn);
+        btnQQ = (Button) findViewById(R.id.loginBtnQQ);
+        btnWeibo = (Button) findViewById(R.id.loginBtnWeibo);
         txtPassword = (EditText) findViewById(R.id.loginTxtPassword);
         txtUserName = (EditText) findViewById(R.id.loginTxtUserName);
         txtNickName = (EditText) findViewById(R.id.loginTxtNickName);
         layoutMain = (RelativeLayout) findViewById(R.id.loginLayoutMain);
         layoutFeild = (RelativeLayout) findViewById(R.id.loginLayoutFeild);
 
+        btnWeibo.setOnClickListener(weiboLoginListener);
         btnLogin.setOnClickListener(loginListener);
         btnRegister.setOnClickListener(registerListener);
         btnReturn.setOnClickListener(returnListener);
         btnSubmit.setOnClickListener(sumbitListener);
     }
+
+    private View.OnClickListener weiboLoginListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Context mContext = getApplicationContext();
+            if (OauthHelper.isAuthenticated(getApplication(), SHARE_MEDIA.SINA)) {
+
+            } else {
+                mController.doOauthVerify(LoginActivity.this, SHARE_MEDIA.SINA, new SocializeListeners.UMAuthListener() {
+                    @Override
+                    public void onStart(SHARE_MEDIA platform) {
+
+                    }
+
+                    @Override
+                    public void onError(SocializeException e, SHARE_MEDIA platform) {
+                        //Toast.makeText(mContext, "授权错误", Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onComplete(Bundle value, SHARE_MEDIA platform) {
+                        //Toast.makeText(mContext, "授权完成", Toast.LENGTH_SHORT).show();
+                        //获取相关授权信息或者跳转到自定义的分享编辑页面
+                        String uid = value.getString("uid");
+                    }
+
+                    @Override
+                    public void onCancel(SHARE_MEDIA platform) {
+                        //Toast.makeText(mContext, "授权取消", Toast.LENGTH_SHORT).show();
+                    }
+                } );
+            }
+        }
+    };
 
     private View.OnClickListener loginListener = new View.OnClickListener() {
         @Override
@@ -192,6 +242,16 @@ public class LoginActivity extends OrmLiteBaseActivity<DatabaseHelper> {
             }
         }
     };
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        /**使用SSO授权必须添加如下代码 */
+        UMSsoHandler ssoHandler = mController.getConfig().getSsoHandler(requestCode);
+        if (ssoHandler != null) {
+            ssoHandler.authorizeCallBack(requestCode, resultCode, data);
+        }
+    }
 
     @Override
     public void onBackPressed() {

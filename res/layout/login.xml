@@ -24,6 +24,15 @@
                 android:background="@drawable/login_button" android:textColor="#000000" android:textSize="24dp"
                 android:layout_alignLeft="@+id/loginBtnLogin" android:layout_below="@+id/loginBtnLogin" android:layout_marginTop="5dp"
                 android:textStyle="bold"/>
+        <Button
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/loginBtnWeibo" android:layout_alignLeft="@+id/loginBtnLogin"
+                android:layout_below="@+id/loginBtnRegister" android:background="@drawable/weibo"
+                android:layout_marginLeft="20dp"/>
+        <Button android:layout_width="40dp" android:layout_height="40dp" android:id="@+id/loginBtnQQ"
+                android:background="@drawable/qq" android:layout_toRightOf="@+id/loginBtnWeibo"
+                android:layout_below="@+id/loginBtnRegister" android:layout_marginLeft="25dp"/>
     </RelativeLayout>
     <RelativeLayout
             android:layout_width="fill_parent"

@@ -145,7 +145,7 @@ public class SystemHandler {
 
             @Override
             public void onFailure(Throwable error, String content) {
-                Log.e(this.getClass().getName(), error.getMessage());
+                Log.e(this.getClass().getName(), "" + error.getMessage());
                 handler.sendEmptyMessage(0);
             }
         });

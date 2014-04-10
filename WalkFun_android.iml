@@ -18,6 +18,8 @@
     <orderEntry type="jdk" jdkName="Android 4.0 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="libs" level="project" />
+    <orderEntry type="module" module-name="social_sdk_library_project" />
+    <orderEntry type="library" name="umeng_lib" level="project" />
   </component>
 </module>
 
