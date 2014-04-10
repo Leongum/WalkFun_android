@@ -91,7 +91,6 @@ public class LoginActivity extends OrmLiteBaseActivity<DatabaseHelper> {
     private View.OnClickListener weiboLoginListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            Context mContext = getApplicationContext();
             if (OauthHelper.isAuthenticated(getApplication(), SHARE_MEDIA.SINA)) {
 
             } else {
