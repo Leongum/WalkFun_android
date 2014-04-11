@@ -66,7 +66,7 @@ public class UserHandler {
 
                 @Override
                 public void onFailure(int statusCode, Throwable error, String content) {
-                    if(statusCode == 406 && content.contains("LOGIN_CHECK_FAIL")){
+                    if (statusCode == 406 && content.contains("LOGIN_CHECK_FAIL")) {
                         logout();
                     }
                     Log.e(this.getClass().getName(), error.getMessage());
@@ -158,7 +158,7 @@ public class UserHandler {
 
             @Override
             public void onFailure(Throwable error, String content) {
-                Log.e(this.getClass().getName(), error.getMessage() + content);
+                Log.e(this.getClass().getName(), "" + error.getMessage() + content);
                 handler.sendEmptyMessage(0);
             }
         });

@@ -49,6 +49,12 @@ public class ActionDefinition {
     private String notificationMessage;
     @Expose
     @DatabaseField
+    private Double minLevelLimit;
+    @Expose
+    @DatabaseField
+    private Double maxLevelLimit;
+    @Expose
+    @DatabaseField
     private Date updateTime;
 
     public  ActionDefinition(){
@@ -141,6 +147,22 @@ public class ActionDefinition {
 
     public void setNotificationMessage(String notificationMessage) {
         this.notificationMessage = notificationMessage;
+    }
+
+    public Double getMinLevelLimit() {
+        return minLevelLimit;
+    }
+
+    public void setMinLevelLimit(Double minLevelLimit) {
+        this.minLevelLimit = minLevelLimit;
+    }
+
+    public Double getMaxLevelLimit() {
+        return maxLevelLimit;
+    }
+
+    public void setMaxLevelLimit(Double maxLevelLimit) {
+        this.maxLevelLimit = maxLevelLimit;
     }
 
     public Date getUpdateTime() {

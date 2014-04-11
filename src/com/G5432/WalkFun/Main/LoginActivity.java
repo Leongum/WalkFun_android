@@ -1,6 +1,5 @@
 package com.G5432.WalkFun.Main;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -21,6 +20,9 @@ import com.umeng.socialize.controller.UMSsoHandler;
 import com.umeng.socialize.controller.listener.SocializeListeners;
 import com.umeng.socialize.db.OauthHelper;
 import com.umeng.socialize.exception.SocializeException;
+import com.umeng.socialize.sso.SinaSsoHandler;
+
+import java.util.Map;
 
 /**
  * Created with IntelliJ IDEA.
@@ -66,6 +68,7 @@ public class LoginActivity extends OrmLiteBaseActivity<DatabaseHelper> {
         runningHistoryHandler = new RunningHistoryHandler(getHelper());
         missionHistoryHandler = new MissionHistoryHandler(getHelper());
         userPropHandler = new UserPropHandler(getHelper());
+        mController.getConfig().setSsoHandler(new SinaSsoHandler());
     }
 
     private void initPageUIControl() {
@@ -82,6 +85,7 @@ public class LoginActivity extends OrmLiteBaseActivity<DatabaseHelper> {
         layoutFeild = (RelativeLayout) findViewById(R.id.loginLayoutFeild);
 
         btnWeibo.setOnClickListener(weiboLoginListener);
+        btnQQ.setOnClickListener(qqLoginListener);
         btnLogin.setOnClickListener(loginListener);
         btnRegister.setOnClickListener(registerListener);
         btnReturn.setOnClickListener(returnListener);
@@ -91,32 +95,84 @@ public class LoginActivity extends OrmLiteBaseActivity<DatabaseHelper> {
     private View.OnClickListener weiboLoginListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            if (OauthHelper.isAuthenticated(getApplication(), SHARE_MEDIA.SINA)) {
+            doSNSAuth(SHARE_MEDIA.SINA);
+        }
+    };
 
+    private View.OnClickListener qqLoginListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            doSNSAuth(SHARE_MEDIA.QZONE);
+        }
+    };
+
+    private void doSNSAuth(final SHARE_MEDIA shareMedia) {
+        if (OauthHelper.isAuthenticated(getApplication(), shareMedia)) {
+            doSNSLogin(shareMedia);
+        } else {
+            mController.doOauthVerify(LoginActivity.this, shareMedia, new SocializeListeners.UMAuthListener() {
+                @Override
+                public void onStart(SHARE_MEDIA platform) {
+                }
+
+                @Override
+                public void onError(SocializeException e, SHARE_MEDIA platform) {
+                    ToastUtil.showMessage(getApplicationContext(), "授权失败");
+                }
+
+                @Override
+                public void onComplete(Bundle value, SHARE_MEDIA platform) {
+                    doSNSLogin(shareMedia);
+                }
+
+                @Override
+                public void onCancel(SHARE_MEDIA platform) {
+                    ToastUtil.showMessage(getApplicationContext(), "授权取消");
+                }
+            });
+        }
+    }
+
+    UserBase snsUserBase = new UserBase();
+
+    private void doSNSLogin(final SHARE_MEDIA shareMedia) {
+        mController.getPlatformInfo(LoginActivity.this, shareMedia, new SocializeListeners.UMDataListener() {
+            @Override
+            public void onStart() {
+            }
+
+            @Override
+            public void onComplete(int status, Map<String, Object> info) {
+                if (status == 200 && info != null) {
+                    snsUserBase.setNickName(info.get("screen_name").toString());
+                    snsUserBase.setUserName(info.get("uid").toString());
+                    snsUserBase.setPassword(info.get("uid").toString());
+                    snsUserBase.setPlatformInfo("android");
+                    snsUserBase.setSex("未知");
+
+
+                    userHandler.syncUserInfoByLogin(info.get("uid").toString(), info.get("uid").toString(), snsLoginHandler);
+                } else {
+                    ToastUtil.showMessage(getApplicationContext(), "授权失败");
+                }
+            }
+        });
+    }
+
+    Handler snsLoginHandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            if (msg.what == 1) {
+                loginSuccessful = true;
+                GlobalSyncStatus.setUserBaseSync();
+                userPropHandler.syncUserProps(loginSuccessHandler);
+                friendHandler.syncActions(loginSuccessHandler);
+                friendHandler.syncFriendSort(loginSuccessHandler);
+                friendHandler.syncFriends(loginSuccessHandler);
+                missionHistoryHandler.syncMissionHistories(loginSuccessHandler);
+                runningHistoryHandler.syncRunningHistories(loginSuccessHandler);
             } else {
-                mController.doOauthVerify(LoginActivity.this, SHARE_MEDIA.SINA, new SocializeListeners.UMAuthListener() {
-                    @Override
-                    public void onStart(SHARE_MEDIA platform) {
-
-                    }
-
-                    @Override
-                    public void onError(SocializeException e, SHARE_MEDIA platform) {
-                        //Toast.makeText(mContext, "授权错误", Toast.LENGTH_SHORT).show();
-                    }
-
-                    @Override
-                    public void onComplete(Bundle value, SHARE_MEDIA platform) {
-                        //Toast.makeText(mContext, "授权完成", Toast.LENGTH_SHORT).show();
-                        //获取相关授权信息或者跳转到自定义的分享编辑页面
-                        String uid = value.getString("uid");
-                    }
-
-                    @Override
-                    public void onCancel(SHARE_MEDIA platform) {
-                        //Toast.makeText(mContext, "授权取消", Toast.LENGTH_SHORT).show();
-                    }
-                } );
+                userHandler.registerUser(snsUserBase, registerHandler);
             }
         }
     };
@@ -161,6 +217,7 @@ public class LoginActivity extends OrmLiteBaseActivity<DatabaseHelper> {
                 userBase.setPassword(txtPassword.getText().toString());
                 userBase.setNickName(txtNickName.getText().toString());
                 userBase.setPlatformInfo("android");
+                userBase.setSex("未知");
                 //todo:: add device id
                 userHandler.registerUser(userBase, registerHandler);
             }

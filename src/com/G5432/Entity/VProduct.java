@@ -28,7 +28,7 @@ public class VProduct {
     private Integer virtualPrice;
     @Expose
     @DatabaseField
-    private Integer dropFlag;
+    private Integer propFlag;
     @Expose
     @DatabaseField
     private String picLink;
@@ -87,12 +87,12 @@ public class VProduct {
         this.virtualPrice = virtualPrice;
     }
 
-    public Integer getDropFlag() {
-        return dropFlag;
+    public Integer getPropFlag() {
+        return propFlag;
     }
 
-    public void setDropFlag(Integer dropFlag) {
-        this.dropFlag = dropFlag;
+    public void setPropFlag(Integer propFlag) {
+        this.propFlag = propFlag;
     }
 
     public String getPicLink() {
