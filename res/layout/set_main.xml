@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:background="@drawable/history_detail_bg">
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="102dp"
+            android:id="@+id/setMainImgTitle" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"
+            android:background="@drawable/history_detail_title"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="152dp"
+            android:id="@+id/setMainImgBottom"
+            android:background="@drawable/history_detail_sum"
+            android:layout_alignLeft="@+id/setMainImgTitle" android:layout_alignParentBottom="true"/>
+    <Button
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:id="@+id/setMainBtnReturn" android:layout_alignLeft="@+id/setMainImgTitle"
+            android:layout_alignTop="@+id/setMainImgTitle" android:background="@drawable/back_button"
+            android:layout_marginLeft="14dp" android:layout_marginTop="9dp"/>
+    <Button android:layout_width="55dp" android:layout_height="55dp" android:id="@+id/setMainBtnLogout"
+            android:background="@drawable/back_button" android:layout_alignRight="@+id/setMainImgTitle"
+            android:layout_alignParentTop="true" android:layout_marginTop="7dp" android:layout_marginRight="7dp"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:text="新浪微博: @Cyberace_赛跑乐" android:id="@+id/setMainTxtSina"
+              android:textColor="#4c157c"
+              android:layout_alignLeft="@+id/setMainTxtWeixin"
+              android:layout_above="@+id/setMainTxtWeixin" android:layout_marginBottom="15dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="微信（订阅号）: Cyberace"
+            android:id="@+id/setMainTxtWeixin"
+            android:textColor="#4c157c"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true" android:layout_marginBottom="30dp" android:layout_marginLeft="35dp"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/setMainBtnWriteUs" android:layout_alignRight="@+id/setMainBtnLogout"
+            android:layout_alignTop="@+id/setMainTxtSina" android:background="@drawable/write_us"
+            android:layout_marginRight="10dp" android:layout_marginTop="-2dp"/>
+</RelativeLayout>

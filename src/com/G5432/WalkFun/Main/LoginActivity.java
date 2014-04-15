@@ -6,12 +6,11 @@ import android.os.Handler;
 import android.os.Message;
 import android.view.View;
 import android.widget.*;
-import com.G5432.DBUtils.DatabaseHelper;
 import com.G5432.Entity.UserBase;
 import com.G5432.HttpClient.*;
 import com.G5432.Utils.*;
 import com.G5432.WalkFun.R;
-import com.j256.ormlite.android.apptools.OrmLiteBaseActivity;
+import com.G5432.WalkFun.WalkFunBaseActivity;
 import com.umeng.socialize.bean.SHARE_MEDIA;
 import com.umeng.socialize.controller.RequestType;
 import com.umeng.socialize.controller.UMServiceFactory;
@@ -31,7 +30,7 @@ import java.util.Map;
  * Time: 下午1:35
  * To change this template use File | Settings | File Templates.
  */
-public class LoginActivity extends OrmLiteBaseActivity<DatabaseHelper> {
+public class LoginActivity extends WalkFunBaseActivity {
 
     //page ui control
     private Button btnLogin;

@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.*;
-import com.G5432.DBUtils.DatabaseHelper;
 import com.G5432.Entity.ActionDefinition;
 import com.G5432.Entity.FightDefinition;
 import com.G5432.Entity.RunningHistory;
@@ -14,10 +13,10 @@ import com.G5432.HttpClient.RunningHistoryHandler;
 import com.G5432.HttpClient.SystemHandler;
 import com.G5432.Utils.CommonUtil;
 import com.G5432.WalkFun.R;
+import com.G5432.WalkFun.WalkFunBaseActivity;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
-import com.j256.ormlite.android.apptools.OrmLiteBaseActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -32,7 +31,7 @@ import java.util.Map;
  * Time: 上午11:02
  * To change this template use File | Settings | File Templates.
  */
-public class HistoryRunDetailActivity extends OrmLiteBaseActivity<DatabaseHelper> {
+public class HistoryRunDetailActivity extends WalkFunBaseActivity {
 
     //init UI control
     private Button btnMap;

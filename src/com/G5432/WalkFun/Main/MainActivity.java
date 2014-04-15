@@ -6,14 +6,13 @@ import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.*;
-import com.G5432.DBUtils.DatabaseHelper;
 import com.G5432.HttpClient.UserHandler;
-import com.G5432.Utils.ProgressDlgUtil;
 import com.G5432.WalkFun.Friend.FriendMainActivity;
 import com.G5432.WalkFun.Item.ItemMainActivity;
 import com.G5432.WalkFun.R;
+import com.G5432.WalkFun.Setting.SetMainActivity;
 import com.G5432.WalkFun.User.UserMainActivity;
-import com.j256.ormlite.android.apptools.OrmLiteBaseActivity;
+import com.G5432.WalkFun.WalkFunBaseActivity;
 
 import java.util.ArrayList;
 
@@ -25,7 +24,7 @@ import java.util.ArrayList;
  * Time: 上午11:10
  * To change this template use File | Settings | File Templates.
  */
-public class MainActivity extends OrmLiteBaseActivity<DatabaseHelper> {
+public class MainActivity extends WalkFunBaseActivity {
 
     //init UI control
     private Button btnSync;
@@ -178,18 +177,15 @@ public class MainActivity extends OrmLiteBaseActivity<DatabaseHelper> {
         @Override
         public void onClick(View view) {
             //todo:: do sync things
-            ProgressDlgUtil.showProgressDlg(MainActivity.this);
         }
     };
 
     private View.OnClickListener settingListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            userHandler.logout();
             Intent intent = new Intent();
-            intent.setClass(MainActivity.this, LoginActivity.class);
+            intent.setClass(MainActivity.this, SetMainActivity.class);
             startActivity(intent);
-            //todo:: do jump
         }
     };
 

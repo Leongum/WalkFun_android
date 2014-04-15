@@ -3,13 +3,12 @@ package com.G5432.WalkFun.History;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
-import com.G5432.DBUtils.DatabaseHelper;
 import com.G5432.Entity.RunningHistory;
 import com.G5432.HttpClient.RunningHistoryHandler;
 import com.G5432.Utils.CommonUtil;
 import com.G5432.Utils.UserUtil;
 import com.G5432.WalkFun.R;
-import com.j256.ormlite.android.apptools.OrmLiteBaseActivity;
+import com.G5432.WalkFun.WalkFunBaseActivity;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -23,7 +22,7 @@ import java.util.List;
  * Time: 下午2:38
  * To change this template use File | Settings | File Templates.
  */
-public class HistoryRunMainActivity extends OrmLiteBaseActivity<DatabaseHelper> {
+public class HistoryRunMainActivity extends WalkFunBaseActivity {
 
     //init UI control
     private Button btnReturn;

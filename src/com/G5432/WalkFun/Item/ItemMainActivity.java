@@ -4,12 +4,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
-import com.G5432.DBUtils.DatabaseHelper;
 import com.G5432.Entity.*;
 import com.G5432.HttpClient.*;
 import com.G5432.Utils.UserUtil;
 import com.G5432.WalkFun.R;
-import com.j256.ormlite.android.apptools.OrmLiteBaseActivity;
+import com.G5432.WalkFun.WalkFunBaseActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -23,7 +22,7 @@ import java.util.Map;
  * Time: 下午3:50
  * To change this template use File | Settings | File Templates.
  */
-public class ItemMainActivity extends OrmLiteBaseActivity<DatabaseHelper> {
+public class ItemMainActivity extends WalkFunBaseActivity {
 
     //init UI control
     private Button btnMall;

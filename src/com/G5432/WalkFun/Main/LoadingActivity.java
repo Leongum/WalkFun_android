@@ -2,14 +2,12 @@ package com.G5432.WalkFun.Main;
 
 import android.content.Intent;
 import android.os.*;
-import com.G5432.DBUtils.DatabaseHelper;
 import com.G5432.Entity.*;
 import com.G5432.HttpClient.*;
 import com.G5432.Utils.*;
 import com.G5432.WalkFun.R;
-import com.j256.ormlite.android.apptools.OrmLiteBaseActivity;
+import com.G5432.WalkFun.WalkFunBaseActivity;
 
-import java.io.File;
 import java.util.Date;
 
 
@@ -20,7 +18,7 @@ import java.util.Date;
  * Time: 下午3:42
  * To change this template use File | Settings | File Templates.
  */
-public class LoadingActivity extends OrmLiteBaseActivity<DatabaseHelper> {
+public class LoadingActivity extends WalkFunBaseActivity {
 
     private SystemHandler systemHandler = null;
     private UserHandler userHandler = null;

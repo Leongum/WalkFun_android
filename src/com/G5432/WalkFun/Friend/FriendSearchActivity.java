@@ -9,7 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.*;
-import com.G5432.DBUtils.DatabaseHelper;
 import com.G5432.Entity.Enum.FollowStatusEnum;
 import com.G5432.Entity.SearchUserInfo;
 import com.G5432.HttpClient.FriendHandler;
@@ -17,7 +16,7 @@ import com.G5432.HttpClient.UserHandler;
 import com.G5432.Utils.*;
 import com.G5432.WalkFun.Main.MainActivity;
 import com.G5432.WalkFun.R;
-import com.j256.ormlite.android.apptools.OrmLiteBaseActivity;
+import com.G5432.WalkFun.WalkFunBaseActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -31,7 +30,7 @@ import java.util.Map;
  * Time: 上午10:58
  * To change this template use File | Settings | File Templates.
  */
-public class FriendSearchActivity extends OrmLiteBaseActivity<DatabaseHelper> {
+public class FriendSearchActivity extends WalkFunBaseActivity {
 
     //init UI control
     private Button btnReturn;

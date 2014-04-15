@@ -6,7 +6,6 @@ import android.os.Handler;
 import android.os.Message;
 import android.view.View;
 import android.widget.*;
-import com.G5432.DBUtils.DatabaseHelper;
 import com.G5432.Entity.UserBase;
 import com.G5432.Entity.VProduct;
 import com.G5432.HttpClient.UserHandler;
@@ -17,7 +16,7 @@ import com.G5432.Utils.ToastUtil;
 import com.G5432.Utils.UserUtil;
 import com.G5432.WalkFun.Main.MainActivity;
 import com.G5432.WalkFun.R;
-import com.j256.ormlite.android.apptools.OrmLiteBaseActivity;
+import com.G5432.WalkFun.WalkFunBaseActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -31,7 +30,7 @@ import java.util.Map;
  * Time: 上午11:12
  * To change this template use File | Settings | File Templates.
  */
-public class ItemMallActivity extends OrmLiteBaseActivity<DatabaseHelper> {
+public class ItemMallActivity extends WalkFunBaseActivity {
 
     //init UI control
     private Button btnReturn;

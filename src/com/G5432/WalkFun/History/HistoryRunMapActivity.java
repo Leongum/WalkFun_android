@@ -5,17 +5,16 @@ import android.os.Handler;
 import android.os.Message;
 import android.view.View;
 import android.widget.*;
-import com.G5432.DBUtils.DatabaseHelper;
 import com.G5432.Entity.BMapInfo;
 import com.G5432.Entity.RunningHistory;
 import com.G5432.HttpClient.RunningHistoryHandler;
 import com.G5432.Utils.CommonUtil;
 import com.G5432.Utils.WalkFunApplication;
 import com.G5432.WalkFun.R;
+import com.G5432.WalkFun.WalkFunBaseActivity;
 import com.baidu.mapapi.map.MapController;
 import com.baidu.mapapi.map.MapView;
 import com.baidu.mapapi.map.RouteOverlay;
-import com.j256.ormlite.android.apptools.OrmLiteBaseActivity;
 
 /**
  * Created with IntelliJ IDEA.
@@ -24,7 +23,7 @@ import com.j256.ormlite.android.apptools.OrmLiteBaseActivity;
  * Time: 下午2:39
  * To change this template use File | Settings | File Templates.
  */
-public class HistoryRunMapActivity extends OrmLiteBaseActivity<DatabaseHelper> {
+public class HistoryRunMapActivity extends WalkFunBaseActivity {
 
     //init UI
     private Button btnReturn;

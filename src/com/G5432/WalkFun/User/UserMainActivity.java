@@ -31,7 +31,7 @@ import java.util.Date;
  * Time: 下午12:50
  * To change this template use File | Settings | File Templates.
  */
-public class UserMainActivity extends OrmLiteBaseActivity<DatabaseHelper> {
+public class UserMainActivity extends WalkFunBaseActivity {
 
     //init UI control
     private Button btnTraffic;

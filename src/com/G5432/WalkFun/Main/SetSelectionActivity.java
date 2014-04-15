@@ -8,13 +8,12 @@ import android.os.Handler;
 import android.os.Message;
 import android.view.View;
 import android.widget.*;
-import com.G5432.DBUtils.DatabaseHelper;
 import com.G5432.Entity.UserBase;
 import com.G5432.HttpClient.*;
 import com.G5432.Utils.ToastUtil;
 import com.G5432.Utils.UserUtil;
 import com.G5432.WalkFun.R;
-import com.j256.ormlite.android.apptools.OrmLiteBaseActivity;
+import com.G5432.WalkFun.WalkFunBaseActivity;
 
 /**
  * Created with IntelliJ IDEA.
@@ -23,7 +22,7 @@ import com.j256.ormlite.android.apptools.OrmLiteBaseActivity;
  * Time: 上午10:17
  * To change this template use File | Settings | File Templates.
  */
-public class SetSelectionActivity extends OrmLiteBaseActivity<DatabaseHelper> {
+public class SetSelectionActivity extends WalkFunBaseActivity {
 
     //init UI Control
     private ImageView imgWoman;

@@ -1,9 +1,9 @@
 package com.G5432.WalkFun;
 
-import android.app.LocalActivityManager;
 import android.os.Bundle;
 import com.G5432.DBUtils.DatabaseHelper;
 import com.j256.ormlite.android.apptools.OrmLiteBaseActivity;
+import com.umeng.analytics.MobclickAgent;
 
 /**
  * Created with IntelliJ IDEA.
@@ -14,7 +14,7 @@ import com.j256.ormlite.android.apptools.OrmLiteBaseActivity;
  */
 public class WalkFunBaseActivity extends OrmLiteBaseActivity<DatabaseHelper> {
 
-    protected LocalActivityManager manager = null;
+//protected LocalActivityManager manager = null;
 //    private View shareView;
 //    private ImageView imageView;
 //    private ScaleGestureDetector mScaleGestureDetector = null;
@@ -23,9 +23,21 @@ public class WalkFunBaseActivity extends OrmLiteBaseActivity<DatabaseHelper> {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        manager = new LocalActivityManager(this, true);
-        manager.dispatchCreate(savedInstanceState);
+        //manager = new LocalActivityManager(this, true);
+        //manager.dispatchCreate(savedInstanceState);
         //mScaleGestureDetector = new ScaleGestureDetector(this, new ScaleGestureListener());
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
     }
 
 //    @Override
