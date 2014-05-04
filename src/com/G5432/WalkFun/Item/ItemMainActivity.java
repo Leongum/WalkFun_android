@@ -31,6 +31,8 @@ public class ItemMainActivity extends WalkFunBaseActivity {
     private RelativeLayout layoutUse;
     private Button btnUse;
     private TextView txtUseTitle;
+    private TextView txtUseAttribute;
+    private TextView txtUseDesc;
     private ImageView imgUse;
 
     private UserHandler userHandler;
@@ -62,12 +64,14 @@ public class ItemMainActivity extends WalkFunBaseActivity {
 
         layoutUse = (RelativeLayout) findViewById(R.id.itemMainLayoutUse);
         btnUse = (Button) findViewById(R.id.itemMainBtnUse);
-        txtUseTitle = (TextView) findViewById(R.id.itemMainTxtUseTitle);
+        txtUseTitle = (TextView) findViewById(R.id.itemMainTxtName);
+        txtUseAttribute = (TextView) findViewById(R.id.itemMainTxtAttribute);
+        txtUseDesc = (TextView) findViewById(R.id.itemMainTxtDesc);
         imgUse = (ImageView) findViewById(R.id.itemMainImgUseShow);
 
         btnMall.setOnClickListener(mallClickListener);
 
-        txtMoney.setText(String.valueOf(Math.floor(userBase.getUserInfo().getGoldCoin())));
+        txtMoney.setText(String.valueOf((int)userBase.getUserInfo().getGoldCoin().doubleValue()));
 
         showUserProps(userProps);
     }
@@ -103,7 +107,9 @@ public class ItemMainActivity extends WalkFunBaseActivity {
                 layoutUse.setVisibility(View.GONE);
             }
         });
-        txtUseTitle.setText(vProduct.getProductDescription());
+        txtUseTitle.setText(vProduct.getProductName());
+        txtUseAttribute.setText(vProduct.getProductDescription().split("\\|")[1]);
+        txtUseDesc.setText(vProduct.getProductDescription().split("\\|")[0]);
         imgUse.setImageURI(virtualProductHandler.getImageURI(vProduct));
         btnUse.setOnClickListener(new View.OnClickListener() {
             @Override

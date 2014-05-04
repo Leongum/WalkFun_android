@@ -62,7 +62,7 @@ public class FriendService {
                     userFriend.setSex(friendSort.getSex());
                     userFriend.setLevel(friendSort.getLevel());
                     userFriend.setUserName(friendSort.getFriendName());
-                    userFriend.setUserTitle(friendSort.getUserTitle());
+                    //todo:: userFriend.setUserTitle(friendSort.getUserTitle());
                 }
             }
         } catch (SQLException e) {
@@ -83,7 +83,7 @@ public class FriendService {
                 userFriend.setSex(friendSort.getSex());
                 userFriend.setLevel(friendSort.getLevel());
                 userFriend.setUserName(friendSort.getFriendName());
-                userFriend.setUserTitle(friendSort.getUserTitle());
+                //todo:: userFriend.setUserTitle(friendSort.getUserTitle());
             }
         } catch (SQLException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
@@ -103,7 +103,7 @@ public class FriendService {
                 userFriend.setSex(friendSort.getSex());
                 userFriend.setLevel(friendSort.getLevel());
                 userFriend.setUserName(friendSort.getFriendName());
-                userFriend.setUserTitle(friendSort.getUserTitle());
+                //todo:: userFriend.setUserTitle(friendSort.getUserTitle());
             }
         } catch (SQLException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
@@ -123,7 +123,7 @@ public class FriendService {
                 userFriend.setSex(friendSort.getSex());
                 userFriend.setLevel(friendSort.getLevel());
                 userFriend.setUserName(friendSort.getFriendName());
-                userFriend.setUserTitle(friendSort.getUserTitle());
+                //todo:: userFriend.setUserTitle(friendSort.getUserTitle());
             }
         } catch (SQLException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.

@@ -120,7 +120,7 @@ public class FriendSearchActivity extends WalkFunBaseActivity {
             }
             item.put("userName", friendList.get(i).getNickName());
             item.put("level", "Lv." + friendList.get(i).getLevel());
-            item.put("userTitle", friendList.get(i).getUserTitle());
+            //todo:: item.put("userTitle", friendList.get(i).getUserTitle());
             FollowStatusEnum friendStatus = friendHandler.getFollowStatus(friendList.get(i).getUserId());
             if (friendStatus == FollowStatusEnum.FOLLOWED) {
                 item.put("follow", "取消关注");

@@ -69,7 +69,7 @@ public class ItemUseActivity extends WalkFunBaseActivity {
         UserFriend me = new UserFriend();
         UserBase userBase = userHandler.fetchUser(UserUtil.getUserId());
         me.setSex(userBase.getSex());
-        me.setUserName(userBase.getUserName() + "(自己)");
+        me.setUserName("自己");
         me.setUserId(userBase.getUserId());
         me.setFriendId(userBase.getUserId());
         me.setLevel(userBase.getUserInfo().getLevel());
@@ -83,20 +83,13 @@ public class ItemUseActivity extends WalkFunBaseActivity {
         //add friend
         for (int i = 0; i < friendList.size(); i++) {
             Map<String, Object> item = new HashMap<String, Object>();
-            if (friendList.get(i).getSex().equalsIgnoreCase("女")) {
-                item.put("sex", R.drawable.female);
-            } else {
-                item.put("sex", R.drawable.male);
-            }
             item.put("userName", friendList.get(i).getUserName());
-            item.put("level", "Lv." + friendList.get(i).getLevel());
-            item.put("userTitle", friendList.get(i).getUserTitle());
             mData.add(item);
         }
 
-        SimpleAdapter adapter = new SimpleAdapter(this, mData, R.layout.friend_cell,
-                new String[]{"userName", "sex", "level", "userTitle"},
-                new int[]{R.id.friendcellTxtUserName, R.id.friendcellImgSex, R.id.friendcellTxtLevel, R.id.friendcellTxtUserTitle});
+        SimpleAdapter adapter = new SimpleAdapter(this, mData, R.layout.item_use_friend_cell,
+                new String[]{"userName"},
+                new int[]{R.id.itemUseFriendTxtName});
         listFriend.setAdapter(adapter);
         listFriend.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

@@ -42,6 +42,7 @@ public class MainActivity extends WalkFunBaseActivity {
 
     private View userMainTitle;
     private View itemMainTitle;
+    private View friendMainTitle;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -82,15 +83,18 @@ public class MainActivity extends WalkFunBaseActivity {
 
         itemMainTitle = itemMain.findViewById(R.id.itemMainLayoutTitle);
         userMainTitle = userMain.findViewById(R.id.userMainLayoutTitle);
+        friendMainTitle = friendMain.findViewById(R.id.friendmainLayoutTitle);
 
         ((RelativeLayout) itemMainTitle.getParent()).removeView(itemMainTitle);
         ((RelativeLayout) userMainTitle.getParent()).removeView(userMainTitle);
+        ((RelativeLayout) friendMainTitle.getParent()).removeView(friendMainTitle);
         FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(
                 FrameLayout.LayoutParams.WRAP_CONTENT,
                 FrameLayout.LayoutParams.WRAP_CONTENT);
         params.topMargin = 0;
         addContentView(itemMainTitle, params);
         addContentView(userMainTitle, params);
+        addContentView(friendMainTitle, params);
 
         setTitleDismiss(currIndex);
     }
@@ -128,17 +132,26 @@ public class MainActivity extends WalkFunBaseActivity {
     private void refreshTitleLayout(Integer disMissPage, Integer showPage, double offset) {
         if (offset <= 0.5) {
             if (disMissPage == 0) {
+                View layoutUse = itemMain.findViewById(R.id.itemMainLayoutUse);
+                layoutUse.setVisibility(View.GONE);
                 FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(
                         FrameLayout.LayoutParams.WRAP_CONTENT,
                         FrameLayout.LayoutParams.WRAP_CONTENT);
                 params.topMargin = -(int) (offset * 2 * TITLE_HEIGHT);
                 itemMainTitle.setLayoutParams(params);
+
             } else if (disMissPage == 1) {
                 FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(
                         FrameLayout.LayoutParams.WRAP_CONTENT,
                         FrameLayout.LayoutParams.WRAP_CONTENT);
                 params.topMargin = -(int) (offset * 2 * TITLE_HEIGHT);
                 userMainTitle.setLayoutParams(params);
+            }else if (disMissPage == 2){
+                FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(
+                        FrameLayout.LayoutParams.WRAP_CONTENT,
+                        FrameLayout.LayoutParams.WRAP_CONTENT);
+                params.topMargin = -(int) (offset * 2 * TITLE_HEIGHT);
+                friendMainTitle.setLayoutParams(params);
             }
         } else if (offset > 0.5) {
             if (showPage == 0) {
@@ -153,6 +166,12 @@ public class MainActivity extends WalkFunBaseActivity {
                         FrameLayout.LayoutParams.WRAP_CONTENT);
                 params.topMargin = -(int) ((1 - offset) * 2 * TITLE_HEIGHT);
                 userMainTitle.setLayoutParams(params);
+            } else if (showPage == 2) {
+                FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(
+                        FrameLayout.LayoutParams.WRAP_CONTENT,
+                        FrameLayout.LayoutParams.WRAP_CONTENT);
+                params.topMargin = -(int) ((1 - offset) * 2 * TITLE_HEIGHT);
+                friendMainTitle.setLayoutParams(params);
             }
         }
     }
@@ -164,11 +183,20 @@ public class MainActivity extends WalkFunBaseActivity {
                     FrameLayout.LayoutParams.WRAP_CONTENT);
             params.topMargin = -TITLE_HEIGHT;
             userMainTitle.setLayoutParams(params);
+            friendMainTitle.setLayoutParams(params);
         } else if (pageIndex == 1) {
             FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(
                     FrameLayout.LayoutParams.WRAP_CONTENT,
                     FrameLayout.LayoutParams.WRAP_CONTENT);
             params.topMargin = -TITLE_HEIGHT;
+            itemMainTitle.setLayoutParams(params);
+            friendMainTitle.setLayoutParams(params);
+        }else if (pageIndex == 2) {
+            FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(
+                    FrameLayout.LayoutParams.WRAP_CONTENT,
+                    FrameLayout.LayoutParams.WRAP_CONTENT);
+            params.topMargin = -TITLE_HEIGHT;
+            userMainTitle.setLayoutParams(params);
             itemMainTitle.setLayoutParams(params);
         }
     }

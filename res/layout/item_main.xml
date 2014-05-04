@@ -6,7 +6,7 @@
         >
     <RelativeLayout
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
+            android:layout_height="fill_parent" android:visibility="visible">
         <RelativeLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content" android:id="@+id/itemMainLayoutTitle">
@@ -27,7 +27,8 @@
                     android:text="12345"
                     android:id="@+id/itemMainTxtMoney" android:layout_alignLeft="@+id/itemMainBtnMall"
                     android:layout_alignTop="@+id/itemMainBtnMall" android:layout_marginTop="8dp"
-                    android:gravity="right|fill_vertical" android:textSize="12dp" android:textColor="#080808"/>
+                    android:gravity="right|fill_vertical" android:textSize="12dp" android:textColor="#ffffff"
+                    android:textStyle="bold"/>
         </RelativeLayout>
         <ImageView
                 android:layout_width="320dp"
@@ -45,25 +46,49 @@
     </RelativeLayout>
     <RelativeLayout
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent" android:alpha="0.5" android:background="#000000"
-            android:id="@+id/itemMainLayoutUse" android:visibility="gone">
-        <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="使 用"
-                android:id="@+id/itemMainBtnUse" android:layout_centerHorizontal="true" android:layout_alignParentTop="true"
-                android:layout_marginTop="380dp"/>
-        <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/itemMainImgUseShow" android:layout_centerHorizontal="true" android:layout_alignParentTop="true"
-                android:layout_marginTop="240dp"/>
-        <TextView
-                android:layout_width="280dp"
-                android:layout_height="wrap_content"
-                android:text="How to use"
-                android:id="@+id/itemMainTxtUseTitle" android:layout_centerHorizontal="true" android:layout_alignParentTop="true"
-                android:layout_marginTop="128dp" android:textSize="14dp" android:gravity="center"
-                android:inputType="text|textMultiLine" android:textColor="#ffffff"/>
+            android:layout_height="fill_parent"
+            android:id="@+id/itemMainLayoutUse" android:visibility="gone"
+            >
+        <RelativeLayout
+                android:layout_width="245dp"
+                android:layout_height="384dp" android:background="@drawable/challenge_pop_bg"
+                android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+            <TextView android:layout_width="fill_parent" android:layout_height="25dp" android:text="Name"
+                      android:id="@+id/itemMainTxtName" android:textSize="16dip" android:gravity="center"
+                      android:inputType="text|textMultiLine" android:textColor="#000000"
+                      android:textStyle="bold" android:layout_alignParentLeft="true"
+                      android:layout_alignParentTop="true" android:layout_marginTop="15dp"/>
+            <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/itemMainImgUseShow"
+                    android:layout_alignLeft="@+id/itemMainTxtName" android:layout_below="@+id/itemMainTxtName"
+                    android:layout_marginLeft="70dp" android:layout_marginTop="50dp"/>
+            <TextView
+                    android:layout_width="165dp"
+                    android:layout_height="40dp"
+                    android:text="How to use"
+                    android:id="@+id/itemMainTxtAttribute"
+                    android:textSize="16dp" android:gravity="center"
+                    android:inputType="text|textMultiLine" android:textColor="#ffffff"
+                    android:layout_alignParentLeft="true" android:layout_marginLeft="40dp"
+                    android:layout_below="@+id/itemMainImgUseShow" android:layout_marginTop="10dp"
+                    android:textStyle="bold"/>
+            <TextView android:layout_width="145dp" android:layout_height="60dp" android:text="How to use"
+                      android:id="@+id/itemMainTxtDesc" android:textSize="14dip"
+                      android:inputType="text|textMultiLine" android:textColor="#ffffff"
+                      android:gravity="center_vertical" android:layout_alignLeft="@+id/itemMainTxtAttribute"
+                      android:layout_below="@+id/itemMainTxtAttribute" android:layout_marginTop="10dp"
+                      android:layout_marginLeft="10dp"/>
+            <Button
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:text="使用"
+                    android:id="@+id/itemMainBtnUse"
+                    android:background="@drawable/running_end_bg"
+                    android:textStyle="bold" android:textSize="18dip"
+                    android:layout_alignLeft="@+id/itemMainTxtAttribute" android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="10dp"/>
+        </RelativeLayout>
     </RelativeLayout>
 </RelativeLayout>

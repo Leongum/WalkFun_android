@@ -33,6 +33,13 @@
         <Button android:layout_width="40dp" android:layout_height="40dp" android:id="@+id/loginBtnQQ"
                 android:background="@drawable/qq" android:layout_toRightOf="@+id/loginBtnWeibo"
                 android:layout_below="@+id/loginBtnRegister" android:layout_marginLeft="25dp"/>
+        <ImageView
+                android:layout_width="148dp"
+                android:layout_height="90dp"
+                android:id="@+id/loginImgLogo"
+                android:background="@drawable/logo" android:layout_alignRight="@+id/loginImgContainer"
+                android:layout_below="@+id/loginBtnWeibo" android:layout_marginTop="45dp"
+                android:layout_marginRight="25dp"/>
     </RelativeLayout>
     <RelativeLayout
             android:layout_width="fill_parent"

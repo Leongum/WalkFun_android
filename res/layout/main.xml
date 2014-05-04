@@ -3,7 +3,7 @@
 <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android"
-        android:background="@drawable/charactor" android:id="@+id/mianLayoutMain">
+        android:background="@drawable/main_bg" android:id="@+id/mianLayoutMain">
     <android.support.v4.view.ViewPager
             android:id="@+id/mainVPagerContainer"
             android:layout_width="wrap_content"
@@ -12,12 +12,18 @@
             android:layout_weight="1.0"
             android:flipInterval="30"
             android:persistentDrawingCache="animation" />
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:id="@+id/mianImgButtomboard" android:background="@drawable/main_bottom_board"
+            android:layout_alignLeft="@+id/mainVPagerContainer" android:layout_alignBottom="@+id/mainVPagerContainer"/>
     <Button
             android:layout_width="55dp"
             android:layout_height="55dp"
             android:id="@+id/mainBtnSync" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true"
-            android:background="@drawable/sync_apply" android:layout_marginLeft="15dp"/>
+            android:background="@drawable/sync_apply" android:layout_marginLeft="22dp"
+            android:layout_marginBottom="5dp"/>
     <Button android:layout_width="55dp" android:layout_height="55dp" android:id="@+id/mainBtnSet"
             android:background="@drawable/settings" android:layout_alignParentRight="true"
-            android:layout_alignBottom="@+id/mainBtnSync" android:layout_marginRight="15dp"/>
+            android:layout_alignBottom="@+id/mainBtnSync" android:layout_marginRight="22dp"/>
 </RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        android:layout_width="320dp"
+        android:layout_height="83dp" xmlns:android="http://schemas.android.com/apk/res/android"
+        android:background="@drawable/friend_add_cell" android:clickable="false">
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="自己"
+            android:id="@+id/itemUseFriendTxtName"
+            android:textColor="#000000" android:textSize="26dip"
+            android:gravity="center"/>
+</RelativeLayout>

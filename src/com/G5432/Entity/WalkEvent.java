@@ -16,6 +16,8 @@ public class WalkEvent {
     @Expose
     private Integer eId;
     @Expose
+    private Integer fId;
+    @Expose
     private Integer eWin;
     @Expose
     private Integer times;
@@ -80,5 +82,13 @@ public class WalkEvent {
 
     public void setPower(Double power) {
         this.power = power;
+    }
+
+    public Integer getfId() {
+        return fId;
+    }
+
+    public void setfId(Integer fId) {
+        this.fId = fId;
     }
 }

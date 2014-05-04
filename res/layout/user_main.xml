@@ -30,14 +30,29 @@
                 android:layout_height="wrap_content"
                 android:text="User Name"
                 android:id="@+id/userMainTxtName" android:layout_alignLeft="@+id/userMainImgUserInfo"
-                android:layout_alignTop="@+id/userMainImgTop" android:layout_marginLeft="15dp"
-                android:layout_marginTop="20dp" android:textColor="#000000"/>
+                android:layout_alignTop="@+id/userMainImgTop" android:layout_marginLeft="25dp"
+                android:layout_marginTop="22dp" android:textColor="#000000"
+                />
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Lv.1"
-                android:id="@+id/userMainTxtLevel" android:layout_alignRight="@+id/userMainImgUserInfo"
-                android:layout_alignTop="@+id/userMainImgTop" android:layout_marginRight="20dp"
-                android:layout_marginTop="20dp" android:textColor="#000000" android:textSize="10dp"/>
+                android:id="@+id/userMainTxtLevel"
+                android:textColor="#000000" android:textSize="10dp" android:layout_alignLeft="@+id/userMainTxtName"
+                android:layout_below="@+id/userMainTxtName" android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="荣誉"
+                android:id="@+id/userMainTxtRongyu" android:layout_alignRight="@+id/userMainImgUserInfo"
+                android:layout_alignTop="@+id/userMainBtnTrafficlight" android:textColor="#000000"
+                android:layout_marginRight="30dp" android:layout_marginTop="6dp" android:textSize="8dip"/>
+        <Button
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:text="0"
+                android:id="@+id/userMainBtnFighting" android:layout_alignLeft="@+id/userMainTxtRongyu" android:layout_below="@+id/userMainTxtRongyu"
+                android:layout_marginLeft="-8dp" android:background="@drawable/badge_0" android:layout_marginTop="2dp"/>
     </RelativeLayout>
 </RelativeLayout>

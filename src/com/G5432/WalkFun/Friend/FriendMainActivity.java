@@ -64,7 +64,8 @@ public class FriendMainActivity extends WalkFunBaseActivity {
         btnOK = (Button) findViewById(R.id.friendmainBtnOK);
         listFriend = (ListView) findViewById(R.id.friendmainListFriend);
         btnOK.setVisibility(View.GONE);
-        btnFollow.setBackgroundColor(Color.RED);
+        btnFollow.setBackgroundResource(R.drawable.followbutton_selected);
+        btnFan.setBackgroundResource(R.drawable.fansbutton_normal);
         showFriendList(follows);
 
         btnFan.setOnClickListener(fanListener);
@@ -104,7 +105,7 @@ public class FriendMainActivity extends WalkFunBaseActivity {
         public void onClick(View view) {
             if (followClick) {
                 followClick = false;
-                btnFollow.setBackgroundColor(Color.BLUE);
+                btnFollow.setBackgroundResource(R.drawable.followbutton_normal);
                 if (fanClick) {
                     showFriendList(fans);
                 } else {
@@ -112,7 +113,7 @@ public class FriendMainActivity extends WalkFunBaseActivity {
                 }
             } else {
                 followClick = true;
-                btnFollow.setBackgroundColor(Color.RED);
+                btnFollow.setBackgroundResource(R.drawable.followbutton_selected);
                 if (fanClick) {
                     showFriendList(fanEach);
                 } else {
@@ -127,7 +128,7 @@ public class FriendMainActivity extends WalkFunBaseActivity {
         public void onClick(View view) {
             if (fanClick) {
                 fanClick = false;
-                btnFan.setBackgroundColor(Color.BLUE);
+                btnFan.setBackgroundResource(R.drawable.fansbutton_normal);
                 if (followClick) {
                     showFriendList(follows);
                 } else {
@@ -136,7 +137,7 @@ public class FriendMainActivity extends WalkFunBaseActivity {
 
             } else {
                 fanClick = true;
-                btnFan.setBackgroundColor(Color.RED);
+                btnFan.setBackgroundResource(R.drawable.fansbutton_selected);
                 if (followClick) {
                     showFriendList(fanEach);
                 } else {

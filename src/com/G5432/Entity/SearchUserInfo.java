@@ -19,15 +19,19 @@ public class SearchUserInfo {
     @Expose
     private Double level;
     @Expose
-    private String userTitle;
-    @Expose
-    private String userTitlePic;
-    @Expose
     private Double fatness;
     @Expose
     private Double power;
     @Expose
     private Double fight;
+    @Expose
+    private Integer totalFights;
+    @Expose
+    private Integer fightsWin;
+    @Expose
+    private Integer totalFriendFights;
+    @Expose
+    private Integer friendFightWin;
 
     public Integer getUserId() {
         return userId;
@@ -59,22 +63,6 @@ public class SearchUserInfo {
 
     public void setLevel(Double level) {
         this.level = level;
-    }
-
-    public String getUserTitle() {
-        return userTitle;
-    }
-
-    public void setUserTitle(String userTitle) {
-        this.userTitle = userTitle;
-    }
-
-    public String getUserTitlePic() {
-        return userTitlePic;
-    }
-
-    public void setUserTitlePic(String userTitlePic) {
-        this.userTitlePic = userTitlePic;
     }
 
     public Double getFatness() {

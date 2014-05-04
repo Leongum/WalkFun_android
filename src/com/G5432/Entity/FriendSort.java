@@ -26,12 +26,6 @@ public class FriendSort {
     private Double level;
     @Expose
     @DatabaseField
-    private String userTitle;
-    @Expose
-    @DatabaseField
-    private String userTitlePic;
-    @Expose
-    @DatabaseField
     private Double fatness;
     @Expose
     @DatabaseField
@@ -42,6 +36,18 @@ public class FriendSort {
     @Expose
     @DatabaseField
     private Double fightPlus;
+    @Expose
+    @DatabaseField
+    private Integer totalFights;
+    @Expose
+    @DatabaseField
+    private Integer fightsWin;
+    @Expose
+    @DatabaseField
+    private Integer totalFriendFights;
+    @Expose
+    @DatabaseField
+    private Integer friendFightWin;
 
     public FriendSort(){
 
@@ -79,22 +85,6 @@ public class FriendSort {
         this.level = level;
     }
 
-    public String getUserTitle() {
-        return userTitle;
-    }
-
-    public void setUserTitle(String userTitle) {
-        this.userTitle = userTitle;
-    }
-
-    public String getUserTitlePic() {
-        return userTitlePic;
-    }
-
-    public void setUserTitlePic(String userTitlePic) {
-        this.userTitlePic = userTitlePic;
-    }
-
     public Double getFatness() {
         return fatness;
     }
@@ -125,5 +115,37 @@ public class FriendSort {
 
     public void setFightPlus(Double fightPlus) {
         this.fightPlus = fightPlus;
+    }
+
+    public Integer getTotalFights() {
+        return totalFights;
+    }
+
+    public void setTotalFights(Integer totalFights) {
+        this.totalFights = totalFights;
+    }
+
+    public Integer getFightsWin() {
+        return fightsWin;
+    }
+
+    public void setFightsWin(Integer fightsWin) {
+        this.fightsWin = fightsWin;
+    }
+
+    public Integer getTotalFriendFights() {
+        return totalFriendFights;
+    }
+
+    public void setTotalFriendFights(Integer totalFriendFights) {
+        this.totalFriendFights = totalFriendFights;
+    }
+
+    public Integer getFriendFightWin() {
+        return friendFightWin;
+    }
+
+    public void setFriendFightWin(Integer friendFightWin) {
+        this.friendFightWin = friendFightWin;
     }
 }

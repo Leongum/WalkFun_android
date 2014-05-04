@@ -66,6 +66,18 @@ public class UserInfo {
     private Integer totalActiveTimes;
     @Expose
     @DatabaseField
+    private Integer totalFights;
+    @Expose
+    @DatabaseField
+    private Integer fightsWin;
+    @Expose
+    @DatabaseField
+    private Integer totalFriendFights;
+    @Expose
+    @DatabaseField
+    private Integer friendFightWin;
+    @Expose
+    @DatabaseField
     private Integer missionCombo;
     @DatabaseField
     private String propHaving;
@@ -211,6 +223,38 @@ public class UserInfo {
 
     public void setTotalActiveTimes(Integer totalActiveTimes) {
         this.totalActiveTimes = totalActiveTimes;
+    }
+
+    public Integer getTotalFights() {
+        return totalFights;
+    }
+
+    public void setTotalFights(Integer totalFights) {
+        this.totalFights = totalFights;
+    }
+
+    public Integer getFightsWin() {
+        return fightsWin;
+    }
+
+    public void setFightsWin(Integer fightsWin) {
+        this.fightsWin = fightsWin;
+    }
+
+    public Integer getTotalFriendFights() {
+        return totalFriendFights;
+    }
+
+    public void setTotalFriendFights(Integer totalFriendFights) {
+        this.totalFriendFights = totalFriendFights;
+    }
+
+    public Integer getFriendFightWin() {
+        return friendFightWin;
+    }
+
+    public void setFriendFightWin(Integer friendFightWin) {
+        this.friendFightWin = friendFightWin;
     }
 
     public Integer getMissionCombo() {

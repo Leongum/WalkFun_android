@@ -5,4 +5,12 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent" android:background="@drawable/loading_bg">
 
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="资源加载中....."
+            android:id="@+id/loadingTxtLoading"
+            android:textColor="#fff821"
+            android:layout_alignWithParentIfMissing="true" android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true" android:layout_marginBottom="30dp"/>
 </RelativeLayout>

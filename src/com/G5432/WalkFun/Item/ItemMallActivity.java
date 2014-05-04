@@ -50,7 +50,7 @@ public class ItemMallActivity extends WalkFunBaseActivity {
     private VirtualProductHandler virtualProductHandler;
 
     private Integer userId;
-    private Double totalMoney;
+    private Integer totalMoney;
     private UserBase userBase;
     private List<VProduct> props;
 
@@ -64,7 +64,7 @@ public class ItemMallActivity extends WalkFunBaseActivity {
         virtualProductHandler = new VirtualProductHandler(getHelper());
         userPropHandler = new UserPropHandler(getHelper());
         userBase = userHandler.fetchUser(userId);
-        totalMoney = Math.floor(userBase.getUserInfo().getGoldCoin());
+        totalMoney = (int)userBase.getUserInfo().getGoldCoin().doubleValue();
         initPageUIControl();
     }
 
@@ -131,7 +131,7 @@ public class ItemMallActivity extends WalkFunBaseActivity {
                     Map<String, Object> item = new HashMap<String, Object>();
                     item.put("imageUrl", virtualProductHandler.getImageURI(props.get(i)));
                     item.put("propName", props.get(i).getProductName());
-                    item.put("propDesc", props.get(i).getProductDescription());
+                    item.put("propDesc", props.get(i).getProductDescription().replace("|","\n"));
                     item.put("propMoney", String.valueOf(Math.floor(props.get(i).getVirtualPrice())));
                     mData.add(item);
                 }
@@ -196,7 +196,7 @@ public class ItemMallActivity extends WalkFunBaseActivity {
             if (msg.what == 1) {
                 ToastUtil.showMessage(getApplicationContext(), "购买成功");
                 userBase = userHandler.fetchUser(userId);
-                totalMoney = Math.floor(userBase.getUserInfo().getGoldCoin());
+                totalMoney = (int)userBase.getUserInfo().getGoldCoin().doubleValue();
                 txtMoney.setText(String.valueOf(totalMoney));
                 layoutBuy.setVisibility(View.GONE);
             } else {

@@ -37,6 +37,9 @@ public class Mission {
     private Integer triggerTimes;
     @Expose
     @DatabaseField
+    private Integer triggerDirection;
+    @Expose
+    @DatabaseField
     private Double triggerDistances;
     @Expose
     @DatabaseField
@@ -122,6 +125,14 @@ public class Mission {
 
     public void setTriggerTimes(Integer triggerTimes) {
         this.triggerTimes = triggerTimes;
+    }
+
+    public Integer getTriggerDirection() {
+        return triggerDirection;
+    }
+
+    public void setTriggerDirection(Integer triggerDirection) {
+        this.triggerDirection = triggerDirection;
     }
 
     public Double getTriggerDistances() {
