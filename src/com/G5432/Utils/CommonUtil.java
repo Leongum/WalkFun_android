@@ -10,6 +10,7 @@ import java.text.DateFormat;
 import java.text.MessageFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -67,6 +68,34 @@ public class CommonUtil {
     public static String getUrl(String url, String... params) {
         String newUrl = MessageFormat.format(url, params);
         return newUrl.replace(" ", "%20");
+    }
+
+    /**
+     * 计算两个日期之间相差的天数
+     *
+     * @param smdate 较小的时间
+     * @param bdate  较大的时间
+     * @return 相差天数
+     * @throws ParseException
+     */
+    public static int daysBetween(Date smdate, Date bdate) {
+        try {
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+
+            smdate = sdf.parse(sdf.format(smdate));
+
+            bdate = sdf.parse(sdf.format(bdate));
+            Calendar cal = Calendar.getInstance();
+            cal.setTime(smdate);
+            long time1 = cal.getTimeInMillis();
+            cal.setTime(bdate);
+            long time2 = cal.getTimeInMillis();
+            long between_days = (time2 - time1) / (1000 * 3600 * 24);
+            return Integer.parseInt(String.valueOf(between_days));
+        } catch (ParseException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+        return 0;
     }
 
     public static String getMD5(String source) {
@@ -163,10 +192,10 @@ public class CommonUtil {
         }
         route.customizeRoute(start, end, routeList);
         bMapInfo.setRoute(route);
-        GeoPoint centerPoint = new GeoPoint((maxLat + minLat)/2, (maxLon + minLon)/2);
+        GeoPoint centerPoint = new GeoPoint((maxLat + minLat) / 2, (maxLon + minLon) / 2);
         bMapInfo.setCenterPoint(centerPoint);
-        bMapInfo.setSpanLat((int)(Math.abs(maxLat - minLat) * 1.2));
-        bMapInfo.setSpanLon((int)(Math.abs(maxLon - minLon) * 1.2));
+        bMapInfo.setSpanLat((int) (Math.abs(maxLat - minLat) * 1.2));
+        bMapInfo.setSpanLon((int) (Math.abs(maxLon - minLon) * 1.2));
         return bMapInfo;
     }
 

@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -57,6 +58,7 @@ public class FriendSearchActivity extends WalkFunBaseActivity {
         btnReturn = (Button) findViewById(R.id.friendSearchBtnReturn);
         btnNext = (Button) findViewById(R.id.friendSearchBtnNext);
         searchNickName = (EditText) findViewById(R.id.friendSearchTxtInput);
+        searchNickName.setOnEditorActionListener(searchEditorListener);
         listSearch = (ListView) findViewById(R.id.friendSearchList);
         btnSearch = (Button) findViewById(R.id.friendsearchBtnSearch);
 
@@ -65,6 +67,18 @@ public class FriendSearchActivity extends WalkFunBaseActivity {
         btnSearch.setOnClickListener(searchListener);
         btnNext.setOnClickListener(nextListener);
     }
+
+    public TextView.OnEditorActionListener searchEditorListener = new TextView.OnEditorActionListener() {
+        @Override
+        public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {
+            if (searchNickName.getText().toString() != "") {
+                userHandler.searchFriend(searchNickName.getText().toString(), searchHandler);
+            } else {
+                friendHandler.fetchRecommendFriends(0, recommendHandler);
+            }
+            return true;
+        }
+    };
 
     public View.OnClickListener backListener = new View.OnClickListener() {
         @Override
@@ -88,7 +102,7 @@ public class FriendSearchActivity extends WalkFunBaseActivity {
     public View.OnClickListener searchListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            userHandler.searchFriend(searchNickName.getText().toString(), recommendHandler);
+
         }
     };
 
@@ -108,6 +122,23 @@ public class FriendSearchActivity extends WalkFunBaseActivity {
         }
     };
 
+    Handler searchHandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            if (msg.what == 1) {
+                List<SearchUserInfo> recommendList = (List<SearchUserInfo>) msg.obj;
+                if (recommendList.size() > 0) {
+                    showRecommendFriendList(recommendList);
+                } else {
+                    showRecommendFriendList(new ArrayList<SearchUserInfo>());
+                    ToastUtil.showMessage(getApplicationContext(), "没有找到你要的小伙伴~");
+                }
+            } else {
+                ToastUtil.showMessage(getApplicationContext(), "网络获取失败");
+            }
+        }
+    };
+
     private void showRecommendFriendList(final List<SearchUserInfo> friendList) {
         ArrayList<Map<String, Object>> mData = new ArrayList<Map<String, Object>>();
         for (int i = 0; i < friendList.size(); i++) {
@@ -119,8 +150,9 @@ public class FriendSearchActivity extends WalkFunBaseActivity {
                 item.put("sex", R.drawable.male);
             }
             item.put("userName", friendList.get(i).getNickName());
-            item.put("level", "Lv." + friendList.get(i).getLevel());
-            //todo:: item.put("userTitle", friendList.get(i).getUserTitle());
+            item.put("level", "Lv." + (int) friendList.get(i).getLevel().doubleValue());
+            item.put("fight", (int) friendList.get(i).getFight().doubleValue() + "");
+            item.put("friendFight", friendList.get(i).getFriendFightWin() + "");
             FollowStatusEnum friendStatus = friendHandler.getFollowStatus(friendList.get(i).getUserId());
             if (friendStatus == FollowStatusEnum.FOLLOWED) {
                 item.put("follow", "取消关注");
@@ -131,10 +163,19 @@ public class FriendSearchActivity extends WalkFunBaseActivity {
         }
 
         FriendSearchAdapter adapter = new FriendSearchAdapter(this, mData, R.layout.friend_search_cell,
-                new String[]{"userName", "sex", "level", "userTitle", "follow"},
+                new String[]{"userName", "sex", "level", "fight", "friendFight", "follow"},
                 new int[]{R.id.friendSearchCellName, R.id.friendSearchCellSex,
-                        R.id.friendSearchCellLevel, R.id.friendSearchCellTitle, R.id.friendSearchCellFollow});
+                        R.id.friendSearchCellLevel, R.id.friendSearchCellFight, R.id.friendSearchCellFriendFight, R.id.friendSearchCellFollow});
         listSearch.setAdapter(adapter);
+//        listSearch.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                Intent intent = new Intent();
+//                intent.putExtra("userId", friendList.get(i).getUserId());
+//                intent.setClass(FriendSearchActivity.this, FriendInfoMainActivity.class);
+//                startActivity(intent);
+//            }
+//        });
     }
 
     public class FriendSearchAdapter extends SimpleAdapter {
@@ -156,7 +197,8 @@ public class FriendSearchActivity extends WalkFunBaseActivity {
                 convertView = mInflater.inflate(R.layout.friend_search_cell, null);
                 viewHolder.userName = (TextView) convertView.findViewById(R.id.friendSearchCellName);
                 viewHolder.level = (TextView) convertView.findViewById(R.id.friendSearchCellLevel);
-                viewHolder.userTitle = (TextView) convertView.findViewById(R.id.friendSearchCellTitle);
+                viewHolder.fight = (TextView) convertView.findViewById(R.id.friendSearchCellFight);
+                viewHolder.friendFight = (TextView) convertView.findViewById(R.id.friendSearchCellFriendFight);
                 viewHolder.sex = (ImageView) convertView.findViewById(R.id.friendSearchCellSex);
                 viewHolder.follow = (Button) convertView.findViewById(R.id.friendSearchCellFollow);
                 convertView.setTag(viewHolder);
@@ -165,12 +207,24 @@ public class FriendSearchActivity extends WalkFunBaseActivity {
             }
             viewHolder.userName.setText((String) mData.get(position).get("userName"));
             viewHolder.level.setText((String) mData.get(position).get("level"));
-            viewHolder.userTitle.setText((String) mData.get(position).get("userTitle"));
+            viewHolder.fight.setText((String) mData.get(position).get("fight"));
+            viewHolder.friendFight.setText((String) mData.get(position).get("friendFight"));
             viewHolder.sex.setBackgroundDrawable(getResources().getDrawable((Integer) mData.get(position).get("sex")));
             viewHolder.follow.setText((String) mData.get(position).get("follow"));
 
-            FollowListener myListener = new FollowListener((Integer) mData.get(position).get("userId"), viewHolder.follow);
+            final Integer userId = (Integer) mData.get(position).get("userId");
+            FollowListener myListener = new FollowListener(userId, viewHolder.follow);
             viewHolder.follow.setOnClickListener(myListener);
+
+            convertView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent();
+                    intent.putExtra("userId", userId);
+                    intent.setClass(FriendSearchActivity.this, FriendInfoMainActivity.class);
+                    startActivity(intent);
+                }
+            });
             return convertView;
         }
 
@@ -179,7 +233,8 @@ public class FriendSearchActivity extends WalkFunBaseActivity {
             public TextView userName;
             public ImageView sex;
             public TextView level;
-            public TextView userTitle;
+            public TextView fight;
+            public TextView friendFight;
             public Button follow;
         }
     }

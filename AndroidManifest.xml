@@ -89,6 +89,9 @@
         <activity android:name=".Friend.FriendSearchActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait">
         </activity>
 
+        <activity android:name=".Friend.FriendInfoMainActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait">
+        </activity>
+
         <activity android:name=".Item.ItemMainActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait">
         </activity>
 

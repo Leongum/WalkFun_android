@@ -1,7 +1,6 @@
 package com.G5432.WalkFun.Friend;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
@@ -95,7 +94,10 @@ public class FriendMainActivity extends WalkFunBaseActivity {
         listFriend.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                ToastUtil.showMessage(getApplicationContext(), friendList.get(i).getFriendId().toString());
+                Intent intent = new Intent();
+                intent.putExtra("userId", friendList.get(i).getFriendId());
+                intent.setClass(FriendMainActivity.this, FriendInfoMainActivity.class);
+                startActivity(intent);
             }
         });
     }

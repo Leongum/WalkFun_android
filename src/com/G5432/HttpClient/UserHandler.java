@@ -45,7 +45,10 @@ public class UserHandler {
         if (userId > 0) {
             GlobalSyncStatus.userInfoSynced = false;
             UserBase userBase = userService.fetchUserById(userId);
-            String lastUpdateTime = CommonUtil.parseDateToString(userBase.getUserInfo().getUpdateTime());
+            String lastUpdateTime = "2001-01-01 00:00:00";
+            if (userBase != null) {
+                lastUpdateTime = CommonUtil.parseDateToString(userBase.getUserInfo().getUpdateTime());
+            }
             String url = CommonUtil.getUrl(MessageFormat.format(Constant.USER_GETINFO_BY_ID_URL, userId, lastUpdateTime));
             httpClientHelper.get(url, null, new AsyncHttpResponseHandler() {
                 @Override

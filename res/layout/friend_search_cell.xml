@@ -1,36 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <RelativeLayout
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android"
-        android:background="#ffffff" android:id="@+id/friendSearchCellReturn">
+        android:clickable="false">
+    <ImageView
+            android:layout_width="320dp"
+            android:layout_height="85dp"
+            android:id="@+id/friendSearchCellImgBg" android:background="@drawable/friend_add_cell"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="User Name"
-            android:id="@+id/friendSearchCellName" android:textColor="#000000" android:layout_marginLeft="10dp"/>
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="User Title"
-            android:id="@+id/friendSearchCellTitle"
-            android:layout_toRightOf="@+id/friendSearchCellName" android:layout_alignTop="@+id/friendSearchCellName"
-            android:layout_marginLeft="15dp" android:textColor="#535353"/>
+            android:id="@+id/friendSearchCellName" android:textColor="#000000" android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp" android:textSize="24dip" android:textStyle="bold"/>
+    <TextView android:layout_width="26dp" android:layout_height="26dp"
+              android:id="@+id/friendSearchCellFriendFight" android:textColor="#000000" android:text="0"
+              android:background="@drawable/badge_0"
+              android:gravity="center" android:layout_alignRight="@+id/friendSearchCellFight"
+              android:layout_alignBaseline="@+id/friendSearchCellName"/>
     <ImageView
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:id="@+id/friendSearchCellSex" android:layout_alignLeft="@+id/friendSearchCellName" android:layout_below="@+id/friendSearchCellName"
-            android:layout_marginLeft="10dp" android:layout_marginTop="5dp"/>
+            android:layout_marginTop="5dp"/>
     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Level"
               android:id="@+id/friendSearchCellLevel"
-              android:textSize="12dp"
+              android:textSize="14dip"
               android:layout_toRightOf="@+id/friendSearchCellSex" android:layout_alignBottom="@+id/friendSearchCellSex"
-              android:layout_marginLeft="15dp" android:textColor="#000000"/>
+              android:layout_marginLeft="5dp" android:textColor="#5d5d5d"/>
     <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="79dp"
+            android:layout_height="48dp"
             android:text="关注"
             android:id="@+id/friendSearchCellFollow" android:layout_alignParentRight="true" android:layout_alignTop="@+id/friendSearchCellName"
-            android:background="#ffffff" android:textColor="#3399ff" android:layout_marginRight="20dp"
-            android:layout_marginTop="14dp"/>
+            android:background="@drawable/friend_add_followbutton" android:textColor="#ffffff" android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp" android:textSize="16dip" android:textStyle="bold"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:id="@+id/friendSearchCellFightTitle" android:textColor="#5d5d5d"
+              android:text="战斗力" android:layout_toRightOf="@+id/friendSearchCellLevel"
+              android:layout_alignBottom="@+id/friendSearchCellLevel" android:layout_marginLeft="25dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/friendSearchCellFight"
+            android:textColor="#5d5d5d"
+            android:text="133" android:layout_toRightOf="@+id/friendSearchCellFightTitle"
+            android:layout_alignBottom="@+id/friendSearchCellSex" android:layout_marginLeft="15dp"/>
 </RelativeLayout>

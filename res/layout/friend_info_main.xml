@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:background="@drawable/main_bg">
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+        <ImageView
+                android:layout_width="320dp"
+                android:layout_height="102dp"
+                android:id="@+id/friendInfoMainImgTitle" android:background="@drawable/history_title"/>
+        <Button
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:id="@+id/friendInfoMainBtnReturn" android:layout_alignLeft="@+id/friendInfoMainImgTitle"
+                android:layout_alignTop="@+id/friendInfoMainImgTitle" android:background="@drawable/back_button"
+                android:layout_marginTop="8dp" android:layout_marginLeft="12.5dp"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User Name"
+                android:id="@+id/friendInfoMainTxtUserName" android:layout_toRightOf="@+id/friendInfoMainBtnReturn" android:layout_alignTop="@+id/friendInfoMainBtnReturn"
+                android:textSize="24dip" android:textColor="#000000" android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lv.20"
+                android:id="@+id/friendInfoMainTxtLevel" android:layout_alignLeft="@+id/friendInfoMainTxtUserName" android:layout_below="@+id/friendInfoMainTxtUserName"
+                android:textSize="14dip" android:layout_marginTop="2dp" android:layout_marginLeft="5dp"
+                android:textColor="#000000"/>
+        <TextView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:text="0"
+                android:id="@+id/friendInfoMainTxtFight"
+                android:layout_alignRight="@+id/friendInfoMainImgTitle" android:layout_alignTop="@+id/friendInfoMainTxtUserName"
+                android:textColor="#000000" android:background="@drawable/badge_0" android:gravity="center"
+                android:layout_marginRight="20dp" android:layout_marginTop="5dp"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="更新中....."
+                android:id="@+id/friendInfoMainTxtUpdating" android:layout_alignRight="@+id/friendInfoMainImgTitle"
+                android:layout_below="@+id/friendInfoMainTxtFight" android:layout_marginTop="3dp"
+                android:layout_marginRight="15dp" android:textColor="#c8b80e" android:textStyle="italic"/>
+    </RelativeLayout>
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+        <ImageView
+                android:layout_width="320dp"
+                android:layout_height="102dp"
+                android:id="@+id/friendInfoMainImgBottom" android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true" android:background="@drawable/history_detail_sum"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="最近没什么人理这家伙"
+                android:id="@+id/friendInfoMainTxtPropUse" android:layout_alignLeft="@+id/friendInfoMainImgBottom"
+                android:layout_alignBottom="@+id/friendInfoMainImgBottom" android:shadowColor="#ff8300" android:textColor="#000000"
+                android:singleLine="false" android:textSize="16dip" android:layout_marginLeft="20dp"
+                android:layout_marginBottom="10dp" android:textStyle="bold"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="上次走路"
+                  android:id="@+id/friendInfoMainTxtWalk"
+                  android:shadowColor="#ff8300" android:textColor="#000000"
+                  android:singleLine="false" android:textSize="16dip"
+                  android:textStyle="bold" android:layout_alignLeft="@+id/friendInfoMainTxtPropUse"
+                  android:layout_above="@+id/friendInfoMainTxtPropUse" android:layout_marginBottom="5dp"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/friendInfoMainTxtPropUseTime" android:layout_alignRight="@+id/friendInfoMainImgBottom"
+                android:layout_alignBottom="@+id/friendInfoMainImgBottom" android:textColor="#ffffff" android:textStyle="bold"
+                android:layout_marginBottom="12dp" android:layout_marginRight="10dp" android:textSize="14dip"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="上辈子"
+                  android:id="@+id/friendInfoMainTxtWalkTime"
+                  android:textColor="#ffffff" android:textStyle="bold"
+                  android:textSize="14dip" android:layout_alignRight="@+id/friendInfoMainTxtPropUseTime"
+                  android:layout_above="@+id/friendInfoMainTxtPropUse" android:layout_marginBottom="7dp"/>
+    </RelativeLayout>
+</RelativeLayout>
