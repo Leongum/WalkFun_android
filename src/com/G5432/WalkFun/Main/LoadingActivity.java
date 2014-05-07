@@ -52,6 +52,10 @@ public class LoadingActivity extends WalkFunBaseActivity {
             if (msg.what == 1) {
                 VersionControl version = (VersionControl) msg.obj;
                 UserUtil.saveSystemTime(version.getSystemTime());
+                if(UserUtil.getDescVersion().intValue() != version.getDescVersion().intValue()){
+                    UserUtil.saveDescVersion(version.getDescVersion(),version.getDescription());
+                    UserUtil.saveNoticeUpdate(1);
+                }
                 //time from service
                 Date missionLastUpdateTime = version.getMissionLastUpdateTime();
                 Date fightDefineUpdateTime = version.getFightDefineUpdateTime();

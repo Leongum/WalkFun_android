@@ -119,5 +119,14 @@
         <activity android:name=".Setting.SettingShareActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait">
         </activity>
 
+        <activity android:name=".Setting.ActionHistoryMainActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name=".Setting.AnnouncementActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name=".Setting.AboutUsActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait">
+        </activity>
+
     </application>
 </manifest>

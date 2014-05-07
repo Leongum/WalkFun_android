@@ -26,4 +26,9 @@
     <Button android:layout_width="55dp" android:layout_height="55dp" android:id="@+id/mainBtnSet"
             android:background="@drawable/settings" android:layout_alignParentRight="true"
             android:layout_alignBottom="@+id/mainBtnSync" android:layout_marginRight="22dp"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mainImgUpdated" android:layout_alignLeft="@+id/mainBtnSet"
+            android:layout_alignTop="@+id/mainBtnSync" android:background="@drawable/check" android:visibility="gone"/>
 </RelativeLayout>

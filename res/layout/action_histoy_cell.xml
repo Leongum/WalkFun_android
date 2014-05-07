@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+            android:layout_width="320dp"
+            android:layout_height="85dp"
+            android:id="@+id/actionHistoryCellImgTitle" android:background="@drawable/friend_add_cell"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2014-01-01 00:00:00"
+            android:id="@+id/actionHistoryCellTxtTime" android:layout_alignLeft="@+id/actionHistoryCellImgTitle"
+            android:layout_alignTop="@+id/actionHistoryCellImgTitle" android:layout_marginTop="15dp" android:layout_marginLeft="20dp"
+            android:textColor="#000000" android:textSize="16dip"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:text="某好友对你使用了" android:id="@+id/actionHistoryCellTxtDesc"
+              android:textColor="#000000" android:textSize="16dip" android:layout_alignLeft="@+id/actionHistoryCellTxtTime"
+              android:layout_below="@+id/actionHistoryCellTxtTime" android:layout_marginTop="10dp"/>
+</RelativeLayout>

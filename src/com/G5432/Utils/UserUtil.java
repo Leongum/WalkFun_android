@@ -72,6 +72,41 @@ public class UserUtil {
         editor.commit();
     }
 
+    public static Integer getDescVersion() {
+        return UserUtil.sharedPreferences.getInt("descVersion", 0);
+    }
+
+    public static String getVersionDesc() {
+        return UserUtil.sharedPreferences.getString("versionDesc", "如果你看到这段文字，说明网络连接有问题~");
+    }
+
+    public static void saveDescVersion(Integer descVersion, String description) {
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("descVersion", descVersion);
+        editor.putString("versionDesc", description);
+        editor.commit();
+    }
+
+    public static Integer getActionUpdate() {
+        return UserUtil.sharedPreferences.getInt("actionUpdate", 0);
+    }
+
+    public static void saveActionUpdate(Integer updated) {
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("actionUpdate", updated);
+        editor.commit();
+    }
+
+    public static Integer getNoticeUpdate() {
+        return UserUtil.sharedPreferences.getInt("noticeUpdate", 0);
+    }
+
+    public static void saveNoticeUpdate(Integer updated) {
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("noticeUpdate", updated);
+        editor.commit();
+    }
+
     public static void saveUserInfoToList(UserBase user) {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putInt("userId", user.getUserId());
@@ -100,7 +135,7 @@ public class UserUtil {
         SharedPreferences.Editor editor = weatherPreferences.edit();
         editor.putInt("index", index);
         editor.putString("weatherInfo", weatherInfo);
-        editor.putString("weatherSyncTime",  CommonUtil.parseDateToString(new Date()));
+        editor.putString("weatherSyncTime", CommonUtil.parseDateToString(new Date()));
         editor.commit();
     }
 

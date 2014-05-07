@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android"
+        android:background="@drawable/main_bg">
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/setAboutImgBg" android:background="@drawable/paper"/>
+    <Button
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:id="@+id/setAboutBtnReturn" android:layout_alignLeft="@+id/setAboutImgBg"
+            android:layout_alignTop="@+id/setAboutImgBg" android:layout_marginTop="6dp"
+            android:background="@drawable/back_bg"/>
+    <ImageView
+            android:layout_width="250dp"
+            android:layout_height="155dp"
+            android:id="@+id/setAboutImgLogo" android:layout_centerHorizontal="true" android:layout_alignParentTop="true"
+            android:background="@drawable/logo" android:layout_marginTop="110dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="版本"
+            android:id="@+id/setAboutTxtVersionTitle" android:layout_alignLeft="@+id/setAboutImgLogo"
+            android:layout_below="@+id/setAboutImgLogo" android:textColor="#000000" android:textStyle="bold"
+            android:textSize="17dip" android:layout_marginTop="20dp" android:layout_marginLeft="15dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Version"
+            android:id="@+id/setAboutTxtVersion" android:layout_alignRight="@+id/setAboutImgLogo"
+            android:layout_alignTop="@+id/setAboutTxtVersionTitle" android:layout_marginRight="15dp" android:textColor="#388cff"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我们"
+            android:id="@+id/setAboutTxtUs" android:layout_alignLeft="@+id/setAboutTxtVersionTitle" android:layout_below="@+id/setAboutTxtVersionTitle"
+            android:layout_marginTop="20dp" android:textColor="#000000" android:textSize="17dip"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="赵秉阳"
+              android:id="@+id/setAboutTxtZBY"
+              android:textColor="#000000" android:textSize="15dip" android:layout_toRightOf="@+id/setAboutTxtVersionTitle"
+              android:layout_alignTop="@+id/setAboutTxtUs" android:layout_marginLeft="20dp"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="陆泳"
+              android:id="@+id/setAboutTxtLY" android:textColor="#000000" android:textSize="15dip"
+              android:layout_toRightOf="@+id/setAboutTxtZBY" android:layout_alignTop="@+id/setAboutTxtUs"
+              android:layout_marginLeft="20dp"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="谢安"
+              android:id="@+id/setAboutTxtXA" android:textColor="#000000" android:textSize="15dip"
+              android:layout_toRightOf="@+id/setAboutTxtLY" android:layout_alignTop="@+id/setAboutTxtUs"
+              android:layout_marginTop="-10dp" android:layout_marginLeft="22dp"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="王策"
+              android:id="@+id/setAboutTxtWC" android:textColor="#000000" android:textSize="15dip"
+              android:layout_alignLeft="@+id/setAboutTxtXA" android:layout_below="@+id/setAboutTxtXA"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="空气质量信息来自PM25.in"
+            android:id="@+id/setAboutTxtPM25" android:layout_centerHorizontal="true"
+            android:layout_alignBottom="@+id/setAboutImgBg" android:layout_marginBottom="70dp" android:textColor="#000000"
+            android:textSize="12dip"/>
+</RelativeLayout>

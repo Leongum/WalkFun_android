@@ -64,6 +64,10 @@ public class CommonUtil {
         return formatter.format(date);
     }
 
+    public static String parseDateToStringOnlyMins(Date date) {
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        return formatter.format(date);
+    }
 
     public static String getUrl(String url, String... params) {
         String newUrl = MessageFormat.format(url, params);

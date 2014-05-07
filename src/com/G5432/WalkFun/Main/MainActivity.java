@@ -7,6 +7,7 @@ import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.*;
 import com.G5432.HttpClient.UserHandler;
+import com.G5432.Utils.UserUtil;
 import com.G5432.WalkFun.Friend.FriendMainActivity;
 import com.G5432.WalkFun.Item.ItemMainActivity;
 import com.G5432.WalkFun.R;
@@ -30,6 +31,7 @@ public class MainActivity extends WalkFunBaseActivity {
     private Button btnSync;
     private Button btnSetting;
     private ViewPager viewPager;
+    private ImageView imgUpdated;
 
     private UserHandler userHandler;
     LocalActivityManager manager = null;
@@ -60,6 +62,11 @@ public class MainActivity extends WalkFunBaseActivity {
     private void initPageUIControl() {
         btnSync = (Button) findViewById(R.id.mainBtnSync);
         btnSetting = (Button) findViewById(R.id.mainBtnSet);
+        imgUpdated = (ImageView) findViewById(R.id.mainImgUpdated);
+
+        if (UserUtil.getNoticeUpdate().intValue() == 1 || UserUtil.getActionUpdate().intValue() == 1) {
+            imgUpdated.setVisibility(View.VISIBLE);
+        }
 
         btnSync.setOnClickListener(syncListener);
         btnSetting.setOnClickListener(settingListener);
@@ -146,7 +153,7 @@ public class MainActivity extends WalkFunBaseActivity {
                         FrameLayout.LayoutParams.WRAP_CONTENT);
                 params.topMargin = -(int) (offset * 2 * TITLE_HEIGHT);
                 userMainTitle.setLayoutParams(params);
-            }else if (disMissPage == 2){
+            } else if (disMissPage == 2) {
                 FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(
                         FrameLayout.LayoutParams.WRAP_CONTENT,
                         FrameLayout.LayoutParams.WRAP_CONTENT);
@@ -191,7 +198,7 @@ public class MainActivity extends WalkFunBaseActivity {
             params.topMargin = -TITLE_HEIGHT;
             itemMainTitle.setLayoutParams(params);
             friendMainTitle.setLayoutParams(params);
-        }else if (pageIndex == 2) {
+        } else if (pageIndex == 2) {
             FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(
                     FrameLayout.LayoutParams.WRAP_CONTENT,
                     FrameLayout.LayoutParams.WRAP_CONTENT);

@@ -15,6 +15,7 @@ import com.loopj.android.http.AsyncHttpResponseHandler;
 
 import java.text.MessageFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -194,6 +195,7 @@ public class FriendHandler {
         action.setActionId(actionId);
         action.setActionToId(actionToId);
         action.setActionToName(actionToUserName);
+        action.setUpdateTime(new Date());
 
         String requestBody = gson.toJson(action, Action.class);
         String url = CommonUtil.getUrl(MessageFormat.format(Constant.ACTION_CREATE_ACTION_URL, userId));

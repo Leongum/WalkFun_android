@@ -4,7 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 import com.G5432.HttpClient.UserHandler;
+import com.G5432.Utils.UserUtil;
 import com.G5432.WalkFun.Main.LoginActivity;
 import com.G5432.WalkFun.Main.MainActivity;
 import com.G5432.WalkFun.R;
@@ -24,6 +27,16 @@ public class SetMainActivity extends WalkFunBaseActivity {
     private Button btnReturn;
     private Button btnLogout;
     private Button btnWriteUs;
+    private TextView txtActions;
+    private Button btnActionDetails;
+    private TextView txtNotice;
+    private Button btnNoticeDetails;
+    private TextView txtAbout;
+    private TextView txtWalkfun;
+    private Button btnAboutDetails;
+
+    private ImageView actionUpdated;
+    private ImageView noticeUpdated;
 
     private UserHandler userHandler;
 
@@ -48,8 +61,62 @@ public class SetMainActivity extends WalkFunBaseActivity {
         btnLogout.setOnClickListener(logoutListener);
         btnReturn.setOnClickListener(returnListener);
         btnWriteUs.setOnClickListener(writeUsListener);
+
+        txtActions = (TextView) findViewById(R.id.setMainTxtActions);
+        txtNotice = (TextView) findViewById(R.id.setMainTxtNotice);
+        txtAbout = (TextView) findViewById(R.id.setMainTxtAbout);
+        txtWalkfun = (TextView) findViewById(R.id.setMainTxtAboutWalkfun);
+        btnActionDetails = (Button) findViewById(R.id.setMainBtnActions);
+        btnNoticeDetails = (Button) findViewById(R.id.setMainBtnNotice);
+        btnAboutDetails = (Button) findViewById(R.id.setMainBtnAbout);
+
+        txtActions.setOnClickListener(actionsListener);
+        txtNotice.setOnClickListener(noticeListener);
+        txtAbout.setOnClickListener(aboutListener);
+        txtWalkfun.setOnClickListener(aboutListener);
+        btnActionDetails.setOnClickListener(actionsListener);
+        btnNoticeDetails.setOnClickListener(noticeListener);
+        btnAboutDetails.setOnClickListener(aboutListener);
+
+        actionUpdated = (ImageView) findViewById(R.id.setMainImgActionUpdated);
+        noticeUpdated = (ImageView) findViewById(R.id.setMainImgNoticeUpdated);
+
+        if (UserUtil.getNoticeUpdate().intValue() == 1) {
+            noticeUpdated.setVisibility(View.VISIBLE);
+        }
+
+        if (UserUtil.getActionUpdate().intValue() == 1) {
+            actionUpdated.setVisibility(View.VISIBLE);
+        }
     }
 
+    private View.OnClickListener aboutListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent();
+            intent.setClass(SetMainActivity.this, AboutUsActivity.class);
+            startActivity(intent);
+        }
+    };
+
+    private View.OnClickListener noticeListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent();
+            intent.setClass(SetMainActivity.this, AnnouncementActivity.class);
+            startActivity(intent);
+        }
+    };
+
+
+    private View.OnClickListener actionsListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent();
+            intent.setClass(SetMainActivity.this, ActionHistoryMainActivity.class);
+            startActivity(intent);
+        }
+    };
 
     private View.OnClickListener logoutListener = new View.OnClickListener() {
         @Override
