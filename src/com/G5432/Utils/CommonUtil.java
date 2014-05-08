@@ -24,22 +24,46 @@ import java.util.Map;
  */
 public class CommonUtil {
 
+    //是否可以掉落在地上
+    public static String RULE_Drop_Down = "D";
+    //掉落在的花盆上
+    public static String RULE_Drop_Pot = "DP";
+    //是否可以显示在脸上
+    public static String RULE_On_Face = "OF";
+    //是否需要改变脸的颜色
+    public static String RULE_Face_Color = "FC";
+    //标注肥肉的改变值
+    public static String RULE_Fatness = "F";
+    //标注肥肉的直接增加值
+    public static String RULE_Fight_Add = "FA";
+    //标注肥肉的百分比真价值
+    public static String RULE_Fight_Percent = "FPE";
+    //标注体力的临时上限增加
+    public static String RULE_Physical_Power_Add = "PPA";
+    //标注体力的临时上限的增加的百分比
+    public static String RULE_Physical_Power_Percent = "PPP";
+    //标注为道具。
+    public static String RULE_Prop_Yes = "PY";
+    //标注不是道具
+    public static String RULE_Prop_No = "PN";
+    //标注是否是钱
+    public static String RULE_Money = "M";
+    //标注触发是一个action事件
+    public static String RULE_Type_Action = "TA";
+    //标注触发是一个战斗事件
+    public static String RULE_Type_Fight = "TF";
+    //标注触发是一个好友战斗事件
+    public static String RULE_Type_Fight_Friend = "TFF";
+    //标注出发事件。
+    public static String RULE_Type_Start = "TS";
 
-    public static String Drop_Down = "D";
-    public static String Fatness = "F";
-    public static String Fight_Win = "FW";
-    public static String Fight_Loose = "FL";
-    public static String Flower_Pot = "FP";
-    public static String Fight_Add = "FA";
-    public static String Fight_Percent = "FPE";
-    public static String Physical_Power_Add = "PPA";
-    public static String Physical_Power_Percent = "PPP";
-    public static String Prop_Yes = "PY";
-    public static String Prop_No = "PN";
-    public static String Show_Position = "SP";
-    public static String Money = "M";
-    public static String Type_Action = "TA";
-    public static String Type_Fight = "TF";
+    public static Integer COIN_ACTION_ID = 0;
+
+    public static String SENTENCE_START_WALKING_ALONE = "独自一人从村里出发了|从村里出发了|毫无悬念的一个人从村里出发了";
+    public static String SENTENCE_START_WALKING_WITH = "与小伙伴{0}一起从村里出发了";
+    public static String SENTENCE_FRIEND_FIGHT_WIN = "遇到{0}并主动与之切磋武艺，几招过后轻松取胜，被围观群众投来崇拜的目光。|巧遇{0}与之切磋，大战250回合后终于艰难取胜。";
+    public static String SENTENCE_FRIEND_FIGHT_LOSE = "遇到{0}并主动与之切磋武艺，结果连对方三招都没接住。|巧遇{0}与之切磋，大战250回合后遗憾落败。";
+
 
     public static Date parseDate(String date) {
         DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -138,9 +162,9 @@ public class CommonUtil {
         hour = (int) (min / 60);
         min = (int) (min % 60);
         if (hour > 0) {
-            return MessageFormat.format("{0}:{1}''{2}\"", hour, min, second);
+            return MessageFormat.format("{0}小时{1}分{2}秒", hour, min, second);
         } else {
-            return MessageFormat.format("{0}''{1}\"", min, second);
+            return MessageFormat.format("{0}分{1}秒", min, second);
         }
     }
 
@@ -210,11 +234,11 @@ public class CommonUtil {
             String[] ruleArray = actionRule.split("\\|");
             for (int i = 0; i < ruleArray.length; i++) {
                 String[] ruleDetails = ruleArray[i].split(",");
-                if (ruleDetails != null && ruleDetails.length == 4) {
+                if (ruleDetails != null && ruleDetails.length >= 3) {
                     Integer productId = Integer.parseInt(ruleDetails[0]);
                     Integer numb = Integer.parseInt(ruleDetails[1]);
                     String propFlag = ruleDetails[2];
-                    if (propFlag.equalsIgnoreCase(Prop_Yes)) {
+                    if (propFlag.equalsIgnoreCase(RULE_Prop_Yes)) {
                         vProductIds.put(productId, numb);
                     }
                 }
@@ -222,4 +246,39 @@ public class CommonUtil {
         }
         return vProductIds;
     }
+
+    public static Map<Integer, Integer> explainPropHaveRule(String propHaving) {
+        Map<Integer, Integer> vProductIds = new HashMap<Integer, Integer>();
+        //17,1|1,1|18,1|3,1|
+        if (propHaving != null) {
+            String[] ruleArray = propHaving.split("\\|");
+            for (int i = 0; i < ruleArray.length; i++) {
+                String[] ruleDetails = ruleArray[i].split(",");
+                if (ruleDetails != null && ruleDetails.length >= 2) {
+                    Integer productId = Integer.parseInt(ruleDetails[0]);
+                    Integer numb = Integer.parseInt(ruleDetails[1]);
+                    vProductIds.put(productId, numb);
+                }
+            }
+        }
+        return vProductIds;
+    }
+
+    public static Map<String, Integer> explainActionEffectiveRule(String effectiveRule) {
+        Map<String, Integer> userStatusMap = new HashMap<String, Integer>();
+        //B,1|H,-1
+        if (effectiveRule != null) {
+            String[] ruleArray = effectiveRule.split("\\|");
+            for (int i = 0; i < ruleArray.length; i++) {
+                String[] ruleDetails = ruleArray[i].split(",");
+                if (ruleDetails != null && ruleDetails.length >= 2) {
+                    String effectiveName = ruleDetails[0];
+                    Integer numb = Integer.parseInt(ruleDetails[1]);
+                    userStatusMap.put(effectiveName, numb);
+                }
+            }
+        }
+        return userStatusMap;
+    }
+
 }

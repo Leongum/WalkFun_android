@@ -34,7 +34,7 @@ public class FightDefinition {
     private String mName;
     @Expose
     @DatabaseField
-    private String mLevel;
+    private Integer mLevel;
     @Expose
     @DatabaseField
     private Double mMaxFight;
@@ -121,11 +121,11 @@ public class FightDefinition {
         this.mName = mName;
     }
 
-    public String getmLevel() {
+    public Integer getmLevel() {
         return mLevel;
     }
 
-    public void setmLevel(String mLevel) {
+    public void setmLevel(Integer mLevel) {
         this.mLevel = mLevel;
     }
 

@@ -62,7 +62,13 @@ public class FriendService {
                     userFriend.setSex(friendSort.getSex());
                     userFriend.setLevel(friendSort.getLevel());
                     userFriend.setUserName(friendSort.getFriendName());
-                    //todo:: userFriend.setUserTitle(friendSort.getUserTitle());
+                    userFriend.setFight(friendSort.getFight());
+                    userFriend.setFightPlus(friendSort.getFightPlus());
+                    userFriend.setPower(friendSort.getPower());
+                    userFriend.setTotalFights(friendSort.getTotalFights());
+                    userFriend.setFightsWin(friendSort.getFightsWin());
+                    userFriend.setTotalFriendFights(friendSort.getTotalFriendFights());
+                    userFriend.setFriendFightWin(friendSort.getFriendFightWin());
                 }
             }
         } catch (SQLException e) {
@@ -83,7 +89,13 @@ public class FriendService {
                 userFriend.setSex(friendSort.getSex());
                 userFriend.setLevel(friendSort.getLevel());
                 userFriend.setUserName(friendSort.getFriendName());
-                //todo:: userFriend.setUserTitle(friendSort.getUserTitle());
+                userFriend.setFight(friendSort.getFight());
+                userFriend.setFightPlus(friendSort.getFightPlus());
+                userFriend.setPower(friendSort.getPower());
+                userFriend.setTotalFights(friendSort.getTotalFights());
+                userFriend.setFightsWin(friendSort.getFightsWin());
+                userFriend.setTotalFriendFights(friendSort.getTotalFriendFights());
+                userFriend.setFriendFightWin(friendSort.getFriendFightWin());
             }
         } catch (SQLException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
@@ -103,7 +115,13 @@ public class FriendService {
                 userFriend.setSex(friendSort.getSex());
                 userFriend.setLevel(friendSort.getLevel());
                 userFriend.setUserName(friendSort.getFriendName());
-                //todo:: userFriend.setUserTitle(friendSort.getUserTitle());
+                userFriend.setFight(friendSort.getFight());
+                userFriend.setFightPlus(friendSort.getFightPlus());
+                userFriend.setPower(friendSort.getPower());
+                userFriend.setTotalFights(friendSort.getTotalFights());
+                userFriend.setFightsWin(friendSort.getFightsWin());
+                userFriend.setTotalFriendFights(friendSort.getTotalFriendFights());
+                userFriend.setFriendFightWin(friendSort.getFriendFightWin());
             }
         } catch (SQLException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
@@ -123,7 +141,13 @@ public class FriendService {
                 userFriend.setSex(friendSort.getSex());
                 userFriend.setLevel(friendSort.getLevel());
                 userFriend.setUserName(friendSort.getFriendName());
-                //todo:: userFriend.setUserTitle(friendSort.getUserTitle());
+                userFriend.setFight(friendSort.getFight());
+                userFriend.setFightPlus(friendSort.getFightPlus());
+                userFriend.setPower(friendSort.getPower());
+                userFriend.setTotalFights(friendSort.getTotalFights());
+                userFriend.setFightsWin(friendSort.getFightsWin());
+                userFriend.setTotalFriendFights(friendSort.getTotalFriendFights());
+                userFriend.setFriendFightWin(friendSort.getFriendFightWin());
             }
         } catch (SQLException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.

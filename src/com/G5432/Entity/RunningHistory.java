@@ -94,6 +94,12 @@ public class RunningHistory {
     @Expose
     @DatabaseField
     private Date commitTime;
+    @Expose
+    @DatabaseField
+    private Integer friendId;
+    @Expose
+    @DatabaseField
+    private String  friendName;
 
     public RunningHistory() {
 
@@ -313,5 +319,21 @@ public class RunningHistory {
 
     public void setCommitTime(Date commitTime) {
         this.commitTime = commitTime;
+    }
+
+    public Integer getFriendId() {
+        return friendId;
+    }
+
+    public void setFriendId(Integer friendId) {
+        this.friendId = friendId;
+    }
+
+    public String getFriendName() {
+        return friendName;
+    }
+
+    public void setFriendName(String friendName) {
+        this.friendName = friendName;
     }
 }

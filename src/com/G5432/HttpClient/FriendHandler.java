@@ -114,6 +114,16 @@ public class FriendHandler {
     }
 
     /**
+     * 获取好友信息。
+     *
+     * @param userId
+     * @return
+     */
+    public UserFriend fetchFriendByIds(Integer userId, Integer friendId) {
+        return friendService.fetchFriendByIds(userId, friendId);
+    }
+
+    /**
      * 获得我的粉丝按照修改时间修改顺序排序
      *
      * @param userId

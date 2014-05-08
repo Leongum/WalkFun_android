@@ -43,6 +43,14 @@ public class UserFriend {
 
     private String userTitle;
 
+    private Double fight;
+    private Double fightPlus;
+    private Double power;
+    private Integer totalFights;
+    private Integer fightsWin;
+    private Integer totalFriendFights;
+    private Integer friendFightWin;
+
     public UserFriend() {
 
     }
@@ -133,5 +141,61 @@ public class UserFriend {
 
     public void setUserTitle(String userTitle) {
         this.userTitle = userTitle;
+    }
+
+    public Double getFight() {
+        return fight;
+    }
+
+    public void setFight(Double fight) {
+        this.fight = fight;
+    }
+
+    public Double getFightPlus() {
+        return fightPlus;
+    }
+
+    public void setFightPlus(Double fightPlus) {
+        this.fightPlus = fightPlus;
+    }
+
+    public Double getPower() {
+        return power;
+    }
+
+    public void setPower(Double power) {
+        this.power = power;
+    }
+
+    public Integer getTotalFights() {
+        return totalFights;
+    }
+
+    public void setTotalFights(Integer totalFights) {
+        this.totalFights = totalFights;
+    }
+
+    public Integer getFightsWin() {
+        return fightsWin;
+    }
+
+    public void setFightsWin(Integer fightsWin) {
+        this.fightsWin = fightsWin;
+    }
+
+    public Integer getTotalFriendFights() {
+        return totalFriendFights;
+    }
+
+    public void setTotalFriendFights(Integer totalFriendFights) {
+        this.totalFriendFights = totalFriendFights;
+    }
+
+    public Integer getFriendFightWin() {
+        return friendFightWin;
+    }
+
+    public void setFriendFightWin(Integer friendFightWin) {
+        this.friendFightWin = friendFightWin;
     }
 }

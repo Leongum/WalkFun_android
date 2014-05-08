@@ -289,6 +289,14 @@ public class SystemHandler {
                 if (statusCode == 200 || statusCode == 204) {
                     List<FightDefinition> fightDefinitions = gson.fromJson(response, new TypeToken<List<FightDefinition>>() {
                     }.getType());
+                    for(FightDefinition fightDefinition : fightDefinitions){
+                        if(fightDefinition.getfWin() == null || fightDefinition.getfWin().equalsIgnoreCase("")){
+                           fightDefinition.setfWin("蹂躏之。|陷入苦战，最后使出饱含信念的一击将其击倒。|战斗中全程被压制，最后使出了封印已久的招式才险胜。|拼尽余下全部体力发出奋力一击，勉强获胜。");
+                        }
+                        if(fightDefinition.getfLoose() == null || fightDefinition.getfLoose().equalsIgnoreCase("")){
+                            fightDefinition.setfLoose("感觉好厉害的样子，绕道而行。|上前挑战，但被无视了。|与之大战三百回合，即将获胜之时却被逃走了。");
+                        }
+                    }
                     systemService.saveFightDefineToDB(fightDefinitions);
                     UserUtil.saveLastUpdateTime("FightDefineUpdateTime");
                     handler.sendEmptyMessage(1);
