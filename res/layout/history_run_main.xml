@@ -3,19 +3,49 @@
 <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android"
-        android:background="@drawable/main_bg">
-    <ImageView
+        android:background="@drawable/history_bg" android:clickable="false">
+    <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/paper"/>
-    <Button
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:id="@+id/historyRunMainBtnReturn" android:layout_alignLeft="@+id/imageView"
-            android:layout_alignTop="@+id/imageView" android:background="@drawable/back_bg"/>
+            android:layout_height="wrap_content" android:id="@+id/historyRunMainLayoutTitle">
+        <ImageView
+                android:layout_width="320dp"
+                android:layout_height="102dp"
+                android:id="@+id/historyRunMainImgTitle" android:background="@drawable/history_title"/>
+        <Button
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:id="@+id/historyRunMainBtnReturn"
+                android:background="@drawable/back_button" android:layout_marginTop="8dp"
+                android:layout_marginLeft="12.5dp"/>
+        <TextView
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:text="总时间"
+                android:id="@+id/historyRunMainTxtTimeTitle"
+                android:textSize="15dip"
+                android:gravity="center" android:textColor="#000000"
+                android:layout_toRightOf="@+id/historyRunMainBtnReturn" android:layout_alignTop="@+id/historyRunMainImgTitle"
+                android:layout_marginTop="15dp" android:layout_marginLeft="20dp"/>
+        <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:text="总步数"
+                  android:id="@+id/histoyrRunMainTxtStepsTitle" android:textSize="15dip" android:gravity="center"
+                  android:textColor="#000000"
+                  android:layout_toRightOf="@+id/historyRunMainTxtTimeTitle" android:layout_alignTop="@+id/historyRunMainTxtTimeTitle"/>
+        <TextView android:layout_width="128dp" android:layout_height="wrap_content" android:text="113小时56分12秒"
+                  android:id="@+id/historyRunMainTxtTime" android:textSize="14dip" android:gravity="center"
+                  android:textColor="#ffffff"
+                  android:textStyle="bold"
+                  android:layout_alignRight="@+id/historyRunMainTxtTimeTitle" android:layout_below="@+id/historyRunMainTxtTimeTitle"
+                  android:layout_marginTop="5dp"/>
+        <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:text="11111111步"
+                  android:id="@+id/historyRunMainTxtSteps" android:textSize="14dip" android:gravity="center"
+                  android:textColor="#ffffff"
+                  android:textStyle="bold" android:layout_toRightOf="@+id/historyRunMainTxtTimeTitle"
+                  android:layout_alignTop="@+id/historyRunMainTxtTime"/>
+    </RelativeLayout>
     <ListView
-            android:layout_width="250dp"
-            android:layout_height="370dp"
-            android:id="@+id/historyRunMainList" android:layout_alignParentLeft="true" android:layout_marginLeft="35dp"
-            android:layout_alignParentTop="true" android:layout_marginTop="110dp"/>
+            android:layout_width="280dp"
+            android:layout_height="fill_parent"
+            android:id="@+id/historyRunMainList"
+            android:layout_centerHorizontal="true" android:layout_below="@+id/historyRunMainLayoutTitle"
+            android:layout_marginLeft="35dp" android:divider="@null" android:scrollbars="none"/>
 </RelativeLayout>

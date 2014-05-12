@@ -1,18 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="35dp" xmlns:android="http://schemas.android.com/apk/res/android">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android"
+        >
+    <ImageView
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:id="@+id/imageView" android:background="@drawable/history_cell_normal"/>
     <TextView
             android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:text="Time"
-            android:id="@+id/historyRunCellTxtTime" android:layout_alignParentLeft="true" android:layout_marginLeft="15dp"
-            android:layout_alignParentTop="true" android:textSize="20dp"
-            android:textColor="#000000" android:gravity="center"/>
-    <TextView android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="steps"
+            android:layout_height="40dp"
+            android:text="1小时12分11秒"
+            android:id="@+id/historyRunCellTxtTime" android:layout_alignParentLeft="true" android:layout_marginLeft="50dp"
+            android:layout_alignParentTop="true" android:textSize="14dp"
+            android:textColor="#000000" android:minWidth="100dp" android:gravity="center_vertical"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="40dp" android:text="12345步"
               android:id="@+id/historyRunCellTxtSteps"
-              android:layout_alignParentRight="true" android:layout_alignTop="@+id/historyRunCellTxtTime"
-              android:textSize="20dp" android:textColor="#000000" android:gravity="center"
-              android:layout_marginRight="15dp"/>
+              android:textSize="14dp" android:textColor="#000000" android:gravity="center"
+              android:layout_toRightOf="@+id/historyRunCellTxtTime" android:layout_alignTop="@+id/imageView"
+              android:layout_marginLeft="20dp"/>
+    <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/imageView1" android:layout_alignRight="@+id/imageView"
+            android:layout_centerVertical="true" android:background="@drawable/details"
+            android:layout_marginRight="5dp"/>
 </RelativeLayout>

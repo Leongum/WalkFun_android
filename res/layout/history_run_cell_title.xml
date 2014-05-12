@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <RelativeLayout
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+            android:layout_width="280dp"
+            android:layout_height="22dp" android:background="@drawable/history_cell_section">
+    </RelativeLayout>
     <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
             android:text="date"
             android:id="@+id/historyRunCellTitleTxtDate" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"
-            android:gravity="center" android:textColor="#707070" android:textSize="12dp"
-            android:layout_marginTop="5dp" android:layout_marginBottom="2dp"/>
+            android:gravity="center" android:textColor="#000000" android:textSize="14dp"
+            android:layout_marginLeft="50dp"/>
 </RelativeLayout>

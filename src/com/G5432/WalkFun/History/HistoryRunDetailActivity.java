@@ -1,6 +1,7 @@
 package com.G5432.WalkFun.History;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import com.G5432.HttpClient.RunningHistoryHandler;
 import com.G5432.HttpClient.SystemHandler;
 import com.G5432.HttpClient.VirtualProductHandler;
 import com.G5432.Utils.CommonUtil;
+import com.G5432.Utils.FontManager;
 import com.G5432.Utils.UserUtil;
 import com.G5432.WalkFun.R;
 import com.G5432.WalkFun.WalkFunBaseActivity;
@@ -69,6 +71,8 @@ public class HistoryRunDetailActivity extends WalkFunBaseActivity {
         friendHandler = new FriendHandler(getHelper());
         virtualProductHandler = new VirtualProductHandler(getHelper());
         initPageUIControl();
+        Typeface typeface = FontManager.wawaw5(this);
+        FontManager.changeFonts(this.getWindow().getDecorView(),typeface);
     }
 
     private void initPageUIControl() {
@@ -172,7 +176,7 @@ public class HistoryRunDetailActivity extends WalkFunBaseActivity {
                     item.put("actionCost", "体力-" + walkEvent.getPower());
                     mData.add(item);
                 } else if (walkEvent.geteType().equalsIgnoreCase(CommonUtil.RULE_Type_Start)) {
-                    item.put("itemType", "event");
+                    item.put("itemType", "start_event");
                     if (historyDetail.getFriendName() != null) {
                         String[] sentenceList = CommonUtil.SENTENCE_START_WALKING_WITH.split("\\|");
                         item.put("actionDesc", MessageFormat.format(sentenceList[walkEvent.geteId().intValue()], historyDetail.getFriendName()));
