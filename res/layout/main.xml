@@ -12,23 +12,118 @@
             android:layout_weight="1.0"
             android:flipInterval="30"
             android:persistentDrawingCache="animation" />
-    <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="70dp"
-            android:id="@+id/mianImgButtomboard" android:background="@drawable/main_bottom_board"
-            android:layout_alignLeft="@+id/mainVPagerContainer" android:layout_alignBottom="@+id/mainVPagerContainer"/>
-    <Button
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:id="@+id/mainBtnSync" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true"
-            android:background="@drawable/sync_apply" android:layout_marginLeft="22dp"
-            android:layout_marginBottom="5dp"/>
-    <Button android:layout_width="55dp" android:layout_height="55dp" android:id="@+id/mainBtnSet"
-            android:background="@drawable/settings" android:layout_alignParentRight="true"
-            android:layout_alignBottom="@+id/mainBtnSync" android:layout_marginRight="22dp"/>
-    <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/mainImgUpdated" android:layout_alignLeft="@+id/mainBtnSet"
-            android:layout_alignTop="@+id/mainBtnSync" android:background="@drawable/check" android:visibility="gone"/>
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" android:layout_alignParentBottom="false">
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:id="@+id/mianImgButtomboard" android:background="@drawable/main_bottom_board"
+                android:layout_alignParentBottom="true"/>
+        <Button
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:id="@+id/mainBtnSync" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true"
+                android:background="@drawable/sync_apply" android:layout_marginLeft="22dp"
+                android:layout_marginBottom="5dp"/>
+        <Button android:layout_width="55dp" android:layout_height="55dp" android:id="@+id/mainBtnSet"
+                android:background="@drawable/settings" android:layout_alignParentRight="true"
+                android:layout_alignBottom="@+id/mainBtnSync" android:layout_marginRight="22dp"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mainImgUpdated" android:layout_alignLeft="@+id/mainBtnSet"
+                android:layout_alignTop="@+id/mainBtnSync" android:background="@drawable/check" android:visibility="gone"/>
+        <Button android:layout_width="158dp" android:layout_height="55dp" android:id="@+id/mainBtnReadyRun"
+                android:background="@drawable/login_button"
+                android:layout_toRightOf="@+id/mainBtnSync" android:layout_alignTop="@+id/mainBtnSync"
+                android:layout_marginLeft="4dp" android:layout_marginTop="3dp" android:text="准备出发"
+                android:textSize="24dip" android:textStyle="bold"/>
+    </RelativeLayout>
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" android:id="@+id/mainLayoutRun">
+        <RelativeLayout
+                android:layout_width="245dp"
+                android:layout_height="384dp" android:background="@drawable/challenge_pop_bg"
+                android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="准备出发"
+                    android:id="@+id/mainTxtRunTitle"
+                    android:textSize="18dip" android:textColor="#000000"
+                    android:gravity="center" android:layout_centerHorizontal="true" android:layout_alignParentTop="true"
+                    android:layout_marginTop="19dp" android:textStyle="bold"/>
+            <TextView
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:text="战斗力"
+                    android:id="@+id/mainTxtRunFightTitle" android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/mainTxtRunTitle" android:layout_marginTop="60dp"
+                    android:layout_marginLeft="50dp" android:textColor="#ffffff" android:gravity="center"/>
+            <TextView android:layout_width="40dp" android:layout_height="wrap_content" android:text="0"
+                      android:id="@+id/mainTxtRunFight"
+                      android:textColor="#ffffff" android:layout_toRightOf="@+id/mainTxtRunFightTitle"
+                      android:layout_alignTop="@+id/mainTxtRunFightTitle" android:layout_marginLeft="10dp"
+                      android:gravity="center"/>
+            <TextView android:layout_width="15dp" android:layout_height="wrap_content" android:text="+"
+                      android:id="@+id/mainTxtRunFigjtadd" android:textColor="#ffffff"
+                      android:layout_toRightOf="@+id/mainTxtRunFight" android:layout_alignTop="@+id/mainTxtRunFightTitle"
+                      android:gravity="center"/>
+            <TextView android:layout_width="40dp" android:layout_height="wrap_content" android:text="0"
+                      android:id="@+id/mainTxtRunFightPlus" android:textColor="#ffd512"
+                      android:gravity="center" android:layout_toRightOf="@+id/mainTxtRunTitle"
+                      android:layout_alignTop="@+id/mainTxtRunFightTitle"/>
+            <TextView android:layout_width="45dp" android:layout_height="wrap_content" android:text=" 体力"
+                      android:id="@+id/mainTxtRunPowerTitle"
+                      android:textColor="#ffffff" android:layout_alignLeft="@+id/mainTxtRunFightTitle"
+                      android:layout_below="@+id/mainTxtRunFightTitle" android:layout_marginTop="35dp" android:gravity="center"/>
+            <TextView android:layout_width="40dp" android:layout_height="wrap_content" android:text="0"
+                      android:id="@+id/mainTxtRunPower" android:textColor="#ffffff"
+                      android:gravity="center" android:layout_alignLeft="@+id/mainTxtRunFight"
+                      android:layout_alignTop="@+id/mainTxtRunPowerTitle"/>
+            <TextView android:layout_width="15dp" android:layout_height="wrap_content" android:text="+"
+                      android:id="@+id/mainTxtRunPowerAdd" android:textColor="#ffffff"
+                      android:gravity="center" android:layout_toRightOf="@+id/mainTxtRunFight"
+                      android:layout_alignTop="@+id/mainTxtRunPowerTitle"/>
+            <TextView android:layout_width="40dp" android:layout_height="wrap_content" android:text="0"
+                      android:id="@+id/mainTxtRunPowerPlus" android:textColor="#ffd512" android:gravity="center"
+                      android:layout_toRightOf="@+id/mainTxtRunTitle" android:layout_alignTop="@+id/mainTxtRunPowerTitle"/>
+            <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:id="@+id/mainImgRunProp" android:layout_alignLeft="@+id/mainTxtRunFightTitle"
+                    android:layout_below="@+id/mainTxtRunPowerTitle" android:background="@drawable/running_ready_item"
+                    android:layout_marginTop="35dp"/>
+            <TextView android:layout_width="80dp" android:layout_height="26dp" android:text="加强一下"
+                      android:id="@+id/mainTxtRunProp"
+                      android:textColor="#ffffff" android:gravity="center"
+                      android:layout_toRightOf="@+id/mainImgRunProp" android:layout_alignTop="@+id/mainImgRunProp"
+                      android:layout_marginLeft="5dp" android:textSize="12dip"/>
+            <ImageView android:layout_width="40dp" android:layout_height="40dp" android:id="@+id/mainImgRunPropDel"
+                       android:background="@drawable/running_ready_add"
+                       android:layout_toRightOf="@+id/mainTxtRunProp" android:layout_alignTop="@+id/mainImgRunProp"
+                       android:layout_marginTop="-7dp"/>
+            <ImageView android:layout_width="30dp" android:layout_height="30dp" android:id="@+id/mainImgRunFriend"
+                       android:background="@drawable/running_ready_friend" android:layout_alignLeft="@+id/mainTxtRunFightTitle"
+                       android:layout_below="@+id/mainImgRunProp" android:layout_marginTop="30dp"/>
+            <TextView android:layout_width="80dp" android:layout_height="30dp" android:text="带个伙伴"
+                      android:id="@+id/mainTxtRunFriendName" android:textColor="#ffffff" android:gravity="center"
+                      android:layout_alignLeft="@+id/mainTxtRunProp" android:layout_alignTop="@+id/mainImgRunFriend"
+                      android:textSize="12dip"/>
+            <ImageView android:layout_width="40dp" android:layout_height="40dp" android:id="@+id/mainImgRunFriendDel"
+                       android:background="@drawable/running_ready_add"
+                       android:layout_toRightOf="@+id/mainTxtRunTitle" android:layout_alignTop="@+id/mainImgRunFriend"
+                       android:layout_marginTop="-5dp"/>
+            <Button
+                    android:layout_width="120dp"
+                    android:layout_height="44dp"
+                    android:text="出发"
+                    android:id="@+id/mainBtnRunGO" android:layout_alignParentLeft="true" android:layout_marginLeft="58dp"
+                    android:layout_alignParentBottom="true" android:background="@drawable/running_end_bg"
+                    android:textSize="24dip" android:textStyle="bold" android:textColor="#000000"
+                    android:layout_marginBottom="5dp"/>
+        </RelativeLayout>
+    </RelativeLayout>
 </RelativeLayout>

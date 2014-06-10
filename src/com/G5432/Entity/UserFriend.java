@@ -34,6 +34,9 @@ public class UserFriend {
     @Expose
     @DatabaseField
     private Date updateTime;
+    @Expose
+    @DatabaseField
+    private Date lastWalkTime;
 
     private String sex;
 
@@ -197,5 +200,13 @@ public class UserFriend {
 
     public void setFriendFightWin(Integer friendFightWin) {
         this.friendFightWin = friendFightWin;
+    }
+
+    public Date getLastWalkTime() {
+        return lastWalkTime;
+    }
+
+    public void setLastWalkTime(Date lastWalkTime) {
+        this.lastWalkTime = lastWalkTime;
     }
 }

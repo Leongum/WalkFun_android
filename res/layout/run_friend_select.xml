@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android"
+        android:background="@drawable/item_mall_bg">
+    <ImageView
+            android:layout_width="320dp"
+            android:layout_height="102dp"
+            android:id="@+id/runFriendSelectImgTitle" android:background="@drawable/history_title"/>
+    <Button
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:id="@+id/runFriendSelectBtnReturn"
+            android:layout_alignParentLeft="true" android:layout_alignParentTop="true"
+            android:background="@drawable/back_button" android:layout_marginTop="9dp"
+            android:layout_marginLeft="14dp"/>
+    <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/runFriendSelectListFriend" android:layout_alignParentLeft="true"
+            android:layout_below="@+id/runFriendSelectImgTitle" android:layout_alignParentBottom="true"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择伙伴"
+            android:id="@+id/runFriendSelectTxtTitleName" android:layout_toRightOf="@+id/runFriendSelectBtnReturn"
+            android:layout_alignTop="@+id/runFriendSelectBtnReturn" android:textColor="#ffffff" android:textSize="28dip"
+            android:layout_marginLeft="30dp" android:layout_marginTop="10dp"/>
+</RelativeLayout>

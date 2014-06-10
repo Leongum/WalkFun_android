@@ -174,6 +174,9 @@ public class FriendHandler {
                     msg.what = 1;
                     msg.obj = actionList.size();
                     handler.sendMessage(msg);
+                    if (actionList.size() > 0) {
+                        UserUtil.saveActionUpdate(1);
+                    }
                 } else {
                     Log.e(this.getClass().getName(), response);
                     handler.sendEmptyMessage(0);
@@ -322,7 +325,7 @@ public class FriendHandler {
      */
     public FollowStatusEnum getFollowStatus(Integer friendId) {
         UserFriend userFriend = friendService.fetchFriendByIds(UserUtil.getUserId(), friendId);
-        if (userFriend == null){
+        if (userFriend == null) {
             return FollowStatusEnum.UNKNOW;
         }
         if (userFriend != null && userFriend.getFriendStatus() == FollowStatusEnum.DELETED.ordinal()) {
@@ -398,5 +401,9 @@ public class FriendHandler {
                 handler.sendEmptyMessage(0);
             }
         });
+    }
+
+    public UserFriend fetchFanFriendByIds(Integer userId, int friendId) {
+        return friendService.fetchFanFriendByIds(userId,friendId);
     }
 }

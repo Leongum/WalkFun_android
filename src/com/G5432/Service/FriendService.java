@@ -57,6 +57,33 @@ public class FriendService {
             queryBuilder.where().eq("userId", userId).and().eq("friendId", friendId);
             userFriend = queryBuilder.queryForFirst();
             if (userFriend != null) {
+                FriendSort friendSort = friendSortDao.queryForId(userFriend.getFriendId());
+                if (friendSort != null) {
+                    userFriend.setSex(friendSort.getSex());
+                    userFriend.setLevel(friendSort.getLevel());
+                    userFriend.setUserName(friendSort.getFriendName());
+                    userFriend.setFight(friendSort.getFight());
+                    userFriend.setFightPlus(friendSort.getFightPlus());
+                    userFriend.setPower(friendSort.getPower());
+                    userFriend.setTotalFights(friendSort.getTotalFights());
+                    userFriend.setFightsWin(friendSort.getFightsWin());
+                    userFriend.setTotalFriendFights(friendSort.getTotalFriendFights());
+                    userFriend.setFriendFightWin(friendSort.getFriendFightWin());
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+        return userFriend;
+    }
+
+    public UserFriend fetchFanFriendByIds(Integer userId, Integer friendId) {
+        UserFriend userFriend = null;
+        try {
+            QueryBuilder<UserFriend, String> queryBuilder = userFriendDao.queryBuilder();
+            queryBuilder.where().eq("friendId", userId).and().eq("userId", friendId);
+            userFriend = queryBuilder.queryForFirst();
+            if (userFriend != null) {
                 FriendSort friendSort = friendSortDao.queryForId(userFriend.getUserId());
                 if (friendSort != null) {
                     userFriend.setSex(friendSort.getSex());

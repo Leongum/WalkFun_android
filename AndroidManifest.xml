@@ -128,5 +128,11 @@
         <activity android:name=".Setting.AboutUsActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait">
         </activity>
 
+        <activity android:name=".Run.RunFriendSelectActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name=".Run.RunPropSelectActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="portrait">
+        </activity>
+
     </application>
 </manifest>

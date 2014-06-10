@@ -9,6 +9,7 @@ import android.os.Message;
 import android.view.View;
 import android.widget.*;
 import com.G5432.Entity.*;
+import com.G5432.Entity.Enum.PropFlagEnum;
 import com.G5432.HttpClient.*;
 import com.G5432.Utils.*;
 import com.G5432.WalkFun.Main.MainActivity;
@@ -36,12 +37,14 @@ public class ItemUseActivity extends WalkFunBaseActivity {
     private UserHandler userHandler;
     private FriendHandler friendHandler;
     private SystemHandler systemHandler;
+    private VirtualProductHandler virtualProductHandler;
 
     private AlertDialog.Builder friendToUseBuilder = null;
 
     private Integer propId;
 
     private ActionDefinition actionDefinition;
+    private VProduct vProduct;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -53,6 +56,8 @@ public class ItemUseActivity extends WalkFunBaseActivity {
         userHandler = new UserHandler(getHelper());
         friendHandler = new FriendHandler(getHelper());
         systemHandler = new SystemHandler(getHelper());
+        virtualProductHandler = new VirtualProductHandler(getHelper());
+        vProduct = virtualProductHandler.fetchVProduct(propId);
         actionDefinition = systemHandler.fetchActionDefineByPropId(propId);
         initPageUIControl();
     }
@@ -101,6 +106,10 @@ public class ItemUseActivity extends WalkFunBaseActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         if (actionDefinition != null) {
+                            if (friendList.get(friendIndex).getFriendId().intValue() == UserUtil.getUserId().intValue()
+                                    && vProduct.getPropFlag().intValue() == PropFlagEnum.PROPFLAGFIGHT.ordinal()) {
+                                UserUtil.saveUsedPropId(propId);
+                            }
                             friendHandler.createAction(actionDefinition.getActionId(), friendList.get(friendIndex).getFriendId(),
                                     friendList.get(friendIndex).getUserName(), actionHandler);
                         } else {

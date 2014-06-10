@@ -58,6 +58,8 @@ public class HistoryRunMainActivity extends WalkFunBaseActivity {
     private void initPageUIControl() {
         btnReturn = (Button) findViewById(R.id.historyRunMainBtnReturn);
         listHistory = (ListView) findViewById(R.id.historyRunMainList);
+        textTime = (TextView)  findViewById(R.id.historyRunMainTxtTime);
+        textStep = (TextView) findViewById(R.id.historyRunMainTxtSteps);
         textTime.setText(CommonUtil.transSecondToStandardFormat(userBase.getUserInfo().getTotalWalkingTimes()));
         textStep.setText(userBase.getUserInfo().getTotalSteps() + "步");
         btnReturn.setOnClickListener(new View.OnClickListener() {

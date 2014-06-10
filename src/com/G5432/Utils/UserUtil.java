@@ -156,4 +156,23 @@ public class UserUtil {
     public static Date getWeatherTime() {
         return CommonUtil.parseDate(UserUtil.weatherPreferences.getString("weatherSyncTime", "2000-01-01 00:00:00"));
     }
+
+    public static Integer getUsedPropId() {
+        int propId = UserUtil.sharedPreferences.getInt("UsedPropId", -1);
+        int day = UserUtil.sharedPreferences.getInt("UsedPropDay", -1);
+        if (day == -1) {
+            return -1;
+        } else if (day != (new Date()).getDay()) {
+            return -1;
+        } else {
+            return propId;
+        }
+    }
+
+    public static void saveUsedPropId(Integer propId) {
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("UsedPropId", propId);
+        editor.putInt("UsedPropDay", (new Date()).getDay());
+        editor.commit();
+    }
 }

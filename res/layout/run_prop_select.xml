@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android"
+        android:background="@drawable/item_mall_bg">
+    <ImageView
+            android:layout_width="320dp"
+            android:layout_height="102dp"
+            android:id="@+id/runPropSelectImgTitle" android:background="@drawable/history_title"/>
+    <Button
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:id="@+id/runPropSelectBtnReturn"
+            android:layout_alignParentLeft="true" android:layout_alignParentTop="true"
+            android:background="@drawable/back_button" android:layout_marginTop="9dp"
+            android:layout_marginLeft="14dp"/>
+    <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/runPropSelectListProps" android:layout_alignParentLeft="true"
+            android:layout_below="@+id/runPropSelectImgTitle" android:layout_alignParentBottom="true"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择道具"
+            android:id="@+id/runPropSelectTxtTitleName" android:layout_toRightOf="@+id/runPropSelectBtnReturn"
+            android:layout_alignTop="@+id/runPropSelectBtnReturn" android:textColor="#ffffff" android:textSize="28dip"
+            android:layout_marginLeft="30dp" android:layout_marginTop="10dp"/>
+</RelativeLayout>

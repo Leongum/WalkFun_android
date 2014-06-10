@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android"
+        android:clickable="false">
+    <ImageView
+            android:layout_width="320dp"
+            android:layout_height="83dp"
+            android:id="@+id/runFriendSelectDisCellImgBg" android:background="@drawable/friend_add_cell_disabled"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="好友名字"
+            android:id="@+id/runFriendSelectDisCellTxtName" android:textColor="#000000" android:textSize="22dp" android:textStyle="bold"
+            android:layout_marginTop="14dp" android:layout_marginLeft="20dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="战斗力"
+            android:id="@+id/runFriendSelectDisCellTxtFightTitle" android:layout_alignLeft="@+id/runFriendSelectDisCellTxtName" android:layout_below="@+id/runFriendSelectDisCellTxtName"
+            android:textSize="15dip" android:textColor="#fffd01" android:layout_marginTop="4dp"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="战斗力"
+              android:id="@+id/runFriendSelectDisCellTxtFight"
+              android:textSize="15dip" android:textColor="#FFFFFF" android:layout_toRightOf="@+id/runFriendSelectDisCellTxtFightTitle"
+              android:layout_alignTop="@+id/runFriendSelectDisCellTxtFightTitle" android:layout_marginLeft="10dp"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="休息中"
+              android:id="@+id/runFriendSelectDisCellTxtWait"
+              android:textSize="15dip" android:textColor="#fffd01" android:layout_alignRight="@+id/runFriendSelectDisCellImgBg"
+              android:layout_alignTop="@+id/runFriendSelectDisCellTxtName" android:layout_marginRight="15dp" android:layout_marginTop="3dp"/>
+    <TextView android:layout_width="45dp" android:layout_height="wrap_content" android:text="5天"
+              android:id="@+id/runFriendSelectDisCellTxtTime" android:textSize="15dip" android:textColor="#ffffff"
+              android:layout_alignLeft="@+id/runFriendSelectDisCellTxtWait"
+              android:layout_below="@+id/runFriendSelectDisCellTxtWait" android:layout_marginTop="5dp"
+              android:gravity="center"/>
+</RelativeLayout>

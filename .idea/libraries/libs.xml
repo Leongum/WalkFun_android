@@ -8,6 +8,7 @@
       <root url="jar://$PROJECT_DIR$/libs/baidumapapi_v2_4_0.jar!/" />
       <root url="jar://$PROJECT_DIR$/libs/locSDK_4.0.jar!/" />
       <root url="jar://$PROJECT_DIR$/libs/umeng_sdk.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/com.umeng.message.lib.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

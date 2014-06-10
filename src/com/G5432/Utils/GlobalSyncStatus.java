@@ -48,4 +48,11 @@ public class GlobalSyncStatus {
         GlobalSyncStatus.missionHistorySynced = false;
         GlobalSyncStatus.historySynced = false;
     }
+
+    public static void setSyncBtnSync() {
+        GlobalSyncStatus.userPropsSynced = false;
+        GlobalSyncStatus.userFriendSynced = false;
+        GlobalSyncStatus.userFriendSortSynced = false;
+        GlobalSyncStatus.userActionSynced = false;
+    }
 }
