@@ -9,6 +9,7 @@ import com.baidu.location.LocationClientOption;
 import com.baidu.mapapi.BMapManager;
 import com.baidu.mapapi.MKGeneralListener;
 import com.baidu.mapapi.map.MKEvent;
+import com.umeng.message.PushAgent;
 
 /**
  * Created with IntelliJ IDEA.
@@ -27,10 +28,14 @@ public class WalkFunApplication extends Application {
     //test key.
     public static final String strKey = "CmhB94lOObFepqhFpf89Y0ur";
 
+    private PushAgent mPushAgent;
+
     @Override
     public void onCreate() {
         super.onCreate();
         mInstance = this;
+        mPushAgent = PushAgent.getInstance(this);
+        //mPushAgent.setDebugMode(true);
         initEngineManager(this);
     }
 

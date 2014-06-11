@@ -29,45 +29,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/com.umeng.message.lib.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/friend_add_cell_disabled.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/running_ready_add.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/running_ready_friend.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/running_ready_item.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/G5432/Entity/Enum/PropFlagEnum.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/G5432/WalkFun/Run/RunFriendSelectActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/G5432/WalkFun/Run/RunFriendSelectAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/G5432/WalkFun/Run/RunPropSelectActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/run_friend_select.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/run_friend_select_cell.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/run_friend_select_disable_cell.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/run_prop_select.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/run_prop_select_cell.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/G5432/HttpClient/FriendHandler.java" afterPath="$PROJECT_DIR$/src/com/G5432/HttpClient/FriendHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/G5432/Service/FriendService.java" afterPath="$PROJECT_DIR$/src/com/G5432/Service/FriendService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/G5432/Utils/GlobalSyncStatus.java" afterPath="$PROJECT_DIR$/src/com/G5432/Utils/GlobalSyncStatus.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/G5432/WalkFun/History/HistoryRunMainActivity.java" afterPath="$PROJECT_DIR$/src/com/G5432/WalkFun/History/HistoryRunMainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/G5432/WalkFun/Item/ItemUseActivity.java" afterPath="$PROJECT_DIR$/src/com/G5432/WalkFun/Item/ItemUseActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/G5432/WalkFun/Main/MainActivity.java" afterPath="$PROJECT_DIR$/src/com/G5432/WalkFun/Main/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/G5432/Entity/UserFriend.java" afterPath="$PROJECT_DIR$/src/com/G5432/Entity/UserFriend.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/G5432/Utils/UserUtil.java" afterPath="$PROJECT_DIR$/src/com/G5432/Utils/UserUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/libs.xml" afterPath="$PROJECT_DIR$/.idea/libraries/libs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/main.xml" afterPath="$PROJECT_DIR$/res/layout/main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/G5432/Utils/WalkFunApplication.java" afterPath="$PROJECT_DIR$/src/com/G5432/Utils/WalkFunApplication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/G5432/WalkFun/WalkFunBaseActivity.java" afterPath="$PROJECT_DIR$/src/com/G5432/WalkFun/WalkFunBaseActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="24338852-29c0-4e07-a664-dfb1d50d7670" name="no commit" comment="" />
     <ignored path="Cyberace_android.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1402374718351" ignored="false" />
-    <file path="/fragment.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1401171687162" ignored="false" />
+    <file path="/Dummy.txt" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1402453343844" ignored="false" />
+    <file path="/fragment.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1402465213447" ignored="false" />
     <file path="/RunningHistoryService.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1393829484702" ignored="false" />
     <file path="/LoadingActivity.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1399453975435" ignored="false" />
-    <file path="/a.dummy" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1400041757098" ignored="false" />
+    <file path="/a.dummy" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1402460182851" ignored="false" />
     <file path="/BackendSyncRequest.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1393816791175" ignored="false" />
     <file path="/UserUtil.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1399878816681" ignored="false" />
     <file path="/CommonUtil.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1400205834505" ignored="false" />
-    <file path="/AndroidManifest.xml" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1400040652794" ignored="false" />
+    <file path="/AndroidManifest.xml" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1402385537099" ignored="false" />
     <file path="/RunningBasic.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1383121234735" ignored="false" />
     <file path="/LoginActivity.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1397188217452" ignored="false" />
     <file path="/MySNSAdapter.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1383123615830" ignored="false" />
@@ -75,7 +54,7 @@
     <file path="$USER_HOME$/Downloads/ShareSDK Android Sample  2.1.2/Sample/src/cn/sharesdk/demo/AuthPage.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1383189894816" ignored="false" />
     <file path="/AuthPage.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1383189883577" ignored="false" />
     <file path="/ShareSNSActivity.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1386128219807" ignored="false" />
-    <file path="/MainActivity.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1402385084167" ignored="false" />
+    <file path="/MainActivity.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1402456650802" ignored="false" />
     <file path="/RunInfoActivity.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1388050903156" ignored="false" />
     <file path="/CityCode.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1383534564593" ignored="false" />
     <file path="/PlanCollect.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1389252328152" ignored="false" />
@@ -145,7 +124,7 @@
     <file path="$PROJECT_DIR$/../Usavich/service/src/main/java/com/usavich/service/backend/BackendJobCache.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1389365524560" ignored="false" />
     <file path="/BackendJobCache.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1396938299081" ignored="false" />
     <file path="$PROJECT_DIR$/../Usavich/service/src/main/resources/META-INF/spring/context.xml" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1389362075002" ignored="false" />
-    <file path="/context.xml" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1396938426696" ignored="false" />
+    <file path="/context.xml" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1402460637755" ignored="false" />
     <file path="$PROJECT_DIR$/../Usavich/rest/src/main/java/com/usavich/rest/system/SystemRestDef.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1389362480597" ignored="false" />
     <file path="/SystemRestDef.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1389362480597" ignored="false" />
     <file path="$PROJECT_DIR$/../Usavich/rest/src/main/java/com/usavich/rest/system/SystemRestService.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1389362575533" ignored="false" />
@@ -160,12 +139,12 @@
     <file path="/VProduct.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1397110468431" ignored="false" />
     <file path="/GlobalSyncStatus.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1399870291983" ignored="false" />
     <file path="$PROJECT_DIR$/../WalkFun/service/src/main/java/com/walkfun/service/common/impl/CommonServiceImpl.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1397030085850" ignored="false" />
-    <file path="$PROJECT_DIR$/../WalkFun/service/src/main/java/com/walkfun/service/BaseService.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1401169977138" ignored="false" />
+    <file path="$PROJECT_DIR$/../WalkFun/service/src/main/java/com/walkfun/service/BaseService.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1402449163694" ignored="false" />
     <file path="$PROJECT_DIR$/../WalkFun/entity/src/main/java/com/walkfun/entity/account/UserInfo.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1397659546967" ignored="false" />
     <file path="/UserInfo.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1397659538013" ignored="false" />
     <file path="/TestViewActivity.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1393662932096" ignored="false" />
-    <file path="/BaseService.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1401169972226" ignored="false" />
-    <file path="$PROJECT_DIR$/../WalkFun/service/src/main/java/com/walkfun/service/account/impl/AccountServiceImpl.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1401179784456" ignored="false" />
+    <file path="/BaseService.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1402418426125" ignored="false" />
+    <file path="$PROJECT_DIR$/../WalkFun/service/src/main/java/com/walkfun/service/account/impl/AccountServiceImpl.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1402467670561" ignored="false" />
     <file path="$PROJECT_DIR$/../WalkFun/service/src/main/java/com/walkfun/service/running/impl/RunningServiceImpl.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1399360805315" ignored="false" />
     <file path="/MissionHandler.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1393910767140" ignored="false" />
     <file path="/SystemHandler.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1399525505263" ignored="false" />
@@ -222,7 +201,7 @@
     <file path="/RunningHistory.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1399530158384" ignored="false" />
     <file path="$PROJECT_DIR$/../WalkFun/db/src/main/resource/mappers/running/RunningMapper.xml" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1395889888506" ignored="false" />
     <file path="/ProgressDlgUtil.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1395907927844" ignored="false" />
-    <file path="/WalkFunBaseActivity.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1397549826483" ignored="false" />
+    <file path="/WalkFunBaseActivity.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1402454636691" ignored="false" />
     <file path="/SettingShareActivity.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1395989632017" ignored="false" />
     <file path="$PROJECT_DIR$/../WalkFun/entity/src/main/java/com/walkfun/entity/account/UserFriend.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1396344139568" ignored="false" />
     <file path="/RunningServiceImpl.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1397659218144" ignored="false" />
@@ -231,7 +210,7 @@
     <file path="/AccountDAOImpl.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1396344797136" ignored="false" />
     <file path="$PROJECT_DIR$/../WalkFun/db/src/main/java/com/walkfun/db/account/dao/def/AccountDAO.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1396344827621" ignored="false" />
     <file path="$PROJECT_DIR$/../WalkFun/service/src/main/java/com/walkfun/service/account/def/AccountService.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1396344842581" ignored="false" />
-    <file path="/AccountServiceImpl.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1401176969529" ignored="false" />
+    <file path="/AccountServiceImpl.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1402467614719" ignored="false" />
     <file path="$PROJECT_DIR$/../WalkFun/service/src/main/java/com/walkfun/service/backend/BackendJobCache.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1396938301897" ignored="false" />
     <file path="$PROJECT_DIR$/../WalkFun/service/src/main/resources/META-INF/spring/context.xml" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1397666833801" ignored="false" />
     <file path="$PROJECT_DIR$/../WalkFun/entity/src/main/java/com/walkfun/entity/account/UserBase.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1397098421025" ignored="false" />
@@ -274,6 +253,24 @@
     <file path="/ActionDefineTypeEnum.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1401174058140" ignored="false" />
     <file path="$PROJECT_DIR$/../WalkFun/web.app/web/index.html" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1401793188530" ignored="false" />
     <file path="$PROJECT_DIR$/../WalkFun/web.app/web/bgcz.html" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1401849848221" ignored="false" />
+    <file path="$PROJECT_DIR$/../WalkFun/web.app/web/config/default.properties" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1402418615057" ignored="false" />
+    <file path="/default.properties" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1402418097565" ignored="false" />
+    <file path="$PROJECT_DIR$/../WalkFun/thirdparty/src/main/java/com/walkfun/thirdparty/httpService/impl/AndroidMessageRequest.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1402460457804" ignored="false" />
+    <file path="/AndroidMessageRequest.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1402459894997" ignored="false" />
+    <file path="$PROJECT_DIR$/../WalkFun/thirdparty/src/main/java/com/walkfun/thirdparty/httpService/impl/PM25GetRequest.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1402459873933" ignored="false" />
+    <file path="$PROJECT_DIR$/../WalkFun/thirdparty/src/main/java/com/walkfun/thirdparty/entity/AndroidMessage.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1402458659231" ignored="false" />
+    <file path="/AndroidMessage.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1402465178783" ignored="false" />
+    <file path="$PROJECT_DIR$/../WalkFun/thirdparty/src/main/java/com/walkfun/thirdparty/entity/AndroidUniMessageMain.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1402465425545" ignored="false" />
+    <file path="$PROJECT_DIR$/../WalkFun/thirdparty/src/main/java/com/walkfun/thirdparty/entity/AndroidUniMessagePayload.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1402465601493" ignored="false" />
+    <file path="/AndroidUniMessagePayload.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1402458854191" ignored="false" />
+    <file path="$PROJECT_DIR$/../WalkFun/thirdparty/src/main/resources/META-INF/spring/context.xml" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1402460639258" ignored="false" />
+    <file path="/AndroidUniMessageMain.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1402459522876" ignored="false" />
+    <file path="$PROJECT_DIR$/../WalkFun/thirdparty/src/main/java/com/walkfun/thirdparty/message.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1402460510565" ignored="false" />
+    <file path="$PROJECT_DIR$/../WalkFun/thirdparty/src/main/java/com/walkfun/thirdparty/message/def/AndroidMessageService.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1402465060166" ignored="false" />
+    <file path="$PROJECT_DIR$/../WalkFun/thirdparty/src/main/java/com/walkfun/thirdparty/message/impl/AndroidMessageServiceImpl.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1402465818377" ignored="false" />
+    <file path="/AndroidMessageServiceImpl.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1402465784555" ignored="false" />
+    <file path="/AndroidMessageService.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1402464899548" ignored="false" />
+    <file path="$PROJECT_DIR$/../WalkFun/thirdparty/src/main/java/com/walkfun/thirdparty/entity/AndroidUniMessageBody.java" changelist="57f18a69-dda1-496e-a9b7-e2ca298ba3b7" time="1402465586981" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -335,6 +332,23 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <line_breakpoints>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/G5432/WalkFun/Main/MainActivity.java" line="287" class="com.G5432.WalkFun.Main.MainActivity$1" package="com.G5432.WalkFun.Main">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -348,13 +362,70 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/G5432/WalkFun/Main/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="365" column="36" selection-start="15319" selection-end="15319" vertical-scroll-proportion="1.4263158">
+            <state line="23" column="45" selection-start="850" selection-end="850" vertical-scroll-proportion="21.6">
+              <folding>
+                <element signature="e#5567#5573#0" expanded="true" />
+                <element signature="e#11817#12399#0" expanded="true" />
+                <element signature="e#12392#12393#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/G5432/WalkFun/Main/LoginActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="148" column="56" selection-start="5703" selection-end="5710" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ALIAS_TYPE.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/libs/com.umeng.message.lib.jar!/com/umeng/message/ALIAS_TYPE.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="21" selection-start="198" selection-end="198" vertical-scroll-proportion="-3.6">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WalkFunApplication.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/G5432/Utils/WalkFunApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="10" selection-start="1073" selection-end="1073" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserHandler.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/G5432/HttpClient/UserHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="175" column="16" selection-start="6604" selection-end="6604" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="180" column="55" selection-start="9134" selection-end="9134" vertical-scroll-proportion="-21.84">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WalkFunBaseActivity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/G5432/WalkFun/WalkFunBaseActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="34" selection-start="791" selection-end="791" vertical-scroll-proportion="0.25181597">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5056#5062#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -372,38 +443,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FriendService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/G5432/Service/FriendService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="41" selection-start="3107" selection-end="3126" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RunFriendSelectAdapter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/G5432/WalkFun/Run/RunFriendSelectAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="53" selection-start="3051" selection-end="3325" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RunFriendSelectActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/G5432/WalkFun/Run/RunFriendSelectActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="51" selection-start="1184" selection-end="1184" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="FriendHandler.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/G5432/HttpClient/FriendHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="406" column="66" selection-start="15255" selection-end="15255" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="2" column="7" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RunningHistoryHandler.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/G5432/HttpClient/RunningHistoryHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="84" column="91" selection-start="3419" selection-end="3419" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -431,22 +488,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/res/layout/item_main.xml" />
-        <option value="$PROJECT_DIR$/res/layout/main.xml" />
         <option value="$PROJECT_DIR$/res/layout/run_friend_select.xml" />
         <option value="$PROJECT_DIR$/res/layout/run_friend_select_cell.xml" />
         <option value="$PROJECT_DIR$/res/layout/run_friend_select_disable_cell.xml" />
         <option value="$PROJECT_DIR$/src/com/G5432/Entity/UserFriend.java" />
         <option value="$PROJECT_DIR$/src/com/G5432/WalkFun/Run/RunFriendSelectAdapter.java" />
         <option value="$PROJECT_DIR$/res/layout/run_prop_select_cell.xml" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/com/G5432/WalkFun/Run/RunFriendSelectActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/run_prop_select.xml" />
         <option value="$PROJECT_DIR$/src/com/G5432/Utils/CommonUtil.java" />
         <option value="$PROJECT_DIR$/src/com/G5432/WalkFun/Run/RunPropSelectActivity.java" />
         <option value="$PROJECT_DIR$/src/com/G5432/Service/FriendService.java" />
         <option value="$PROJECT_DIR$/src/com/G5432/HttpClient/FriendHandler.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/com/G5432/WalkFun/Main/MainActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/G5432/Utils/WalkFunApplication.java" />
+        <option value="$PROJECT_DIR$/src/com/G5432/WalkFun/WalkFunBaseActivity.java" />
       </list>
     </option>
   </component>
@@ -1247,7 +1304,11 @@
       <created>1399865809250</created>
       <updated>1399865809250</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="finished ready to go page.">
+      <created>1402385205585</created>
+      <updated>1402385205585</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1271,37 +1332,37 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12625538" sideWeight="0.5249376" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22525108" sideWeight="0.5249376" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.680798" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.6708229" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4052369" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47506234" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.276808" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32917705" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32668328" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48877805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32917705" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.4127182" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26757532" sideWeight="0.319202" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26757532" sideWeight="0.5947631" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42518702" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22525108" sideWeight="0.5249376" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.6708229" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5099751" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47506234" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32668328" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48877805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.4127182" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5099751" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1347,7 +1408,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished run page" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished ready to go page." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1385,6 +1446,7 @@
     <MESSAGE value="finished setting page." />
     <MESSAGE value="finished run detail page shows" />
     <MESSAGE value="finished run page" />
+    <MESSAGE value="finished ready to go page." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1398,68 +1460,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/social_sdk_library_project/libs/umeng_social_sdk.jar!/com/umeng/socialize/bean/UMShareMsg.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="167" selection-end="167" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/social_sdk_library_project/libs/umeng_social_sdk.jar!/com/umeng/socialize/common/SocializeConstants.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="169" selection-end="169" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/social_sdk_library_project/libs/umeng_social_sdk.jar!/com/umeng/socialize/common/ResContainer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="22" selection-start="178" selection-end="178" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/social_sdk_library_project/libs/umeng_social_sdk.jar!/com/umeng/socialize/common/c.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="106" selection-start="1563" selection-end="1574" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/G5432/HttpClient/HttpClientHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="13" selection-start="541" selection-end="541" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/G5432/Utils/CommonUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="266" column="65" selection-start="10211" selection-end="10237" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/run_prop_select.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="109" selection-start="1354" selection-end="1376" vertical-scroll-proportion="-7.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/G5432/WalkFun/Run/RunPropSelectActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="55" selection-start="1709" selection-end="1710" vertical-scroll-proportion="25.48">
-          <folding>
-            <element signature="e#5516#5856#0" expanded="true" />
-            <element signature="e#5845#5846#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/G5432/WalkFun/Run/RunFriendSelectAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="74" column="53" selection-start="3051" selection-end="3325" vertical-scroll-proportion="0.0">
@@ -1491,14 +1491,9 @@
     <entry file="file://$PROJECT_DIR$/src/com/G5432/Service/FriendService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="79" column="41" selection-start="3107" selection-end="3126" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/G5432/HttpClient/FriendHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="406" column="66" selection-start="15255" selection-end="15255" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1512,12 +1507,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/G5432/WalkFun/Main/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/com/G5432/WalkFun/Setting/SetMainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="365" column="36" selection-start="15319" selection-end="15319" vertical-scroll-proportion="1.4263158">
+        <state line="141" column="51" selection-start="4932" selection-end="4932" vertical-scroll-proportion="0.6756757">
+          <folding>
+            <element signature="e#4932#5078#0" expanded="true" />
+            <element signature="e#5071#5072#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="180" column="55" selection-start="9134" selection-end="9134" vertical-scroll-proportion="-21.84">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/com.umeng.message.lib.jar!/com/umeng/message/ALIAS_TYPE.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="21" selection-start="198" selection-end="198" vertical-scroll-proportion="-3.6">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/G5432/WalkFun/Main/LoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="148" column="56" selection-start="5703" selection-end="5710" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/G5432/HttpClient/UserHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="175" column="16" selection-start="6604" selection-end="6604" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/G5432/HttpClient/FriendHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="7" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5056#5062#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/G5432/HttpClient/RunningHistoryHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="91" selection-start="3419" selection-end="3419" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/G5432/WalkFun/Main/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="45" selection-start="850" selection-end="850" vertical-scroll-proportion="21.6">
+          <folding>
+            <element signature="e#5567#5573#0" expanded="true" />
+            <element signature="e#11817#12399#0" expanded="true" />
+            <element signature="e#12392#12393#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/G5432/Utils/WalkFunApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="10" selection-start="1073" selection-end="1073" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/G5432/WalkFun/WalkFunBaseActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="34" selection-start="791" selection-end="791" vertical-scroll-proportion="0.25181597">
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -4,6 +4,7 @@ import android.os.Bundle;
 import com.G5432.DBUtils.DatabaseHelper;
 import com.j256.ormlite.android.apptools.OrmLiteBaseActivity;
 import com.umeng.analytics.MobclickAgent;
+import com.umeng.message.PushAgent;
 
 /**
  * Created with IntelliJ IDEA.
@@ -23,6 +24,7 @@ public class WalkFunBaseActivity extends OrmLiteBaseActivity<DatabaseHelper> {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        PushAgent.getInstance(this).onAppStart();
         //manager = new LocalActivityManager(this, true);
         //manager.dispatchCreate(savedInstanceState);
         //mScaleGestureDetector = new ScaleGestureDetector(this, new ScaleGestureListener());

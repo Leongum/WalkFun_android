@@ -22,6 +22,8 @@ import com.G5432.WalkFun.Run.RunPropSelectActivity;
 import com.G5432.WalkFun.Setting.SetMainActivity;
 import com.G5432.WalkFun.User.UserMainActivity;
 import com.G5432.WalkFun.WalkFunBaseActivity;
+import com.umeng.message.PushAgent;
+import com.umeng.message.UmengRegistrar;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -100,8 +102,18 @@ public class MainActivity extends WalkFunBaseActivity {
         userPropHandler = new UserPropHandler(getHelper());
         virtualProductHandler = new VirtualProductHandler(getHelper());
         userBase = userHandler.fetchUser(UserUtil.getUserId());
-
+        PushAgent.getInstance(this).enable();
+        checkUserDeviceToken();
         initPageUIControl();
+    }
+
+    private void checkUserDeviceToken() {
+        String deviceToken = UmengRegistrar.getRegistrationId(this);
+        if (!userBase.getDeviceId().equalsIgnoreCase(deviceToken)) {
+            userBase.setDeviceId(deviceToken);
+            userBase.setPlatformInfo("android");
+            userHandler.updateUserBase(userBase,new Handler());
+        }
     }
 
     private void initPageUIControl() {
